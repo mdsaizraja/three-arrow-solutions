@@ -1,11 +1,6 @@
 import React from "react";
-
-import {
-  Section,
-  SectionText,
-  SectionTitle,
-} from "../../styles/GlobalComponents";
-import Button from "../../styles/GlobalComponents/Button";
+import Lottie from 'react-lottie-player'
+import lottieJson from '../../animation/38834-service-animation.json'
 import {
   HeadingSection,
   LeftSection,
@@ -14,7 +9,7 @@ import {
   MaininputBox,
 } from "./HeroStyles";
 
-const Hero = (props) => (
+const Hero = () => (
   <div className="flex">
     <LeftSection>
       <HeadingSection>
@@ -52,14 +47,17 @@ const Hero = (props) => (
       </MaininputBox>
     </LeftSection>
     <RightSection>
-      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-      <lottie-player
-        src="https://assets5.lottiefiles.com/packages/lf20_y3qfynfr.json"
-        background="transparent"
-        speed="1"
-        loop
-        autoplay
-      ></lottie-player>
+      {/*<Lottie*/}
+      {/*  src="https://assets5.lottiefiles.com/packages/lf20_y3qfynfr.json"*/}
+      {/*  background="transparent"*/}
+      {/*  speed="1"*/}
+      {/*  autoplay*/}
+      {/*/>*/}
+        <Lottie
+            loop
+            animationData={lottieJson}
+            play
+        />
     </RightSection>
   </div>
 );
