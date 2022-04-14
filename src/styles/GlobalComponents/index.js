@@ -295,3 +295,31 @@ export const LinkIconImg = styled.div`
     height: ${({ large }) => (large ? "32px" : "16px")};
   }
 `;
+export const TextTopBorder = styled.span`
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  background: transparent;
+
+  border-top: 3px solid transparent;
+
+  -moz-border-image: -moz-linear-gradient(top, #f49867 0%, #3a4ed5 10%);
+  -webkit-border-image: -webkit-linear-gradient(
+    right,
+    #f49867 0%,
+    #3a4ed5 100%
+  );
+  padding-top: ${(prop) => prop.SpacebtText};
+  border-image-slice: 1;
+`;
+export const HeadingTitle = styled.h1`
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 45px;
+  text-align: ${(props) => props.TextCenter};
+  background: linear-gradient(99.97deg, #ae67fa -10.84%, #f49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;

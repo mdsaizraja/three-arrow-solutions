@@ -1,13 +1,11 @@
 import React from "react";
 import NavSlideBar from "./NavSlideBar";
+import { HeadingTitle } from "../../styles/GlobalComponents";
 const BusinessModel = () => {
   return (
-    <div>
-      <h3 style={{ textAlign: "center" }}>BusinessModel</h3>
-      <div>
-        <NavSlideBar />
-      </div>
-      <div></div>
+    <div className="mt-28">
+      <HeadingTitle TextCenter="center">BusinessModel</HeadingTitle>
+      <NavSlideBar />
     </div>
   );
 };

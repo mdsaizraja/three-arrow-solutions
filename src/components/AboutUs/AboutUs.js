@@ -2,21 +2,20 @@ import React from "react";
 import {
   MainContentBox,
   Title,
-  TextTopBorder,
-  HeadingTitle,
   RightSection,
   LeftSection,
   Para,
 } from "./AboutUsStyles";
+import { TextTopBorder, HeadingTitle } from "../../styles/GlobalComponents";
 const AboutUs = () => {
   return (
-    <MainContentBox>
+    <MainContentBox className="p-16 mt-14">
       <LeftSection>
         <HeadingTitle>Who we are</HeadingTitle>
         <div className="flex" style={{ marginTop: "100px" }}>
           <div className="w-96">
             <Title>
-              <TextTopBorder>Digi</TextTopBorder>
+              <TextTopBorder SpacebtText="30px">Digi</TextTopBorder>
               tal Marketing
             </Title>
             <Para>
@@ -28,7 +27,7 @@ const AboutUs = () => {
         <div className="flex justify-between  mt-24">
           <div className="w-5/12">
             <Title>
-              <TextTopBorder>App</TextTopBorder> development
+              <TextTopBorder SpacebtText="30px">App</TextTopBorder> development
             </Title>
             <Para>
               At jointure ladyship an insisted so humanity he. Friendly bachelor
@@ -37,7 +36,8 @@ const AboutUs = () => {
           </div>
           <div className="w-5/12">
             <Title>
-              <TextTopBorder>Web</TextTopBorder>site development
+              <TextTopBorder SpacebtText="30px">Web</TextTopBorder>site
+              development
             </Title>
             <Para>
               At jointure ladyship an insisted so humanity he. Friendly bachelor

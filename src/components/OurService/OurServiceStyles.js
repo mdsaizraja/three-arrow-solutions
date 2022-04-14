@@ -15,8 +15,7 @@ export const TalkExpertBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
-  width: 1225px;
+
   height: 173px;
   margin-top: 100px;
   background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
@@ -36,8 +35,7 @@ export const IconDiv = styled.div`
 `;
 
 export const Heading = styled.h1`
-  background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%),
-    #ffffff;
+  background: linear-gradient(80.22deg, #ae67fa 30.86%, #f49867 80.55%), #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -62,16 +60,21 @@ export const ButtonContent = styled.div`
 
 export const TalkButton = styled.div`
   color: white;
-
   display: flex;
   width: 20%;
   justify-content: center;
-  border-radius: 60px;
+  border-radius: 40px;
   padding: 15px;
   background: black;
+  margin: 50px;
+}
 `;
 export const Para = styled.p`
   font-weight: 800;
   font-size: 24px;
   line-height: 45px;
+`;
+
+export const MainContent = styled.div`
+  margin-top: 100px;
 `;

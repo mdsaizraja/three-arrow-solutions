@@ -73,7 +73,7 @@ export const InputBox = styled.input`
   left: 109px;
   background: #052d56;
   border-radius: 5px 0px 0px 5px;
-  padding-left: 35px;
+
   &:focus {
     outline: none;
   }

@@ -20,3 +20,11 @@ export const RightSection = styled.div`
   width: 60%;
   color: #81afdd;
 `;
+
+export const RightSubTitle = styled.h1`
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 80px;
+  text-decoration-line: underline;
+  color: #ff8a71;
+`;

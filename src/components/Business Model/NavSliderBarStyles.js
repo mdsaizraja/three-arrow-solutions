@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavSlider = styled.span`
-  width: 30%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 20px 5px;

@@ -23,7 +23,11 @@ const Hero = () => (
         Digital World.
       </SubHeadingSection>
       <MaininputBox>
-        <InputBox type="text" placeholder="Your Email Address"></InputBox>
+        <InputBox
+          className="p-8"
+          type="text"
+          placeholder="Your Email Address"
+        ></InputBox>
         <ButtonBox>Get Started</ButtonBox>
       </MaininputBox>
     </LeftSection>
@@ -35,7 +39,6 @@ const Hero = () => (
       {/*  autoplay*/}
       {/*/>*/}
       <Lottie
-        loop
         animationData={lottieJson}
         play
         style={{ width: "457px", height: "457px" }}

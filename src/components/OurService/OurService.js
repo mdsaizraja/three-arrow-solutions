@@ -8,7 +8,9 @@ import {
   ButtonContent,
   TalkButton,
   Para,
+  MainContent,
 } from "./OurServiceStyles";
+import { HeadingTitle } from "../../styles/GlobalComponents";
 import { FaReact, FaAngular, FaNodeJs } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
 import { SiFirebase } from "react-icons/si";
@@ -16,35 +18,36 @@ import { AiFillGitlab } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 const OurService = () => {
   return (
-    <div style={{ marginTop: "100px" }}>
-      <Heading> OurService</Heading>
+    <MainContent>
+      <HeadingTitle TextCenter="center"> OurService</HeadingTitle>
       <ServiceBox>
         <IconDiv>
           <FaReact style={{ width: "60.16px", height: "55px" }} />
+          <br />
           <span>React</span>
         </IconDiv>
         <IconDiv>
-          <FaAngular style={{ width: "60.16px", height: "55px" }} />
+          <FaAngular style={{ width: "60.16px", height: "55px" }} /> <br />
           <span>Angular</span>
         </IconDiv>
         <IconDiv>
-          <FaNodeJs style={{ width: "60.16px", height: "55px" }} />
+          <FaNodeJs style={{ width: "60.16px", height: "55px" }} /> <br />
           <span>Node</span>
         </IconDiv>
         <IconDiv>
-          <GrGraphQl style={{ width: "60.16px", height: "55px" }} />
+          <GrGraphQl style={{ width: "60.16px", height: "55px" }} /> <br />
           <span>GraphQL</span>
         </IconDiv>
         <IconDiv>
-          <SiFirebase style={{ width: "60.16px", height: "55px" }} />
+          <SiFirebase style={{ width: "60.16px", height: "55px" }} /> <br />
           <span>Firebase</span>
         </IconDiv>
         <IconDiv>
-          <AiFillGitlab style={{ width: "60.16px", height: "55px" }} />
+          <AiFillGitlab style={{ width: "60.16px", height: "55px" }} /> <br />
           <span>GIT</span>
         </IconDiv>
       </ServiceBox>
-      <ButtonBox>
+      <ButtonBox className="mt-10">
         <ButtonContent>
           <button>All Services</button>
           <BsArrowRight style={{ fontSize: "35px", marginLeft: "10px" }} />
@@ -62,7 +65,7 @@ const OurService = () => {
           <button>Talk to our Experts</button>
         </TalkButton>
       </TalkExpertBox>
-    </div>
+    </MainContent>
   );
 };
 
