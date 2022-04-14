@@ -9,13 +9,11 @@ import {
   MaininputBox,
   InputBox,
   ButtonBox,
+  MainSection,
 } from "./HeroStyles";
 
 const Hero = () => (
-  <div
-    className="flex"
-    style={{ marginTop: "60px", justifyContent: "space-between" }}
-  >
+  <MainSection>
     <LeftSection>
       <HeadingSection>
         Let's Build Something amazing with three arrow thechnologies
@@ -43,7 +41,7 @@ const Hero = () => (
         style={{ width: "457px", height: "457px" }}
       />
     </RightSection>
-  </div>
+  </MainSection>
 );
 
 export default Hero;

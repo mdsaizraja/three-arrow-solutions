@@ -4,70 +4,51 @@ import {
   Title,
   TextTopBorder,
   HeadingTitle,
+  RightSection,
+  LeftSection,
+  Para,
 } from "./AboutUsStyles";
 const AboutUs = () => {
   return (
     <MainContentBox>
-      <div style={{ width: "70%" }}>
+      <LeftSection>
         <HeadingTitle>Who we are</HeadingTitle>
         <div className="flex" style={{ marginTop: "100px" }}>
-          <div style={{ width: "40%" }}>
+          <div className="w-96">
             <Title>
               <TextTopBorder>Digi</TextTopBorder>
               tal Marketing
             </Title>
-            <p
-              style={{
-                fontSize: "16px",
-                marginTop: "26px",
-                lineHeight: "30px",
-              }}
-            >
+            <Para>
               We so opinion friends me message as delight. Whole front do of
               plate heard on ouoght.
-            </p>
+            </Para>
           </div>
         </div>
-        <div className="flex justify-between mt-24">
-          <div style={{ width: "40%x" }}>
+        <div className="flex justify-between  mt-24">
+          <div className="w-5/12">
             <Title>
               <TextTopBorder>App</TextTopBorder> development
             </Title>
-            <p
-              style={{
-                fontSize: "16px",
-                marginTop: "26px",
-                lineHeight: "30px",
-              }}
-            >
+            <Para>
               At jointure ladyship an insisted so humanity he. Friendly bachelor
               entrance to on by. As put impossible own appartments b.
-            </p>
+            </Para>
           </div>
-          <div style={{ width: "40%x" }}>
+          <div className="w-5/12">
             <Title>
               <TextTopBorder>Web</TextTopBorder>site development
             </Title>
-            <p
-              style={{
-                fontSize: "16px",
-                marginTop: "26px",
-                lineHeight: "30px",
-              }}
-            >
+            <Para>
               At jointure ladyship an insisted so humanity he. Friendly bachelor
               entrance to on by. As put impossible own appartments b.
-            </p>
+            </Para>
           </div>
         </div>
-      </div>
-      <div style={{ width: "30%" }}>
-        <img
-          width="390px"
-          height="380px"
-          src="https://media.istockphoto.com/photos/mobile-phone-top-view-with-white-screen-picture-id1161116588?s=612x612"
-        />
-      </div>
+      </LeftSection>
+      <RightSection>
+        <img src="/images/undraw_video_upload_3d4u 1.png" />
+      </RightSection>
       <div></div>
     </MainContentBox>
   );

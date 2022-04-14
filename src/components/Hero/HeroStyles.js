@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const MainSection = styled.div`
+  margin-top: 60px;
+  justify-content: space-between;
+  display: flex;
+`;
 export const LeftSection = styled.div`
   width: 50%;
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -20,7 +25,7 @@ export const LeftSection = styled.div`
 
 export const RightSection = styled.div`
   widht: 50%;
-  align-self: flex-end;
+  align-self: center;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 80%;
     display: flex;
@@ -39,26 +44,21 @@ export const RightSection = styled.div`
 
 export const HeadingSection = styled.h1`
   font-family: "Manrope";
-  font-style: 62px;
   font-weight: 800;
-  font-size: 64px;
-  line-height: 75px;
+  font-size: 62px;
+  line-height: 78px;
   letter-spacing: -0.04em;
   background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 `;
 export const SubHeadingSection = styled.h3`
-  width: 521px;
-  height: 66px;
-
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 27px;
+  line-height: 35px;
+  padding-right: 40px;
   color: #81afdd;
 `;
 export const MaininputBox = styled.div`
@@ -68,7 +68,7 @@ export const MaininputBox = styled.div`
 `;
 
 export const InputBox = styled.input`
-  width: 456px;
+  width: 70%;
   height: 73px;
   left: 109px;
   background: #052d56;
@@ -79,7 +79,7 @@ export const InputBox = styled.input`
   }
 `;
 export const ButtonBox = styled.button`
-  width: 174px;
+  width: 30%;
   height: 73px;
   left: 739px;
   top: 630px;
