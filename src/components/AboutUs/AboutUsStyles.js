@@ -8,15 +8,12 @@ export const MainContentBox = styled.div`
   margin-top: 50px;
   //background: linear-gradient(-100.22deg, #81afdd -100.86%, #052d56 99.55%),
   background: linear-gradient(
-      to bottom,
-      #81afdd 0,
-      #81afdd -10%,
-      #052d56 13%,
-      #052d56 66%,
-      #81afdd -66%,
-      #81afdd 100%
-    ),
-    #ffffff;
+    300deg,
+    #1b78de -50%,
+    #1b78de -15%,
+    #052d56 20%,
+    #052d56 56%
+  );
 `;
 
 export const Title = styled.h3`
