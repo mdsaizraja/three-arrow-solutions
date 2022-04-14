@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const LeftSection = styled.div`
+  width: 50%;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 80%;
     display: flex;
@@ -18,6 +19,8 @@ export const LeftSection = styled.div`
 `;
 
 export const RightSection = styled.div`
+  widht: 50%;
+  align-self: flex-end;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 80%;
     display: flex;
@@ -35,8 +38,6 @@ export const RightSection = styled.div`
 `;
 
 export const HeadingSection = styled.h1`
-  width: 614px;
-  height: 225px;
   font-family: "Manrope";
   font-style: 62px;
   font-weight: 800;
@@ -64,4 +65,25 @@ export const MaininputBox = styled.div`
   display: flex;
   flex-direction: row;
   margin: 60px 0px;
+`;
+
+export const InputBox = styled.input`
+  width: 456px;
+  height: 73px;
+  left: 109px;
+  background: #052d56;
+  border-radius: 5px 0px 0px 5px;
+  padding-left: 35px;
+  &:focus {
+    outline: none;
+  }
+`;
+export const ButtonBox = styled.button`
+  width: 174px;
+  height: 73px;
+  left: 739px;
+  top: 630px;
+  background: #ff8a71;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
 `;

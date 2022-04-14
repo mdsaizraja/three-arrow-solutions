@@ -1,12 +1,17 @@
 import React from "react";
-import { MainContentBox, Title, TextTopBorder } from "./AboutUsStyles";
+import {
+  MainContentBox,
+  Title,
+  TextTopBorder,
+  HeadingTitle,
+} from "./AboutUsStyles";
 const AboutUs = () => {
   return (
     <MainContentBox>
-      <div style={{ width: "60%" }}>
-        <h1 style={{ marginTop: "58px" }}>Who we are</h1>
-        <div className="flex justify-between">
-          <div style={{ width: "60%", height: "193px", marginTop: "101px" }}>
+      <div style={{ width: "70%" }}>
+        <HeadingTitle>Who we are</HeadingTitle>
+        <div className="flex" style={{ marginTop: "100px" }}>
+          <div style={{ width: "40%" }}>
             <Title>
               <TextTopBorder>Digi</TextTopBorder>
               tal Marketing
@@ -23,8 +28,8 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div style={{ width: "334px", height: "193px" }}>
+        <div className="flex justify-between mt-24">
+          <div style={{ width: "40%x" }}>
             <Title>
               <TextTopBorder>App</TextTopBorder> development
             </Title>
@@ -39,7 +44,7 @@ const AboutUs = () => {
               entrance to on by. As put impossible own appartments b.
             </p>
           </div>
-          <div style={{ width: "334px", height: "193px" }}>
+          <div style={{ width: "40%x" }}>
             <Title>
               <TextTopBorder>Web</TextTopBorder>site development
             </Title>
@@ -56,7 +61,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div style={{ width: "40%" }}>
+      <div style={{ width: "30%" }}>
         <img
           width="390px"
           height="380px"

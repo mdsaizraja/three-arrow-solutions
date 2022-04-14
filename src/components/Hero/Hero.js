@@ -1,16 +1,21 @@
 import React from "react";
-import Lottie from 'react-lottie-player'
-import lottieJson from '../../animation/38834-service-animation.json'
+import Lottie from "react-lottie-player";
+import lottieJson from "../../animation/38834-service-animation.json";
 import {
   HeadingSection,
   LeftSection,
   RightSection,
   SubHeadingSection,
   MaininputBox,
+  InputBox,
+  ButtonBox,
 } from "./HeroStyles";
 
 const Hero = () => (
-  <div className="flex">
+  <div
+    className="flex"
+    style={{ marginTop: "60px", justifyContent: "space-between" }}
+  >
     <LeftSection>
       <HeadingSection>
         Let's Build Something amazing with three arrow thechnologies
@@ -20,30 +25,8 @@ const Hero = () => (
         Digital World.
       </SubHeadingSection>
       <MaininputBox>
-        <input
-          type="text"
-          placeholder="Your Email Address"
-          style={{
-            width: "456px",
-            height: " 73px",
-            left: "109px",
-            background: "#052d56",
-            borderRadius: "5px 0px 0px 5px",
-            paddingLeft: "35px",
-          }}
-        />
-        <button
-          style={{
-            width: "174px",
-            height: "73px",
-            left: "739px",
-            top: "630px",
-            background: "#FF8A71",
-            borderStartEndRadius: "5px 0px 0px 5px",
-          }}
-        >
-          Get Started
-        </button>
+        <InputBox type="text" placeholder="Your Email Address"></InputBox>
+        <ButtonBox>Get Started</ButtonBox>
       </MaininputBox>
     </LeftSection>
     <RightSection>
@@ -53,11 +36,12 @@ const Hero = () => (
       {/*  speed="1"*/}
       {/*  autoplay*/}
       {/*/>*/}
-        <Lottie
-            loop
-            animationData={lottieJson}
-            play
-        />
+      <Lottie
+        loop
+        animationData={lottieJson}
+        play
+        style={{ width: "457px", height: "457px" }}
+      />
     </RightSection>
   </div>
 );
