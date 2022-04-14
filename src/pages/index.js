@@ -8,7 +8,7 @@ import GitHubSection from "../components/GitHubSection/GitHubSection";
 import Carousel from "../components/Carousel/Carousel";
 import BusinessModel from "../components/Business Model/BusinessModel";
 import TwoSection from "../components/TwoSection/TwoSection";
-// import Clients from "../components/Clients/Clients";
+import Clients from "../components/Clients/Clients";
 const Home = () => {
   return (
     <Layout>
@@ -20,7 +20,7 @@ const Home = () => {
         {/* <Carousel /> */}
         <BusinessModel />
         <TwoSection />
-        {/*<Clients />*/}
+        <Clients />
         {/*<BgAnimation/>*/}
       </Section>
     </Layout>
