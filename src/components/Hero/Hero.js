@@ -1,16 +1,7 @@
 import React, { useRef } from "react";
 import Lottie from "react-lottie-player";
 import lottieJson from "../../animation/38834-service-animation.json";
-import {
-  HeadingSection,
-  LeftSection,
-  RightSection,
-  SubHeadingSection,
-  MaininputBox,
-  InputBox,
-  ButtonBox,
-  MainSection,
-} from "./HeroStyles";
+import { HeadingSection } from "./HeroStyles";
 
 const Hero = () => {
   const ref = useRef(null);
@@ -21,39 +12,35 @@ const Hero = () => {
     }
   };
   return (
-    <MainSection>
-      <LeftSection>
-        <HeadingSection>
+    <div className="flex justify-between my-20">
+      <div className="w-6/12">
+        <HeadingSection className="font-extrabold text-8xl leading-tight tracking-tighter">
           Let's Build Something amazing with three arrow thechnologies
         </HeadingSection>
-        <SubHeadingSection>
+        <div className="text-3xl w-9/12 leading-normal">
           We design a road map towards the success of your Business in this
           Digital World.
-        </SubHeadingSection>
-        <MaininputBox>
-          <InputBox
-            className="p-8"
+        </div>
+        <div className="flex flex-row mt-32">
+          <input
+            className="p-8 w-9/12 h-28 rounded-bl-lg rounded-tl-lg bg-[#052d56] focus:outline-none"
             type="text"
             placeholder="Your Email Address"
-          ></InputBox>
-          <ButtonBox>Get Started</ButtonBox>
-        </MaininputBox>
-      </LeftSection>
-      <RightSection>
-        {/*<Lottie*/}
-        {/*  src="https://assets5.lottiefiles.com/packages/lf20_y3qfynfr.json"*/}
-        {/*  background="transparent"*/}
-        {/*  speed="1"*/}
-        {/*  autoplay*/}
-        {/*/>*/}
+          />
+          <button className="w-3/12 text-white rounded-br-lg rounded-tr-lg bg-[#ff8a71]">
+            Get Started
+          </button>
+        </div>
+      </div>
+      <div className="w-6/12 flex justify-center">
         <Lottie
           ref={(c) => startLottieAnim(c)}
           animationData={lottieJson}
           play
-          style={{ width: "457px", height: "457px" }}
+          className="w-9/12"
         />
-      </RightSection>
-    </MainSection>
+      </div>
+    </div>
   );
 };
 

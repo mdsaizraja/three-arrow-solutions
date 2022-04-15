@@ -1,54 +1,48 @@
 import React from "react";
-import {
-  MainContentBox,
-  Title,
-  RightSection,
-  LeftSection,
-  Para,
-} from "./AboutUsStyles";
+import { MainContentBox } from "./AboutUsStyles";
 import { TextTopBorder, HeadingTitle } from "../../styles/GlobalComponents";
 const AboutUs = () => {
   return (
-    <MainContentBox className="p-16 mt-14">
-      <LeftSection>
+    <MainContentBox className="p-20 mt-48 flex">
+      <div className="w-7/12">
         <HeadingTitle>Who we are</HeadingTitle>
-        <div className="flex" style={{ marginTop: "100px" }}>
-          <div className="w-96">
-            <Title>
-              <TextTopBorder SpacebtText="30px">Digi</TextTopBorder>
+        <div className="flex mt-28">
+          <div className="w-5/12">
+            <h3 className="text-white text-4xl leading-loose">
+              <TextTopBorder SpacebtText="10px">Digi</TextTopBorder>
               tal Marketing
-            </Title>
-            <Para>
+            </h3>
+            <p className="mt-14 leading-relaxed">
               We so opinion friends me message as delight. Whole front do of
               plate heard on ouoght.
-            </Para>
+            </p>
           </div>
         </div>
-        <div className="flex justify-between  mt-24">
+        <div className="flex justify-between  mt-36">
           <div className="w-5/12">
-            <Title>
-              <TextTopBorder SpacebtText="30px">App</TextTopBorder> development
-            </Title>
-            <Para>
+            <h3 className="text-white text-4xl leading-loose">
+              <TextTopBorder SpacebtText="10px">App</TextTopBorder> development
+            </h3>
+            <p className="mt-14 leading-relaxed">
               At jointure ladyship an insisted so humanity he. Friendly bachelor
               entrance to on by. As put impossible own appartments b.
-            </Para>
+            </p>
           </div>
           <div className="w-5/12">
-            <Title>
-              <TextTopBorder SpacebtText="30px">Web</TextTopBorder>site
+            <h3 className="text-white text-4xl leading-loose">
+              <TextTopBorder SpacebtText="10px">Web</TextTopBorder>site
               development
-            </Title>
-            <Para>
+            </h3>
+            <p className="mt-14 leading-relaxed">
               At jointure ladyship an insisted so humanity he. Friendly bachelor
               entrance to on by. As put impossible own appartments b.
-            </Para>
+            </p>
           </div>
         </div>
-      </LeftSection>
-      <RightSection>
+      </div>
+      <div className="w-5/12">
         <img src="/images/undraw_video_upload_3d4u 1.png" />
-      </RightSection>
+      </div>
       <div></div>
     </MainContentBox>
   );
