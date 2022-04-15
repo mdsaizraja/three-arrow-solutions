@@ -10,22 +10,26 @@ import BusinessModel from "../components/Business Model/BusinessModel";
 import TwoSection from "../components/TwoSection/TwoSection";
 import Clients from "../components/Clients/Clients";
 import Blog from "../components/Blog/Blog";
+
 const Home = () => {
   return (
-    <Layout>
-      <Section>
-        <Hero />
-        <AboutUs />
-        <OurService />
-        <GitHubSection />
-        <Carousel />
-        <BusinessModel />
-        <TwoSection />
-        <Clients />
-        <Blog />
-        {/*<BgAnimation/>*/}
-      </Section>
-    </Layout>
+    <>
+      <Layout>
+        <Section>
+          <Hero />
+          <AboutUs />
+          <OurService />
+          <GitHubSection />
+          <Carousel />
+          <BusinessModel />
+          <TwoSection />
+          <Clients />
+          {/* <Blog /> */}
+
+          {/*<BgAnimation/>*/}
+        </Section>
+      </Layout>
+    </>
   );
 };
 
