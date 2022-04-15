@@ -1,10 +1,9 @@
 import React, { useRef } from "react";
 import Lottie from "react-lottie-player";
-import lottieJson from "../../animation/38834-service-animation.json";
+import lottieJson from "../../animation/lf20_fjv8qxqn.json";
 import { HeadingSection } from "./HeroStyles";
 
 const Hero = () => {
-  const ref = useRef(null);
   const startLottieAnim = (anim) => {
     this.lottieAnim = anim;
     if (anim) {

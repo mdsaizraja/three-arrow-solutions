@@ -4,8 +4,6 @@ import { autoPlay } from "react-swipeable-views-utils";
 
 import Pagination from "./PaginationDot.js";
 
-//mport "./styles.css";
-
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Carousel = () => {
@@ -36,7 +34,7 @@ const Carousel = () => {
             </div>
           </div>
           <div className="w-6/12 flex justify-center object-contain items-center">
-            <img src="/images/desktop portfolio.png" className="w-6/12 h-2/4" />
+            <img src="/images/desktop portfolio.png" alt='desktop portfolio.png' className="w-6/12 h-2/4" />
           </div>
         </div>
         <div className="flex bg-yellow-500 text-white">
@@ -57,7 +55,7 @@ const Carousel = () => {
             </div>
           </div>
           <div className="w-6/12 flex justify-center object-contain items-center">
-            <img src="/images/desktop portfolio.png" className="w-6/12 h-2/4" />
+            <img src="/images/desktop portfolio.png" alt='desktop portfolio.png' className="w-6/12 h-2/4" />
           </div>
         </div>
         <div className="flex bg-lime-500 text-white">
@@ -78,11 +76,11 @@ const Carousel = () => {
             </div>
           </div>
           <div className="w-6/12 flex justify-center object-contain items-center">
-            <img src="/images/desktop portfolio.png" className="w-6/12 h-2/4" />
+            <img src="/images/desktop portfolio.png" alt='desktop portfolio.png' className="w-6/12 h-2/4" />
           </div>
         </div>
       </AutoPlaySwipeableViews>
-      <Pagination dots={3} index={index} onChangeIndex={setIndex} />
+      <Pagination dots={3} index={index} onChangeIndex={setIndex} active onClick={console.log('in')}/>
     </div>
   );
 };
