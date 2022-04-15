@@ -1,50 +1,46 @@
 import React from "react";
-import {
-  LeftSection,
-  RightSection,
-  RightSubTitle,
-} from "./GitHubSectionStyles";
+
 import { TextTopBorder, HeadingTitle } from "../../styles/GlobalComponents";
 const GitHubSection = () => {
   return (
-    <div className="flex mt-40">
+    <div className="flex mt-52">
       <div className="w-7/12 pr-24">
         <HeadingTitle>Ut id tincidunt libero, ac luctus libero.</HeadingTitle>
-        <RightSubTitle>
+        <h2 className="font-black text-8xl leading-snug underline text-[#ff8a71]">
           Dribble
           <br /> Github
-        </RightSubTitle>
+        </h2>
       </div>
       <div className="flex flex-col">
         <div className="flex m-10 justify-between">
-          <LeftSection>
+          <div className="w-1/3 text-white font-black text-3xl leading-normal">
             <TextTopBorder SpacebtText="5px">Ut id</TextTopBorder> tincidunt
             libero tincidunt
-          </LeftSection>
-          <RightSection>
+          </div>
+          <div className="w-2/3 text-2xl leading-normal px-24">
             Curabitur vulputate dui dui, vel rutrum odio semper et. Cras non
             erat tempus, ornare enim nec, commodo eros. Pellentesque.
-          </RightSection>
+          </div>
         </div>
         <div className="flex m-10 justify-between">
-          <LeftSection>
+          <div className="w-1/3 text-white font-black text-3xl leading-normal">
             <TextTopBorder SpacebtText="5px">Ut id</TextTopBorder> tincidunt
             libero tincidunt
-          </LeftSection>
-          <RightSection>
+          </div>
+          <div className="w-2/3 text-2xl leading-normal px-24">
             Curabitur vulputate dui dui, vel rutrum odio semper et. Cras non
             erat tempus, ornare enim nec, commodo eros. Pellentesque.
-          </RightSection>
+          </div>
         </div>
         <div className="flex m-10 justify-between">
-          <LeftSection>
+          <div className="w-1/3 text-white font-black text-3xl leading-normal">
             <TextTopBorder SpacebtText="5px">Ut id</TextTopBorder> tincidunt
             libero tincidunt
-          </LeftSection>
-          <RightSection>
+          </div>
+          <div className="w-2/3 text-2xl leading-normal px-24">
             Curabitur vulputate dui dui, vel rutrum odio semper et. Cras non
             erat tempus, ornare enim nec, commodo eros. Pellentesque.
-          </RightSection>
+          </div>
         </div>
       </div>
     </div>

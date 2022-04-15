@@ -9,6 +9,7 @@ import Carousel from "../components/Carousel/Carousel";
 import BusinessModel from "../components/Business Model/BusinessModel";
 import TwoSection from "../components/TwoSection/TwoSection";
 import Clients from "../components/Clients/Clients";
+import Blog from "../components/Blog/Blog";
 const Home = () => {
   return (
     <Layout>
@@ -17,10 +18,11 @@ const Home = () => {
         <AboutUs />
         <OurService />
         <GitHubSection />
-        {/* <Carousel /> */}
+        <Carousel />
         <BusinessModel />
         <TwoSection />
         <Clients />
+        <Blog />
         {/*<BgAnimation/>*/}
       </Section>
     </Layout>

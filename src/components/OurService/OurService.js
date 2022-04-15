@@ -1,5 +1,5 @@
 import React from "react";
-import { TalkExpertBox, TalkButton } from "./OurServiceStyles";
+import { TalkExpertBox } from "./OurServiceStyles";
 import { HeadingTitle } from "../../styles/GlobalComponents";
 import { FaReact, FaAngular, FaNodeJs } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
@@ -8,8 +8,8 @@ import { AiFillGitlab } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 const OurService = () => {
   return (
-    <div className="my-44">
-      <HeadingTitle TextCenter="center"> OurService</HeadingTitle>
+    <div className="mt-52">
+      <HeadingTitle TextCenter="center"> Our Service</HeadingTitle>
       <div className="flex text-center text-gray-500 font-extrabold justify-between py-20">
         <div className="cursor-pointer transition-all delay-300 hover:text-white">
           <FaReact className="text-8xl" />
@@ -54,12 +54,12 @@ const OurService = () => {
             into an amazing digital product.
           </p>
         </div>
-        <TalkButton
-          className="flex text-white w-1/4 rounded-full m-24  cursor-pointer delay-75 duration-700 
+        <div
+          className="flex text-white w-1/4 rounded-full m-24 bg-black  cursor-pointer delay-75 justify-center duration-700 
          transition-all hover:bg-white hover:text-black"
         >
           <button className="font-extrabold">Talk to our Experts</button>
-        </TalkButton>
+        </div>
       </TalkExpertBox>
     </div>
   );

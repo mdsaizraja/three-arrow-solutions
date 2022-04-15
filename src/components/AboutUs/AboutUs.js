@@ -3,7 +3,7 @@ import { MainContentBox } from "./AboutUsStyles";
 import { TextTopBorder, HeadingTitle } from "../../styles/GlobalComponents";
 const AboutUs = () => {
   return (
-    <MainContentBox className="p-20 mt-48 flex">
+    <MainContentBox className="p-20 mt-52 flex">
       <div className="w-7/12">
         <HeadingTitle>Who we are</HeadingTitle>
         <div className="flex mt-28">

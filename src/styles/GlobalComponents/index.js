@@ -321,7 +321,7 @@ export const HeadingTitle = styled.h1`
   text-align: ${(props) => props.TextCenter};
   background: ${(props) =>
     props.TextCenter === "center"
-      ? "linear-gradient(91deg,#ae67fa 48.16%,#f49867 54.67%)"
+      ? "linear-gradient(91deg,#ae67fa 49.16%,#f49867 51.67%)"
       : "linear-gradient(91deg, #ae67fa 8.16%, #f49867 20.67%)"};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
