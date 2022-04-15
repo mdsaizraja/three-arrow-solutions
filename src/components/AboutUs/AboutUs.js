@@ -42,10 +42,10 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="w-5/12">
+      <div className="w-5/12 p-20">
         <img
           src="/images/undraw_video_upload_3d4u 1.png"
-          className="cursor-pointer"
+          className="cursor-pointer transition-all duration-700 delay-150 hover:p-5"
           onClick={() => setShowModal(true)}
         />
       </div>
