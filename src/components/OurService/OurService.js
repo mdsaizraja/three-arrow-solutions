@@ -38,8 +38,11 @@ const OurService = () => {
         </div>
       </div>
       <div className="mt-10 flex justify-center">
-        <div className="text-white border-2 flex justify-around rounded-full p-2 w-80 cursor-pointer delay-75 duration-700 transition-all hover:bg-white hover:text-black">
-          <button>All Services</button>
+        <div
+          className="text-white border-2 flex justify-around rounded-full p-2 w-80 cursor-pointer delay-75 duration-700 
+         transition-all hover:bg-white hover:text-black"
+        >
+          <button className="font-extrabold">All Services</button>
           <BsArrowRight className="text-5xl" />
         </div>
       </div>
@@ -51,8 +54,11 @@ const OurService = () => {
             into an amazing digital product.
           </p>
         </div>
-        <TalkButton className="flex text-white w-1/4">
-          <button>Talk to our Experts</button>
+        <TalkButton
+          className="flex text-white w-1/4 rounded-full m-24  cursor-pointer delay-75 duration-700 
+         transition-all hover:bg-white hover:text-black"
+        >
+          <button className="font-extrabold">Talk to our Experts</button>
         </TalkButton>
       </TalkExpertBox>
     </div>

@@ -7,9 +7,8 @@ export const TalkExpertBox = styled.div`
 export const TalkButton = styled.div`
  
   justify-content: center;
-  border-radius: 40px;
-  padding: 15px;
+
   background: black;
-  margin: 50px;
+ 
 }
 `;

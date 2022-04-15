@@ -319,7 +319,10 @@ export const HeadingTitle = styled.h1`
   font-size: 34px;
   line-height: 45px;
   text-align: ${(props) => props.TextCenter};
-  background: linear-gradient(99.97deg, #ae67fa -10.84%, #f49867 102.67%);
+  background: ${(props) =>
+    props.TextCenter === "center"
+      ? "linear-gradient(91deg,#ae67fa 48.16%,#f49867 54.67%)"
+      : "linear-gradient(91deg, #ae67fa 8.16%, #f49867 20.67%)"};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
