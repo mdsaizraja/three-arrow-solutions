@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 const styles = {
   root: {
     flexGrow: 1,
-
     cursor: "pointer",
     border: 0,
     background: "none",
