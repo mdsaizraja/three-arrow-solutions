@@ -9,7 +9,9 @@ const NavSlideBar = () => {
       {" "}
       <div
         value={index}
-        className="text-white flex relative border-b-2 border-gray-500 justify-around text-center cursor-pointer  bg-transparent py-5 "
+        className="text-white flex relative border-b-2 
+        border-gray-500 justify-around text-center cursor-pointer
+          bg-transparent py-5 "
       >
         <div onClick={() => SetIndex(0)} className={`w-1/3`}>
           Time wise model
@@ -29,7 +31,7 @@ const NavSlideBar = () => {
               : index === 2
               ? "3/4 right-0"
               : ""
-          } -bottom-1 transition-all duration-700 delay-150`}
+          } -bottom-1 transition-all duration-1000 ease-in delay-1000`}
         ></TextBottomBorder>
       </div>
       <SwipeableViews index={index}>

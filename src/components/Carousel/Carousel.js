@@ -10,7 +10,7 @@ const Carousel = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="mt-52">
+    <div className="mt-52 relative">
       <AutoPlaySwipeableViews
         index={index}
         onChangeIndex={setIndex}
@@ -34,7 +34,11 @@ const Carousel = () => {
             </div>
           </div>
           <div className="w-6/12 flex justify-center object-contain items-center">
-            <img src="/images/desktop portfolio.png" alt='desktop portfolio.png' className="w-6/12 h-2/4" />
+            <img
+              src="/images/desktop portfolio.png"
+              alt="desktop portfolio.png"
+              className="w-6/12 h-2/4"
+            />
           </div>
         </div>
         <div className="flex bg-yellow-500 text-white">
@@ -55,7 +59,11 @@ const Carousel = () => {
             </div>
           </div>
           <div className="w-6/12 flex justify-center object-contain items-center">
-            <img src="/images/desktop portfolio.png" alt='desktop portfolio.png' className="w-6/12 h-2/4" />
+            <img
+              src="/images/desktop portfolio.png"
+              alt="desktop portfolio.png"
+              className="w-6/12 h-2/4"
+            />
           </div>
         </div>
         <div className="flex bg-lime-500 text-white">
@@ -76,11 +84,34 @@ const Carousel = () => {
             </div>
           </div>
           <div className="w-6/12 flex justify-center object-contain items-center">
-            <img src="/images/desktop portfolio.png" alt='desktop portfolio.png' className="w-6/12 h-2/4" />
+            <img
+              src="/images/desktop portfolio.png"
+              alt="desktop portfolio.png"
+              className="w-6/12 h-2/4"
+            />
           </div>
         </div>
       </AutoPlaySwipeableViews>
-      <Pagination dots={3} index={index} onChangeIndex={setIndex} active onClick={console.log('in')}/>
+      <div className="absolute left-2/4 top-[90%]">
+        <span
+          className={` rounded-full h-5 w-5 inline-block mx-1 cursor-pointer ${
+            index === 0 ? "bg-white" : "bg-slate-400"
+          }`}
+          onClick={() => setIndex(0)}
+        ></span>
+        <span
+          className={` rounded-full h-5 w-5 inline-block mx-1 cursor-pointer ${
+            index === 1 ? "bg-white" : "bg-slate-400"
+          }`}
+          onClick={() => setIndex(1)}
+        ></span>
+        <span
+          className={` rounded-full h-5 w-5 inline-block mx-1 cursor-pointer ${
+            index === 2 ? "bg-white" : "bg-slate-400"
+          }`}
+          onClick={() => setIndex(2)}
+        ></span>
+      </div>
     </div>
   );
 };
