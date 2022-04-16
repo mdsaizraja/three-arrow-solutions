@@ -4,7 +4,7 @@ import { HeadingTitle } from "../../styles/GlobalComponents";
 const BusinessModel = () => {
   return (
     <div className="mt-52">
-      <HeadingTitle TextCenter="center">Business Model</HeadingTitle>
+      <HeadingTitle TextCenter="center">BusinessModel</HeadingTitle>
       <div className="flex  mt-28">
         <div className="w-2/5">
           <NavSlideBar />

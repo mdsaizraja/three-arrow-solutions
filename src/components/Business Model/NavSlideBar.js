@@ -21,10 +21,15 @@ const NavSlideBar = () => {
           Hire team
         </div>
         <TextBottomBorder
-          className={`border-b-2  absolute w-1/3 transition-all duration-1000  
-         left-${
-           index === 0 ? "0" : index === 1 ? "1/3" : index === 2 ? "[67%]" : ""
-         }  -bottom-1`}
+          className={`border-b-2  absolute w-1/3  left-${
+            index === 0
+              ? "0"
+              : index === 1
+              ? "1/3"
+              : index === 2
+              ? "3/4 right-0"
+              : ""
+          } -bottom-1 transition-all duration-700 delay-150`}
         ></TextBottomBorder>
       </div>
       <SwipeableViews index={index}>

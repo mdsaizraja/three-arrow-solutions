@@ -24,7 +24,7 @@ const Home = () => {
           <BusinessModel />
           <TwoSection />
           <Clients />
-          {/* <Blog /> */}
+          <Blog />
 
           {/*<BgAnimation/>*/}
         </Section>

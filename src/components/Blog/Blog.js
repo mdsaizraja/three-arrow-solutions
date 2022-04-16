@@ -6,7 +6,94 @@ const Blog = () => {
       <HeadingSection className="font-extrabold text-8xl leading-tight tracking-wide w-3/5">
         A lot is happening, We are blogging about it.
       </HeadingSection>
-      <div class="container mx-auto px-4">
+      <div class="grid grid-rows-2 mt-40 text-white  grid-flow-col gap-24 w-full">
+        <div class="row-span-2 col-span-3  bg-[#042C54] text-white">
+          <div className="max-w-fit flex flex-col">
+            <img src="/images/Rectangle 22.jpg" />
+            <div className="relative h-96 p-10">
+              <div className="absolute px-10 leading-normal">
+                <h5 className="text-2xl">Sep 26, 2021</h5>
+                <p className="font-extrabold text-5xl">
+                  Curabitur vulputate dui dui, vel rutrum odio semper et.
+                </p>
+                <div className="text-2xl relative top-28">
+                  Read Full Article
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-3 grid-flow-row grid-rows-2  flex justify-around ">
+          <div className="w-2/5 bg-[#042C54]">
+            <div className="max-w-fit flex flex-col">
+              <img src="/images/Rectangle 22 (1).jpg" />
+              <div className="relative ">
+                <div className="absolute p-7">
+                  <h5 className="text-xl">Sep 26, 2021</h5>
+                  <p className="font-extrabold text-3xl">
+                    Curabitur vulputate dui dui, vel rutrum odio semper et.
+                  </p>
+                  <div className="relative top-16 text-xl">
+                    Read Full Article
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+          </div>{" "}
+          <div className="w-2/5 bg-[#042C54]">
+            <div className="max-w-fit flex flex-col">
+              <img src="/images/Rectangle 22 (2).jpg" />
+              <div className="relative ">
+                <div className="absolute p-7">
+                  <h5 className="text-xl">Sep 26, 2021</h5>
+                  <p className="font-extrabold text-3xl">
+                    Curabitur vulputate dui dui, vel rutrum odio semper et.
+                  </p>
+                  <div className="relative top-16 text-xl">
+                    Read Full Article
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+          </div>
+        </div>
+        <div class="col-span-3 grid-flow-row grid-rows-2 flex justify-around ">
+          <div className="w-2/5 bg-[#042C54]">
+            <div className="max-w-fit flex flex-col">
+              <img src="/images/Rectangle 22 (3).jpg" />
+              <div className="relative ">
+                <div className="absolute p-7">
+                  <h5 className="text-xl">Sep 26, 2021</h5>
+                  <p className="font-extrabold text-3xl">
+                    Curabitur vulputate dui dui, vel rutrum odio semper et.
+                  </p>
+                  <div className="relative top-16 text-xl">
+                    Read Full Article
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+          </div>{" "}
+          <div className="w-2/5 bg-[#042C54]">
+            <div className="max-w-fit flex flex-col">
+              <img src="/images/Rectangle 22 (4).jpg" />
+              <div className="relative ">
+                <div className="absolute p-7">
+                  <h5 className="text-xl">Sep 26, 2021</h5>
+                  <p className="font-extrabold text-3xl">
+                    Curabitur vulputate dui dui, vel rutrum odio semper et.
+                  </p>
+                  <div className="relative top-16 text-xl">
+                    Read Full Article
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+          </div>
+        </div>
+      </div>
+
+      {/* <div class="container mx-auto px-4">
         <section class="py-8 px-4">
           <div class="flex flex-wrap -mx-4">
             <div class="hidden md:block md:w-1/2 px-4">
@@ -173,7 +260,7 @@ const Blog = () => {
             </section>
           </div>
         </section>
-      </div>
+      </div> */}
 
       {/* <div className="flex">
         <div className="w-2/5">
