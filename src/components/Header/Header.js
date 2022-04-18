@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import { SiAirchina } from "react-icons/si";
 import { GiStripedSun } from "react-icons/gi";
 import { RiMenu4Fill, RiSunFill } from "react-icons/ri";
 
-import { NavLink, SocialIcons, Span } from "./HeaderStyles";
+import { NavLink, SocialIcons, Span, Wrapper, HeaderDiv } from "./HeaderStyles";
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleNav = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const renderThemeChanger = () => {
     const currentTheme = theme === "system" ? systemTheme : theme;
@@ -40,6 +45,7 @@ const Header = () => {
           <SocialIcons>
             <RiMenu4Fill className="text-black dark:text-white" />
           </SocialIcons>
+          <div></div>
           {/*<Link href='https://github.com/Nishant88277'>*/}
           {/*    <SocialIcons><AiFillGithub/></SocialIcons>*/}
           {/*</Link>*/}
