@@ -1,6 +1,7 @@
 import { data } from "../../data";
 import React from "react";
 import { HeadingSection } from "./BlogStyles";
+
 const Blog = () => {
   return (
     <div className="mt-52">
