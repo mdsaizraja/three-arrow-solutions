@@ -16,7 +16,7 @@ const Hero = () => {
         <HeadingSection
           className={`font-extrabold text-8xl leading-tight tracking-tighter `}
         >
-          Let's Build Something amazing with three arrow thechnologies
+          Let's Build Something amazing with three arrow technologies
         </HeadingSection>
         <div
           className={`text-3xl w-9/12 leading-normal dark:text-[#81AFDD] text-black`}

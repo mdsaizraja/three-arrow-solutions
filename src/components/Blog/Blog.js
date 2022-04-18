@@ -48,40 +48,6 @@ const Blog = () => {
               );
           })}
         </div>
-        {/* <div class="col-span-3 grid-flow-row grid-rows-2 flex justify-around ">
-          <div className="w-2/5 bg-[#042C54]">
-            <div className="max-w-fit flex flex-col">
-              <img src="/images/Rectangle 22 (3).jpg" />
-              <div className="relative ">
-                <div className="absolute p-7">
-                  <h5 className="text-xl">Sep 26, 2021</h5>
-                  <p className="font-extrabold text-3xl">
-                    Curabitur vulputate dui dui, vel rutrum odio semper et.
-                  </p>
-                  <div className="relative top-16 text-xl">
-                    Read Full Article
-                  </div>
-                </div>
-              </div>
-            </div>{" "}
-          </div>{" "}
-          <div className="w-2/5 bg-[#042C54]">
-            <div className="max-w-fit flex flex-col">
-              <img src="/images/Rectangle 22 (4).jpg" />
-              <div className="relative ">
-                <div className="absolute p-7">
-                  <h5 className="text-xl">Sep 26, 2021</h5>
-                  <p className="font-extrabold text-3xl">
-                    Curabitur vulputate dui dui, vel rutrum odio semper et.
-                  </p>
-                  <div className="relative top-16 text-xl">
-                    Read Full Article
-                  </div>
-                </div>
-              </div>
-            </div>{" "}
-          </div> 
-        </div>*/}
       </div>
     </div>
   );
