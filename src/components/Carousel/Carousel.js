@@ -42,12 +42,12 @@ const Carousel = () => {
       <div className="absolute left-2/4 top-[90%]">
         {data.sliderCarusel.map((item, i) => {
           return (
-            <span
+            <span key={i}
               className={` rounded-full h-4 w-4 inline-block mx-1 cursor-pointer ${
                 index === i ? "bg-white" : "bg-slate-400"
               }`}
               onClick={() => setIndex(i)}
-            ></span>
+            />
           );
         })}
       </div>
