@@ -49,35 +49,35 @@ export const data = {
       Content:
         " Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.",
       imgsrc: "/images/desktop portfolio.png",
-      bgColor: "[#7563FD]",
+      bgColor: "bg-[#7563FD]",
     },
     {
       Heading: " Working as one single team with our clients.",
       Content:
         " Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.",
       imgsrc: "/images/desktop portfolio.png",
-      bgColor: "yellow-500",
+      bgColor: "bg-yellow-500",
     },
     {
       Heading: " Working as one single team with our clients.",
       Content:
         " Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.",
       imgsrc: "/images/desktop portfolio.png",
-      bgColor: "lime-500",
+      bgColor: "bg-lime-500",
     },
     {
       Heading: " Working as one single team with our clients.",
       Content:
         " Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.",
       imgsrc: "/images/desktop portfolio.png",
-      bgColor: "yellow-500",
+      bgColor: "bg-yellow-500",
     },
     {
       Heading: " Working as one single team with our clients.",
       Content:
         " Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.",
       imgsrc: "/images/desktop portfolio.png",
-      bgColor: "[#7563FD]",
+      bgColor: "bg-[#7563FD]",
     },
   ],
   buisnessModelSlider: [
