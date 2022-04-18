@@ -1,14 +1,17 @@
-import React from "react";
-
-import { ThemeProvider } from 'styled-components';
+import React, { useEffect } from "react";
+import { ThemeProvider } from "styled-components";
 import theme from "../themes/default";
-import GlobalStyles from './globals';
+import GlobalStyles from "./globals";
+import { useTheme } from "next-themes";
+const Theme = ({ children }) => {
+  const { themeMode } = useTheme();
 
-const Theme = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyles />
-    {children}
-  </ThemeProvider>
-);
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles themeMode={themeMode} />
+      {children}
+    </ThemeProvider>
+  );
+};
 
 export default Theme;
