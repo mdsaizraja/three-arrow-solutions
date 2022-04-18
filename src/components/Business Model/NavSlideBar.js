@@ -9,7 +9,7 @@ const NavSlideBar = () => {
       {" "}
       <div
         value={index}
-        className="text-white flex relative border-b-2 
+        className="dark:text-white text-black flex relative border-b-2 
         border-gray-500 justify-around text-center cursor-pointer
           bg-transparent py-5 "
       >

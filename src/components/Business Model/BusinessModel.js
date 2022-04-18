@@ -10,7 +10,7 @@ const BusinessModel = () => {
           <NavSlideBar />
         </div>
         <div className="w-3/5 flex justify-center items-center ">
-          <div className="w-7/12 text-white">
+          <div className="w-7/12 dark:text-white text-black">
             <h1 className="text-3xl leading-relaxed font-bold">
               Time wise model
             </h1>
