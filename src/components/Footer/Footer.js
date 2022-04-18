@@ -16,7 +16,7 @@ const Footer = () => {
         </button>
       </div>
       <div>
-        <div className="flex py-28">
+        <div className="flex py-28 container mx-auto">
           <div className="flex items-center font-bold w-2/5 pl-52">
             <SiAirchina size="50px" />
             <span className="ml-2 mt-2">Tech stagers</span>

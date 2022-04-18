@@ -16,7 +16,7 @@ const Carousel = () => {
       >
         {data.sliderCarusel.map((item, index) => {
           return (
-            <div key={index} className={`flex bg-${item.bgColor} text-white`}>
+            <div key={index} className={`flex ${item.bgColor} text-white`}>
               <div className="w-6/12 flex items-center p-28">
                 <div>
                   <h2 className="text-5xl font-extrabold w-3/4 leading-tight">
