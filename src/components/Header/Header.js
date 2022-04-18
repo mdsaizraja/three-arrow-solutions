@@ -17,7 +17,7 @@ const Header = () => {
     } else {
       return (
         <img
-          src="/images/dark_mode.png"
+          src="/images/dark mode.png"
           alt="dark_mode.png"
           width="25px"
           onClick={() => setTheme("dark")}

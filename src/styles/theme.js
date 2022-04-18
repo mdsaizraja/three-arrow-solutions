@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-
 import { ThemeProvider } from "styled-components";
 import theme from "../themes/default";
 import GlobalStyles from "./globals";
 import { useTheme } from "next-themes";
 const Theme = ({ children }) => {
-  const { systemTheme, themeMode, setTheme } = useTheme();
+  const { themeMode } = useTheme();
 
-  useEffect(() => {});
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles themeMode={themeMode} />

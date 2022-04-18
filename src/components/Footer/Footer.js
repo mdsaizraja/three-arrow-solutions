@@ -73,7 +73,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t-2 text-center p-10">
+        <div className="border-t-2 text-center p-10 border-[#BCC0CF]">
           © 2021 All rights reserved.
         </div>
       </div>
