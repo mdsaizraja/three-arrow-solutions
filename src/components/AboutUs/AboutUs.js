@@ -44,12 +44,13 @@ const AboutUs = () => {
       </div>
       <div className="w-5/12 p-20">
         <img
+            alt='undraw_video_upload_3d4u 1.png'
           src="/images/undraw_video_upload_3d4u 1.png"
           className="cursor-pointer transition-all duration-700 delay-150 hover:p-4"
           onClick={() => setShowModal(true)}
         />
       </div>
-      <div></div>
+      <div/>
       {showModal ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -72,14 +73,14 @@ const AboutUs = () => {
                       src="/Vedios/Odisha.mp4"
                       allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
-                    ></iframe>
+                    />
                   </p>
                 </div>
                 {/*footer*/}
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"/>
         </>
       ) : null}
     </MainContentBox>

@@ -7,10 +7,10 @@ const Blog = () => {
       <HeadingSection className="font-extrabold text-8xl leading-tight tracking-wide w-3/5">
         A lot is happening, We are blogging about it.
       </HeadingSection>
-      <div class="grid grid-rows-1 mt-40 text-white  grid-flow-col gap-24 w-full">
-        <div class="row-span-2 col-span-3  bg-[#042C54] text-white">
+      <div className="grid grid-rows-1 mt-40 text-white  grid-flow-col gap-24 w-full">
+        <div className="row-span-2 col-span-3  bg-[#042C54] text-white">
           <div className="max-w-fit flex flex-col">
-            <img src={data.blogs[0].imgsrc} />
+            <img alt={data.blogs[0].imgsrc} src={data.blogs[0].imgsrc} />
             <div className="relative h-96 p-10">
               <div className="absolute px-10 leading-normal">
                 <h5 className="text-2xl">{data.blogs[0].date}</h5>
@@ -24,13 +24,13 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div class="col-span-3 row-span-2 gap-y-32  flex justify-around flex-wrap ">
+        <div className="col-span-3 row-span-2 gap-y-32  flex justify-around flex-wrap ">
           {data.blogs.map((item, index) => {
             if (index !== 0)
               return (
                 <div key={index} className="w-2/5  bg-[#042C54]">
                   <div className="max-w-fit flex flex-col">
-                    <img src={item.imgsrc} />
+                    <img alt={item.imgsrc} src={item.imgsrc} />
                     <div className="relative ">
                       <div className="absolute p-7">
                         <h5 className="text-xl">{item.date}</h5>
