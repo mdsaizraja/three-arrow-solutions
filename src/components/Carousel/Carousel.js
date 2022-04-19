@@ -8,7 +8,7 @@ const Carousel = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="xl:mt-52 mt-20 relative ">
+    <div className="xl:mt-52 mt-20 relative md:mx-5 mx-0">
       <AutoPlaySwipeableViews
         index={index}
         onChangeIndex={setIndex}

@@ -4,7 +4,7 @@ import { HeadingSection } from "./BlogStyles";
 
 const Blog = () => {
   return (
-    <div className="xl:mt-52 mt-20">
+    <div className="xl:mt-52 mt-32 md:mx-5 mx-0">
       <HeadingSection className="font-extrabold xl:text-8xl md:text-7xl text-5xl leading-tight tracking-wide xl:w-3/5 pb-3">
         A lot is happening, We are blogging about it.
       </HeadingSection>

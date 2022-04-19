@@ -10,7 +10,7 @@ const AboutUs = () => {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = React.useState(false);
   return (
-    <MainContentBox className="xl:p-20 p-5  xl:mt-52 mt-20 xl:flex">
+    <MainContentBox className="xl:p-20  p-5  xl:mt-52 mt-20 xl:mx-0 md:mx-5 xl:flex">
       <div className="xl:w-7/12 md:w-full xl:p-0 xl:text-left text-center">
         <HeadingTitle>Who we are</HeadingTitle>
         <div className="xl:flex mt-28  hidden">
@@ -47,7 +47,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="xl:w-5/12 xl:p-20 p-10 md:w-full flex justify-center ">
+      <div className=" p-8 md:w-full flex justify-center ">
         <img
           alt="undraw_video_upload_3d4u 1.png"
           src="/images/undraw_video_upload_3d4u 1.png"
@@ -55,7 +55,7 @@ const AboutUs = () => {
           onClick={() => setShowModal(true)}
         />
       </div>
-      <div className="relative md:block xl:hidden pb-5">
+      <div className="relative md:block xl:hidden pb-12">
         <AutoPlaySwipeableViews
           index={index}
           onChangeIndex={setIndex}
@@ -91,7 +91,7 @@ const AboutUs = () => {
             </p>
           </div>
         </AutoPlaySwipeableViews>
-        <div className="absolute left-[45%] bottom-0">
+        <div className="absolute md:left-[45%] left-[40%] -bottom-2 ">
           <span
             className={` rounded-full h-4 w-4 inline-block mx-1 cursor-pointer ${
               index === 0 ? "bg-white" : "bg-slate-400"

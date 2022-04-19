@@ -11,7 +11,7 @@ const Clients = () => {
   return (
     <div className="xl:mt-52 mt-20">
       <HeadingTitle TextCenter="center">Clients</HeadingTitle>
-      <div className="xl:flex hidden flex-wrap  mt-32">
+      <div className="xl:flex hidden flex-wrap  xl:mt-32 mt-0">
         {data.client.map((item, index) => {
           return (
             <div
@@ -21,13 +21,13 @@ const Clients = () => {
               <img
                 alt={item.image}
                 src={item.image}
-                className="w-3/5 h-40 object-contain"
+                className="w-3/5 xl:h-40 object-contain"
               />
             </div>
           );
         })}
       </div>
-      <div className="xl:mt-52 mt-20 relative xl:hidden block">
+      <div className="xl:mt-52 mt-0 relative xl:hidden block ">
         <AutoPlaySwipeableViews
           index={index}
           onChangeIndex={setIndex}
@@ -37,18 +37,18 @@ const Clients = () => {
             return (
               <div
                 key={index}
-                className=" h-72 flex justify-center items-center"
+                className="xl:h-40 h-32 flex justify-center items-center"
               >
                 <img
                   alt={item.image}
                   src={item.image}
-                  className="w-3/5 h-40 object-contain"
+                  className="w-3/5 xl:h-40 h-32 object-contain"
                 />
               </div>
             );
           })}
         </AutoPlaySwipeableViews>
-        <div className="absolute xl:left-2/4 md:left-[40%] left-[30%] xl:top-[90%] bottom-5">
+        <div className="absolute xl:left-2/4 md:left-[43%] left-[27%] xl:top-[90%]  -bottom-[50%]">
           {data.client.map((item, i) => {
             return (
               <span

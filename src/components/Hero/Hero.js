@@ -11,7 +11,7 @@ const Hero = () => {
     }
   };
   return (
-    <div className="flex justify-between flex-wrap xl:my-20  xl:p-0">
+    <div className="flex justify-between flex-wrap xl:my-20  xl:p-0 md:mx-5 mx-0">
       <div className="md:w-full xl:w-6/12">
         <HeadingSection
           className={`font-extrabold xl:text-8xl  xl:leading-tight tracking-tighter py-4`}
