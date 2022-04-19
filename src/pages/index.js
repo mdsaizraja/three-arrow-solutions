@@ -25,8 +25,6 @@ const Home = () => {
           <TwoSection />
           <Clients />
           <Blog />
-
-          {/*<BgAnimation/>*/}
         </Section>
       </Layout>
     </>

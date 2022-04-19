@@ -107,23 +107,23 @@ export const data = {
       date: "Sep 26, 2021",
     },
     {
-      imgsrc: "/images/Rectangle 22 (1).png",
+      imgsrc: "/images/Rectangle 22.png",
       Heading: " Curabitur vulputate dui dui, vel rutrum odio semper et.",
       date: "Sep 26, 2021",
     },
     {
-      imgsrc: "/images/Rectangle 22 (2).png",
+      imgsrc: "/images/Rectangle 22.png",
       Heading: " Curabitur vulputate dui dui, vel rutrum odio semper et.",
       date: "Sep 26, 2021",
     },
     {
-      imgsrc: "/images/Rectangle 22 (3).png",
+      imgsrc: "/images/Rectangle 22.png",
       Heading: " Curabitur vulputate dui dui, vel rutrum odio semper et.",
       date: "Sep 26, 2021",
     },
 
     {
-      imgsrc: "/images/Rectangle 22 (4).png",
+      imgsrc: "/images/Rectangle 22.png",
       Heading: " Curabitur vulputate dui dui, vel rutrum odio semper et.",
       date: "Sep 26, 2021",
     },
