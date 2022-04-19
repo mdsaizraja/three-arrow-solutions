@@ -26,7 +26,7 @@ const Portfolio = () => {
       x: `+=${screenWidth * 1.5}`,
       ease: "none",
       repeat: -1,
-      duration: 20,
+      duration: 50,
       rotation: 0.1,
       modifiers: {
         x: (x) => {
