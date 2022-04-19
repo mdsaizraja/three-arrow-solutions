@@ -6,14 +6,14 @@ import { BsArrowRight } from "react-icons/bs";
 import { data } from "../../data";
 const OurService = () => {
   return (
-    <div className="mt-52">
+    <div className="xl:mt-52 mt-20">
       <HeadingTitle TextCenter="center"> Our Service</HeadingTitle>
-      <div className="flex text-center text-gray-500 font-extrabold justify-between py-20">
+      <div className="flex text-center xl:overflow-hidden overflow-auto text-gray-500 font-extrabold justify-between py-20">
         {data.services.map((item, index) => {
           return (
             <div
               key={index}
-              className="cursor-pointer transition-all delay-300 dark:hover:text-white hover:text-black "
+              className="xl:m-0 mx-8 cursor-pointer transition-all delay-300 dark:hover:text-white hover:text-black "
             >
               {item.icon}
               <br />
