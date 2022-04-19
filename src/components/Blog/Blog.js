@@ -4,34 +4,34 @@ import { HeadingSection } from "./BlogStyles";
 
 const Blog = () => {
   return (
-    <div className="mt-52">
-      <HeadingSection className="font-extrabold text-8xl leading-tight tracking-wide w-3/5">
+    <div className="xl:mt-52 mt-20">
+      <HeadingSection className="font-extrabold xl:text-8xl md:text-7xl text-5xl leading-tight tracking-wide xl:w-3/5 pb-3">
         A lot is happening, We are blogging about it.
       </HeadingSection>
-      <div className="grid grid-rows-1 mt-40 text-white  grid-flow-col gap-24 w-full">
+      <div className="grid grid-rows-1 xl:mt-40 mt-10 text-white  xl:grid-flow-col grid-flow-row gap-24 w-full">
         <div className="row-span-2 col-span-3  bg-[#042C54] text-white">
           <div
-            className="max-w-fit  flex flex-col"
+            className="xl:max-w-fit md:w-full  flex flex-col"
             style={{
               clipPath:
                 "polygon(0% 7%,10% 0%, 100% 0%, 100% 5%, 100% 95%, 95% 100%,5% 100%,0 95%)",
             }}
           >
             <img alt={data.blogs[0].imgsrc} src={data.blogs[0].imgsrc} />
-            <div className="relative h-96 p-10">
-              <div className="absolute px-10  leading-normal">
-                <h5 className="text-2xl">{data.blogs[0].date}</h5>
-                <p className="font-extrabold text-5xl">
+            <div className="relative h-96 xl:p-10 p-5">
+              <div className="absolute xl:px-10  leading-normal">
+                <h5 className="xl:text-2xl text-sm">{data.blogs[0].date}</h5>
+                <p className="font-extrabold xl:text-5xl">
                   {data.blogs[0].Heading}
                 </p>
-                <div className="text-2xl relative top-44">
+                <div className="xl:text-2xl text-sm relative top-44">
                   Read Full Article
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="col-span-3 row-span-2 gap-y-32  flex justify-around flex-wrap ">
+        <div className="col-span-3 row-span-2 gap-y-32 xl:flex hidden justify-around flex-wrap ">
           {data.blogs.map((item, index) => {
             if (index !== 0)
               return (
@@ -58,7 +58,29 @@ const Blog = () => {
                   </div>{" "}
                 </div>
               );
-          })}
+          })}{" "}
+        </div>
+        <div className="row-span-2 col-span-3 xl:hidden block bg-[#042C54] text-white">
+          <div
+            className=" md:w-full   flex flex-col"
+            style={{
+              clipPath:
+                "polygon(0% 7%,10% 0%, 100% 0%, 100% 5%, 100% 95%, 95% 100%,5% 100%,0 95%)",
+            }}
+          >
+            <img alt={data.blogs[1].imgsrc} src={data.blogs[1].imgsrc} />
+            <div className="relative h-96 xl:p-10 p-5">
+              <div className="absolute xl:px-10  leading-normal">
+                <h5 className="xl:text-2xl text-sm">{data.blogs[1].date}</h5>
+                <p className="font-extrabold xl:text-5xl">
+                  {data.blogs[1].Heading}
+                </p>
+                <div className="xl:text-2xl text-sm relative top-44">
+                  Read Full Article
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

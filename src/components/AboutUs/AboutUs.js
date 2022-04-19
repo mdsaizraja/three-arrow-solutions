@@ -10,8 +10,8 @@ const AboutUs = () => {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = React.useState(false);
   return (
-    <MainContentBox className="p-20 xl:mt-52 mt-20 xl:flex">
-      <div className="xl:w-7/12 md:w-full xl:p-0 px-10">
+    <MainContentBox className="xl:p-20 p-5  xl:mt-52 mt-20 xl:flex">
+      <div className="xl:w-7/12 md:w-full xl:p-0 xl:text-left text-center">
         <HeadingTitle>Who we are</HeadingTitle>
         <div className="xl:flex mt-28  hidden">
           <div className="w-5/12">
@@ -47,15 +47,15 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="xl:w-5/12 xl:p-20 p-10 md:w-full">
+      <div className="xl:w-5/12 xl:p-20 p-10 md:w-full flex justify-center ">
         <img
           alt="undraw_video_upload_3d4u 1.png"
           src="/images/undraw_video_upload_3d4u 1.png"
-          className="cursor-pointer transition-all duration-700 delay-150 hover:p-4"
+          className="cursor-pointer md:max-w-[500px] md:max-h-[400px] "
           onClick={() => setShowModal(true)}
         />
       </div>
-      <div className="relative md:block xl:hidden">
+      <div className="relative md:block xl:hidden pb-5">
         <AutoPlaySwipeableViews
           index={index}
           onChangeIndex={setIndex}
@@ -66,7 +66,7 @@ const AboutUs = () => {
               <TextTopBorder SpacebtText="5px">Digi</TextTopBorder>
               tal Marketing
             </h3>
-            <p className="mt-14 leading-relaxed">
+            <p className="mt-5 leading-relaxed">
               We so opinion friends me message as delight. Whole front do of
               plate heard on ouoght.
             </p>
@@ -75,7 +75,7 @@ const AboutUs = () => {
             <h3 className="text-white text-4xl leading-loose">
               <TextTopBorder SpacebtText="5px">App</TextTopBorder> development
             </h3>
-            <p className="mt-14 leading-relaxed">
+            <p className="mt-5 leading-relaxed">
               At jointure ladyship an insisted so humanity he. Friendly bachelor
               entrance to on by. As put impossible own appartments b.
             </p>
@@ -85,13 +85,13 @@ const AboutUs = () => {
               <TextTopBorder SpacebtText="5px">Web</TextTopBorder>site
               development
             </h3>
-            <p className="mt-14 leading-relaxed">
+            <p className="mt-5 leading-relaxed">
               At jointure ladyship an insisted so humanity he. Friendly bachelor
               entrance to on by. As put impossible own appartments b.
             </p>
           </div>
         </AutoPlaySwipeableViews>
-        <div className="absolute left-[45%] -bottom-10">
+        <div className="absolute left-[45%] bottom-0">
           <span
             className={` rounded-full h-4 w-4 inline-block mx-1 cursor-pointer ${
               index === 0 ? "bg-white" : "bg-slate-400"

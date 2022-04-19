@@ -7,15 +7,19 @@ const NavSlideBar = () => {
   let count = 0;
   return (
     <>
-      <div className="w-2/5">
+      <div className="xl:w-2/5">
         <div
           className="dark:text-white text-black flex relative border-b-2 
         border-gray-500 justify-around text-center cursor-pointer
-          bg-transparent py-5 w-full"
+          bg-transparent py-5  w-full "
         >
           {data.buisnessModelSlider.map((item, index) => {
             return (
-              <div key={index} onClick={() => SetIndex(index)} className={`w-3/12`}>
+              <div
+                key={index}
+                onClick={() => SetIndex(index)}
+                className={`xl:w-3/12 w-10`}
+              >
                 {item.Heading}
                 <span style={{ display: "none" }}>{count++}</span>
               </div>
@@ -33,7 +37,7 @@ const NavSlideBar = () => {
             return (
               <div
                 key={index}
-                className="flex justify-center object-contain p-10"
+                className=" xl:flex hidden justify-center object-contain p-10"
               >
                 <img alt={item.imgsrc} src={item.imgsrc} />
               </div>
@@ -41,7 +45,7 @@ const NavSlideBar = () => {
           })}
         </SwipeableViews>
       </div>
-      <div className="w-2/4 flex items-center">
+      <div className="xl:w-2/4 flex items-center">
         {" "}
         <SwipeableViews index={index}>
           {data.buisnessModelSlider.map((item, index) => {

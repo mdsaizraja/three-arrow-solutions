@@ -18,24 +18,31 @@ const Carousel = () => {
           return (
             <div
               key={index}
-              className={`xl:flex ${item.bgColor} text-white xl:py-0 py-20`}
+              className={`xl:flex ${item.bgColor} text-white xl:pb-0 pb-24`}
             >
               <div className="xl:w-6/12 flex items-center xl:p-28 p-10">
                 <div>
-                  <h2 className="text-5xl font-extrabold xl:w-3/4 leading-tight">
+                  <h2 className="xl:text-5xl text-4xl font-extrabold xl:w-3/4 leading-tight">
                     {item.Heading}
                   </h2>
-                  <p className="my-12 leading-normal">{item.Content}</p>
-                  <button className="bg-[#313A5A] py-6 px-24 rounded-full my-14 xl:mx-0 mx-[15%] transition-all delay-100 duration-700 text-xl   hover:text-white hover:bg-black">
-                    View Project
-                  </button>
+                  <p className="xl:my-12 my-1 leading-normal">{item.Content}</p>
+                  <div className=" flex justify-center xl:justify-start">
+                    <button
+                      className="bg-[#313A5A] xl:py-6 xl:px-24 py-5 px-16 rounded-full 
+                    my-14 xl:mx-0 mx-[15%] 
+                  transition-all delay-100 duration-700 text-xl 
+                   hover:text-white hover:bg-black"
+                    >
+                      View Project
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="xl:w-6/12 flex justify-center object-contain items-center">
                 <img
                   src={item.imgsrc}
                   alt="desktop portfolio.png"
-                  className="w-6/12 h-2/4"
+                  className="w-6/12 h-2/4 max-h-[250px] max-w-[350px]"
                 />
               </div>
             </div>

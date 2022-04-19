@@ -4,26 +4,30 @@ import { HeadingSection } from "./FooterStyles";
 import { SiAirchina } from "react-icons/si";
 const Footer = () => {
   return (
-    <div className="mt-52 bg-[#031B34] text-white">
-      <div className="px-96 py-10">
-        <HeadingSection className=" font-extrabold text-7xl text-center leading-tight tracking-wide ">
+    <div className="xl:mt-52 mt-20 bg-[#031B34] overflow-hidden text-white">
+      <div className="xl:hidden items-center font-bold flex justify-center pt-8 ">
+        <SiAirchina size="50px" />
+        <span className="ml-2 mt-2">Tech stagers</span>
+      </div>
+      <div className="xl:px-96 xl:py-10 px-5">
+        <HeadingSection className=" font-extrabold xl:text-7xl text-6xl xl:text-center text-left leading-tight tracking-wide py-3">
           We are just few steps away to help you grow in this digital world.
         </HeadingSection>
       </div>
       <div className="flex justify-center">
-        <button className="border-2 p-8 transition-all delay-100 duration-700    hover:text-black hover:bg-white">
-          Request Early Accesss
+        <button className="border-2 px-20 py-6 transition-all delay-100 duration-700  rounded-full  hover:text-black hover:bg-white">
+          Let's discuss
         </button>
       </div>
       <div>
-        <div className="flex py-28 container mx-auto">
-          <div className="flex items-center font-bold w-2/5 pl-52">
+        <div className="flex py-28 flex-wrap gap-y-10 mx-auto px-5">
+          <div className="xl:flex items-center font-bold w-2/5 pl-52 hidden ">
             <SiAirchina size="50px" />
             <span className="ml-2 mt-2">Tech stagers</span>
           </div>
-          <div className="w-1/5">
+          <div className="xl:w-1/5 w-1/2">
             <ul className="leading-relaxed">
-              <li className="my-6">
+              <li className="my-6 font-extrabold">
                 <a href="#">Links</a>
               </li>
               <li className="my-6">
@@ -40,9 +44,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-1/5">
+          <div className="xl:w-1/5 w-1/2">
             <ul className="leading-relaxed">
-              <li className="my-6">
+              <li className="my-6 font-extrabold">
                 <a href="#">Company</a>
               </li>
               <li className="my-6">
@@ -56,9 +60,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-1/5">
+          <div className="xl:w-1/5 w-1/2">
             <ul className="leading-relaxed">
-              <li className="my-6">
+              <li className="my-6 font-extrabold">
                 <a href="#">Get in touch</a>
               </li>
               <li className="my-6">
