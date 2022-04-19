@@ -1,91 +1,89 @@
-import {  useRef, useState, useLayoutEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { Layout } from "./../../layout/Layout";
-import { Text, Container } from "./PortfolioStyles";
+import { Layout } from "../../layout/Layout";
 
-const PortFolio = () => {
-  const horizontal = useRef();
-  const horizontalTwo = useRef();
-  const horizontalThree = useRef();
-  const horizontalFour = useRef();
-  const horizontalFive = useRef();
-  const [width, setWidth] = useState();
+const marqueeTexts = [
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+];
 
-  useLayoutEffect(() => {
-    setWidth(window.innerWidth);
-  });
+const Portfolio = () => {
+  const marqueeElements = useRef([]);
+  const [screenWidth, setScreenWidth] = useState(typeof window !== "undefined" && window.innerWidth);
+  const marqueeTween = useRef();
 
-  const FirstHalf = () => {
-    gsap.to(
-      [horizontal.current, horizontalThree.current, horizontalFive.current],
-      {
-        x: -width,
-        duration: 8,
-        repeat: -1,
-        ease: "none",
-        left: "100%",
-      }
-    );
-  };
-  const FirstHalfPause = () => {
-    console.log("Firsthalfpause")
-    gsap.to(
-      [horizontal.current, horizontalThree.current, horizontalFive.current],
-      {
-        paused: true,
-      }
-    );
-  };
+  useEffect(() => {
+    resizeHandler();
+    window.addEventListener("resize", resizeHandler);
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
+  }, []);
 
-  const SecondHalf = () => {
-    gsap.to([horizontalTwo.current, horizontalFour.current], {
-      x: width,
-      duration: 8,
-      repeat: -1,
+  useEffect(() => {
+    marqueeInitialSet();
+    marqueeTween.current && marqueeTween.current.pause().kill();
+    marqueeTween.current = gsap.to(marqueeElements.current, {
+      x: `+=${screenWidth * 1.5}`,
       ease: "none",
-      left: "100%",
+      repeat: -1,
+      duration: 20,
+      rotation: 0.1,
+      modifiers: {
+        x: (x) => {
+          return (parseFloat(x) % (screenWidth * 1.5)) + "px";
+        }
+      }
+    });
+  }, [screenWidth]);
+
+  const marqueeInitialSet = () => {
+    gsap.set(marqueeElements.current, {
+      xPercent: -100,
+      x: function (index) {
+        return (screenWidth / 2) * index;
+      }
     });
   };
 
-  const SecondHalfPause = () => {
-    console.log("Secondhalfpause")
-    gsap.to([horizontalTwo.current, horizontalFour.current], {
-      paused: true,
-    });
+  const resizeHandler = () => {
+    gsap.set(marqueeElements.current, { clearProps: "all" });
+    setScreenWidth(window.innerWidth);
   };
 
+  const marqueeElementsRefHandler = (e, i) => {
+    marqueeElements.current[i] = e;
+  };
+
+  const renderMarqueeElements = () => {
+    if (marqueeTexts.length === 1) {
+      marqueeTexts[2] = marqueeTexts[1] = marqueeTexts[0];
+    }
+    if (marqueeTexts.length === 2) {
+      marqueeTexts[2] = marqueeTexts[0];
+    }
+
+    return marqueeTexts.map((e, i) => (
+        <p
+            onMouseEnter={() => marqueeTween.current.pause()}
+            onMouseLeave={() => marqueeTween.current.play()}
+            className=" text-center px-4 text-2xl font-semibold absolute pin-l w-1/2"
+            key={`marquee-${i}`}
+            ref={(el) => marqueeElementsRefHandler(el, i)}
+        >
+          {e}
+        </p>
+    ));
+  };
   return (
-    <Layout>
-      <Container>
-        <h1 ref={horizontal}>
-          <Text onMouseOver={FirstHalfPause} onMouseOut={FirstHalf}>
-            Smile Kitchens Smile Kitchens Smile Kitchens
-          </Text>
-        </h1>
-        <h1 ref={horizontalTwo}>
-          <Text onMouseOver={SecondHalfPause} onMouseOut={SecondHalf}>
-            Brown Opticians Brown Opticians Brown Opticians
-          </Text>
-        </h1>
-        <h1 ref={horizontalThree}>
-          <Text onMouseOver={FirstHalfPause} onMouseOut={FirstHalf}>
-
-            Yellow Telescope Yellow Telescope Yellow Telescope
-          </Text>
-        </h1>
-        <h1 ref={horizontalFour}>
-          <Text onMouseOver={SecondHalfPause} onMouseOut={SecondHalf}>
-            Acowtancy Acowtancy Acowtancy
-          </Text>
-        </h1>
-        <h1 ref={horizontalFive}>
-          <Text onMouseOver={FirstHalfPause} onMouseOut={FirstHalf}>
-            Walker Lovell Walker Lovell Walker Lovell
-          </Text>
-        </h1>
-      </Container>
-    </Layout>
+      <Layout>
+        <div
+            className=" relative mt-8 py-4 bg-green-600 text-gray-200 flex overflow-hidden items-center"
+            style={{ minHeight: "110px" }}
+        >
+          {renderMarqueeElements()}
+        </div>
+      </Layout>
   );
 };
 
-export default PortFolio;
+export default Portfolio;
