@@ -49,7 +49,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className=" p-8 md:w-full flex justify-center ">
+        <div className="xl:w-5/12 p-8 md:w-full flex justify-center ">
           <img
             alt="undraw_video_upload_3d4u 1.png"
             src="/images/undraw_video_upload_3d4u 1.png"
