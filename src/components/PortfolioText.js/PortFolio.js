@@ -1,15 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { Layout } from "../../layout/Layout";
+import { Text } from "./PortfolioStyles";
 
-const marqueeTexts = [
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
-];
-
-const Portfolio = () => {
+const Portfolio = ({ marqueeTexts, direction }) => {
   const marqueeElements = useRef([]);
-  const [screenWidth, setScreenWidth] = useState(typeof window !== "undefined" && window.innerWidth);
   const marqueeTween = useRef();
+
+  const [screenWidth, setScreenWidth] = useState(
+    typeof window !== "undefined" && window.innerWidth
+  );
 
   useEffect(() => {
     resizeHandler();
@@ -23,7 +22,7 @@ const Portfolio = () => {
     marqueeInitialSet();
     marqueeTween.current && marqueeTween.current.pause().kill();
     marqueeTween.current = gsap.to(marqueeElements.current, {
-      x: `+=${screenWidth * 1.5}`,
+      x: `${direction}=${screenWidth * 1.5}`,
       ease: "none",
       repeat: -1,
       duration: 50,
@@ -31,8 +30,8 @@ const Portfolio = () => {
       modifiers: {
         x: (x) => {
           return (parseFloat(x) % (screenWidth * 1.5)) + "px";
-        }
-      }
+        },
+      },
     });
   }, [screenWidth]);
 
@@ -40,8 +39,8 @@ const Portfolio = () => {
     gsap.set(marqueeElements.current, {
       xPercent: -100,
       x: function (index) {
-        return (screenWidth / 2) * index;
-      }
+        return (screenWidth / 2) * index - 500;
+      },
     });
   };
 
@@ -63,26 +62,24 @@ const Portfolio = () => {
     }
 
     return marqueeTexts.map((e, i) => (
-        <p
-            onMouseEnter={() => marqueeTween.current.pause()}
-            onMouseLeave={() => marqueeTween.current.play()}
-            className=" text-center px-4 text-2xl font-semibold absolute pin-l w-1/2"
-            key={`marquee-${i}`}
-            ref={(el) => marqueeElementsRefHandler(el, i)}
-        >
-          {e}
-        </p>
+      <p
+        onMouseEnter={() => marqueeTween.current.pause()}
+        onMouseLeave={() => marqueeTween.current.play()}
+        key={`marquee-${i}`}
+        ref={(el) => marqueeElementsRefHandler(el, i)}
+        
+      >
+        <Text> {e}</Text>
+      </p>
     ));
   };
   return (
-      <Layout>
-        <div
-            className=" relative mt-8 py-4 bg-green-600 text-gray-200 flex overflow-hidden items-center"
-            style={{ minHeight: "110px" }}
-        >
-          {renderMarqueeElements()}
-        </div>
-      </Layout>
+    <div
+      className=" relative mt-8 py-4 flex overflow-hidden items-center"
+      style={{ minHeight: "120px"}}
+    >
+      {renderMarqueeElements()}
+    </div>
   );
 };
 
