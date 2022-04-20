@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  // // display: ${(props) => (props.grid ? "grid" : "flex")};
-  // display: flex;
-  // flex-direction: "column")};
-  // // padding: ${(props) => (props.nopadding ? "0" : "32px 48px 0")} ;
-  // margin: 0 auto;
-  //max-width: 1040px;
+  display: ${(props) => (props.grid ? "grid" : "flex")};
+  padding: ${(props) => (props.nopadding ? "0" : "32px 48px 0")};
+  margin: 0 auto;
+  max-width: 1040px;
   box-sizing: content-box;
-  // position: relative;
+  position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
 
