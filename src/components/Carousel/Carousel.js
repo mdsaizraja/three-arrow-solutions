@@ -9,7 +9,7 @@ const Carousel = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="xl:mt-52 mt-20 relative md:mx-5 mx-0 xl:p-0 px-2">
+      <div className="xl:mt-52 mt-20 relative md:mx-5 mx-0 xl:p-0 px-5">
         <AutoPlaySwipeableViews
           index={index}
           onChangeIndex={setIndex}
@@ -52,7 +52,8 @@ const Carousel = () => {
             );
           })}
         </AutoPlaySwipeableViews>
-        <div className="absolute xl:left-2/4 left-[40%] xl:top-[90%] bottom-5">
+        <div className="absolute md:left-[45%] left-[38%] bottom-5">
+          {/* xl:left-2/4 left-[40%] xl:top-[90%] bottom-5 */}
           {data.sliderCarusel.map((item, i) => {
             return (
               <span

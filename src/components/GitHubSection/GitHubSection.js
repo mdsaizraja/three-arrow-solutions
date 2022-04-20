@@ -4,7 +4,7 @@ import { TextTopBorder, HeadingTitle } from "../../styles/GlobalComponents";
 const GitHubSection = () => {
   return (
     <div className="container mx-auto">
-      <div className="xl:flex xl:mt-52 mt-20 md:mx-5 xl:p-0 px-2">
+      <div className="xl:flex xl:mt-52 mt-20 md:mx-5 xl:p-0 px-5">
         <div className="xl:w-7/12 xl:pr-24 ">
           <HeadingTitle>Ut id tincidunt libero, ac luctus libero.</HeadingTitle>
           <div className=" flex xl:flex-col flex-row xl:w-full md:w-1/2 w-full justify-between font-black xl:text-8xl text-5xl xl:leading-[80px] underline text-[#ff8a71]">

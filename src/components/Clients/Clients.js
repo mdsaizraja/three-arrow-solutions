@@ -10,7 +10,7 @@ const Clients = () => {
   const [index, setIndex] = useState(0);
   return (
     <div className="container mx-auto">
-      <div className="xl:mt-52 mt-20 xl:p-0 px-2">
+      <div className="xl:mt-52 mt-20 xl:p-0 px-5">
         <HeadingTitle TextCenter="center">Clients</HeadingTitle>
         <div className="xl:flex hidden flex-wrap  xl:mt-32 mt-0">
           {data.client.map((item, index) => {
@@ -49,7 +49,7 @@ const Clients = () => {
               );
             })}
           </AutoPlaySwipeableViews>
-          <div className="absolute xl:left-2/4 md:left-[43%] left-[27%] xl:top-[90%]  -bottom-[50%]">
+          <div className="absolute flex justify-center w-full  -bottom-[50%]">
             {data.client.map((item, i) => {
               return (
                 <span

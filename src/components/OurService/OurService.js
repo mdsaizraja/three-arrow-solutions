@@ -7,7 +7,7 @@ import { data } from "../../data";
 const OurService = () => {
   return (
     <div className="container mx-auto">
-      <div className="xl:mt-52 mt-20 xl:p-0 px-2">
+      <div className="xl:mt-52 mt-20 xl:p-0 px-5">
         <HeadingTitle TextCenter="center"> Our Service</HeadingTitle>
         <div className="flex text-center xl:overflow-hidden overflow-auto text-gray-500 font-extrabold justify-between py-20">
           {data.services.map((item, index) => {
