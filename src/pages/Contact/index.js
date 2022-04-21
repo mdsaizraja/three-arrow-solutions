@@ -12,7 +12,7 @@ const index = () => {
         }}
         className="pt-1 "
       >
-        <div className="px-20">
+        <div className="xl:px-20">
           <Header />
         </div>
         <Contact />

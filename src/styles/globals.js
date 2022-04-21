@@ -20,7 +20,9 @@ const GlobalStyles = createGlobalStyle`
   background:${({ themeMode }) =>
     themeMode === "dark"
       ? `${(props) => props.theme.colors.background1}`
-      : "white"};
+      : themeMode === "light"
+      ? "white"
+      : `${(props) => props.theme.colors.background1}`};
     color: ${(props) => props.theme.colors.primary1};
     cursor: default;
     opacity:1;
