@@ -20,7 +20,6 @@ import { FiPhoneCall } from "react-icons/fi";
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [navWidth, setNavWidth] = useState("hidden");
-  const [bgColor, setbgColor] = useState();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleNav = () => {
@@ -29,6 +28,7 @@ const Header = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
   const renderThemeChanger = () => {
     const currentTheme = theme === "system" ? systemTheme : theme;
+
     if (currentTheme === "dark") {
       return <GiStripedSun onClick={() => setTheme("light")} />;
     } else {
@@ -50,13 +50,13 @@ const Header = () => {
         id="myNav"
         style={{
           background:
-            currentTheme === "dark"
+            currentTheme === "dark" || currentTheme === undefined
               ? "radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%)"
               : "white",
         }}
-        className={`h-full w-full  overflow-hidden ${navWidth} fixed z-10 top-0 -left-5  overflow-x-hidden translate-x-5`}
+        className={`h-full w-full  ${navWidth} fixed z-10 top-0 -left-5  xl:overflow-hidden overflow-x-scroll  translate-x-5`}
       >
-        <div className="mx-32 py-8">
+        <div className="xl:mx-32 xl:py-8 py-5 mx-5">
           <div className="flex ">
             {" "}
             <NavLink className="flex items-center justify-between w-full font-bold ">
@@ -77,264 +77,166 @@ const Header = () => {
               </Span>
             </NavLink>
           </div>
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, #E99080 14.5%, #DF9B8E 88.12%)",
-            }}
-            className="flex mt-10 py-5 px-10 justify-between rounded-xl items-center"
-          >
-            <div className="w-[20%]">
-              <h4 className="text-black text-4xl leading-normal font-extrabold">
-                Looking for career opportunity?
-              </h4>
-            </div>
-            <div className="w-[20%]  text-black gap-5 leading-loose">
-              <div className="flex justify-between">
-                <div className="flex  items-center font-bold">
-                  <BsChatSquareText /> <span className="ml-2">Email</span>
+          <div>
+            <div
+              style={{
+                background:
+                  "linear-gradient(90deg, #E99080 14.5%, #DF9B8E 88.12%)",
+              }}
+              className="flex md:flex-row flex-col mt-10 py-5 xl:px-10 px-5 justify-between rounded-xl xl:items-center"
+            >
+              <div className="md:w-[20%]">
+                <h4 className="text-black text-4xl leading-normal font-extrabold">
+                  Looking for career opportunity?
+                </h4>
+              </div>
+              <div className="xl:w-[20%] xl:mt-0 mt-3  text-black gap-5 leading-loose">
+                <div className="flex justify-between">
+                  <div className="flex  items-center font-bold">
+                    <BsChatSquareText /> <span className="ml-2">Email</span>
+                  </div>
+                  <div className="w-[70%]"> contact@threearrow.in</div>
                 </div>
-                <div className="w-[70%]"> contact@threearrow.in</div>
+                <div className="flex justify-between ">
+                  <span className="flex w-[20%] items-center  font-bold">
+                    <FiPhoneCall /> <span className="ml-2">Call</span>
+                  </span>
+                  <div className="w-[70%]">+91 1234567890</div>
+                </div>
               </div>
-              <div className="flex justify-between ">
-                <span className="flex w-[20%] items-center  font-bold">
-                  <FiPhoneCall /> <span className="ml-2">Call</span>
-                </span>
-                <div className="w-[70%]">+91 1234567890</div>
-              </div>
-            </div>
-            <div className="w-1/5 flex justify-center">
-              <div
-                className="bg-black flex justify-around rounded-full p-2 w-80 cursor-pointer delay-75 duration-700 
+              <div className="md:w-1/5 md:mt-0 mt-3 flex justify-center items-center  ">
+                <div
+                  className="bg-black flex justify-around rounded-full p-2 w-80 cursor-pointer delay-75 duration-700 
          transition-all text-white hover:bg-white hover:text-black"
-              >
-                <button className="font-extrabold">Explore more</button>
-                <BsArrowRight className="text-5xl" />
+                >
+                  <button className="font-extrabold">Explore more</button>
+                  <BsArrowRight className="text-5xl" />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex items-center mt-5">
-            <div className="w-[40%]">
-              <Lottie
-                ref={(c) => startLottieAnim(c)}
-                animationData={lottieJson}
-                play
-                className="max-w-[450px] max-h-[250px]"
-              />
-              <HeadingSection className="font-bold text-4xl p-3">
-                Let's build your digital project together
-              </HeadingSection>{" "}
-            </div>
-            <div className="w-[60%] grid mt-11 grid-cols-3 gap-8 dark:text-white text-black text-lg ">
-              <div className="flex flex-col">
-                <div>
-                  <h5 className="font-bold text-xl mb-3">
-                    Mobile App Development
-                  </h5>
-                  <ol>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      Iphone App Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      React Native App Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      Android Application Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      Flutter App Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      Swift App Development
-                    </li>
-                  </ol>
-                </div>
-                <div>
-                  <h5 className="font-bold text-xl mb-3 mt-8">
-                    Web Development
-                  </h5>
-                  <ol>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-0
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      AngularJS Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      ReactJs Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      Javascript Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      Node.JS Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      PHP Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      Laravel Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      Magento Development
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
-                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
-                    before:h-5"
-                    >
-                      VueJS Development
-                    </li>
-                  </ol>
-                </div>
+            <div className="flex xl:flex-row flex-col xl:items-center mt-5">
+              <div className="xl:w-[40%] md:flex md:flex-col md:items-center">
+                <Lottie
+                  ref={(c) => startLottieAnim(c)}
+                  animationData={lottieJson}
+                  play
+                  className="max-w-[450px] max-h-[250px] xl:mt-0 mt-10"
+                />
+                <HeadingSection className="font-bold text-4xl p-3">
+                  Let's build your digital project together
+                </HeadingSection>{" "}
               </div>
-              <div className="row-span-2">
-                <h5 className="font-bold text-xl mb-3">
-                  Enterprise Mobility Solutions
-                </h5>
-                <ol>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+              <div className="xl:w-[60%] xl:mx-0 mx-5 grid xl:mt-11 mt-20 md:grid-cols-3  gap-8 dark:text-white text-black text-lg ">
+                <div className="flex flex-col">
+                  <div>
+                    <h5 className="font-bold text-2xl xl:mb-10 mb-16">
+                      Mobile App Development
+                    </h5>
+                    <ol>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Real Estate App Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Iphone App Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Travel App Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        React Native App Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Sports App Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Android Application Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Educational App Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Flutter App Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Food Delivery Solutions
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Swift App Development
+                      </li>
+                    </ol>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-2xl xl:mb-10 mb-16 mt-8">
+                      Web Development
+                    </h5>
+                    <ol>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-0
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    E-commerce Solutions
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        AngularJS Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Media & Entertainment App Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        ReactJs Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Social Media App Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Javascript Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Fintech Solutions
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Node.JS Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Business Application Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        PHP Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Digital Transformation Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Laravel Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Statups App Development
-                  </li>
-                  <li
-                    className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Magento Development
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                  >
-                    Demand App Development
-                  </li>
-                </ol>
-              </div>
-              <div className="flex flex-col">
-                <div>
-                  <h5 className="font-bold text-xl mb-3">
-                    Hire Dedicated Developers
+                      >
+                        VueJS Development
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div className="row-span-2">
+                  <h5 className="font-bold text-2xl xl:mb-10 mb-16">
+                    Enterprise Mobility Solutions
                   </h5>
                   <ol>
                     <li
@@ -342,113 +244,215 @@ const Header = () => {
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      Hire iPhone Developer
+                      Real Estate App Development
                     </li>
                     <li
                       className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      Android Developer
+                      Travel App Development
                     </li>
                     <li
                       className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      Swift Developer
+                      Sports App Development
                     </li>
                     <li
                       className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      lonic App Developer
+                      Educational App Development
                     </li>
                     <li
                       className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      Full stack Developer
+                      Food Delivery Solutions
                     </li>
                     <li
                       className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      Node.js Developer
+                      E-commerce Solutions
                     </li>
                     <li
                       className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      AngularJs Developer
+                      Media & Entertainment App Development
                     </li>
                     <li
                       className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      ReactJs Developer
+                      Social Media App Development
                     </li>
                     <li
                       className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                     >
-                      PHP Developer
+                      Fintech Solutions
+                    </li>
+                    <li
+                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                    >
+                      Business Application Development
+                    </li>
+                    <li
+                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                    >
+                      Digital Transformation Development
+                    </li>
+                    <li
+                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                    >
+                      Statups App Development
+                    </li>
+                    <li
+                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                    >
+                      Demand App Development
                     </li>
                   </ol>
                 </div>
+                <div className="flex flex-col">
+                  <div>
+                    <h5 className="font-bold text-2xl xl:mb-10 mb-16">
+                      Hire Dedicated Developers
+                    </h5>
+                    <ol>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        Hire iPhone Developer
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        Android Developer
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        Swift Developer
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        lonic App Developer
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        Full stack Developer
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        Node.js Developer
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        AngularJs Developer
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        ReactJs Developer
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                    before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
+                    before:h-5"
+                      >
+                        PHP Developer
+                      </li>
+                    </ol>
+                  </div>
 
-                <div>
-                  <h5 className="font-bold text-xl mb-3 mt-2">About Us</h5>
-                  <ol>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                  <div>
+                    <h5 className="font-bold text-2xl xl:mb-3 mb-16 mt-2">
+                      About Us
+                    </h5>
+                    <ol>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                    >
-                      Home
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Home
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                    >
-                      Work
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Work
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                    >
-                      Blog
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Blog
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                    >
-                      Contact Us
-                    </li>
-                    <li
-                      className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
+                      >
+                        Contact Us
+                      </li>
+                      <li
+                        className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
-                    >
-                      FAQ
-                    </li>
-                  </ol>
+                      >
+                        FAQ
+                      </li>
+                    </ol>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="absolute bottom-0 border-t-2 border-[#BCC0CF] 
+          className=" border-t-2 border-[#BCC0CF] xl:fixed bottom-0 
         dark:text-white text-black p-4 text-lg
         w-full text-center"
         >

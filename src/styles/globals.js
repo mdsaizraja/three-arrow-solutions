@@ -17,12 +17,10 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
-   {${({ themeMode }) =>
-     themeMode == "dark"
-       ? `background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);`
-       : ""}
-    
-   } 
+  background:${({ themeMode }) =>
+    themeMode === "dark"
+      ? `${(props) => props.theme.colors.background1}`
+      : "white"};
     color: ${(props) => props.theme.colors.primary1};
     cursor: default;
     opacity:1;
