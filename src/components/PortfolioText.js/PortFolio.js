@@ -1,6 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Text } from "./PortfolioStyles";
+import { useContext } from "react/cjs/react.production.min";
+
+
 
 const Portfolio = ({ marqueeTexts, direction }) => {
   const marqueeElements = useRef([]);
@@ -9,6 +12,9 @@ const Portfolio = ({ marqueeTexts, direction }) => {
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
   );
+
+
+  const [onMouseHover, setOnMouseHover] = useState()
 
   useEffect(() => {
     resizeHandler();
@@ -46,11 +52,22 @@ const Portfolio = ({ marqueeTexts, direction }) => {
 
   const resizeHandler = () => {
     gsap.set(marqueeElements.current, { clearProps: "all" });
-    setScreenWidth(window.innerWidth );
+    setScreenWidth(window.innerWidth);
   };
 
   const marqueeElementsRefHandler = (e, i) => {
     marqueeElements.current[i] = e;
+  };
+
+  const OnMouseEnter = () => {
+    marqueeTween.current.pause();
+    setOnMouseHover(true)
+    
+  };
+
+  const OnMouseLeave = () => {
+    marqueeTween.current.play();
+    setOnMouseHover(false)
   };
 
   const renderMarqueeElements = () => {
@@ -63,11 +80,10 @@ const Portfolio = ({ marqueeTexts, direction }) => {
 
     return marqueeTexts.map((e, i) => (
       <p
-        onMouseEnter={() => marqueeTween.current.pause()}
-        onMouseLeave={() => marqueeTween.current.play()}
+        onMouseEnter={OnMouseEnter}
+        onMouseLeave={OnMouseLeave}
         key={`marquee-${i}`}
         ref={(el) => marqueeElementsRefHandler(el, i)}
-        
       >
         <Text> {e}</Text>
       </p>
@@ -76,7 +92,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
   return (
     <div
       className=" relative mt-8 py-4 flex overflow-hidden items-center"
-      style={{ minHeight: "120px"}}
+      style={{ minHeight: "120px" }}
     >
       {renderMarqueeElements()}
     </div>

@@ -17,6 +17,7 @@ export const Text = styled.h2`
   font-weight: 700;
   font-family: "GLD Display";
   color: black;
+  z-index:0
 `;
 
 export const Container = styled.div`

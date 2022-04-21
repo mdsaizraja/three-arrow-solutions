@@ -1,10 +1,8 @@
 import React from "react";
 import PortFolio from "../../components/PortfolioText.js/PortFolio";
-import HoveredRotatedText from "../../components/PortfolioText.js/HoveredRotatedText";
 import { Layout } from "./../../layout/Layout";
 
 const index = () => {
-  
   return (
     <Layout>
       <PortFolio
@@ -28,7 +26,6 @@ const index = () => {
         marqueeTexts={["Walker Lovell Walker Lovell Walker Lovell"]}
         direction={"+"}
       />
-      <HoveredRotatedText />
     </Layout>
   );
 };
