@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Text } from "./PortfolioStyles";
-import HoveredRotatedText from "./HoveredRotatedText";
+import MouseHoverText from "./MouseHoverText";
 
 const Portfolio = ({ marqueeTexts, direction }) => {
   const marqueeElements = useRef([]);
@@ -41,7 +41,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
     gsap.set(marqueeElements.current, {
       xPercent: -100,
       x: function (index) {
-        return (screenWidth / 2) * index ;
+        return (screenWidth / 2) * index;
       },
     });
   };
@@ -84,22 +84,13 @@ const Portfolio = ({ marqueeTexts, direction }) => {
       </p>
     ));
   };
+
   return (
     <div
       className=" relative mt-8 py-4 flex overflow-hidden items-center"
       style={{ minHeight: "120px" }}
     >
-      {isMouseHover === true ? (
-        <div>
-          <HoveredRotatedText
-            marqueeTexts={["View Case Study  Web Design"]}
-            direction={"-"}
-            src={"https://likely-story.co.uk/wp-content/uploads/2021/03/Mask-Group-262@2x-620x768.jpg"}
-          />
-        </div>
-      ) : (
-        ""
-      )}
+      <MouseHoverText marqueeTexts={marqueeTexts} isMouseHover={isMouseHover} />
       {renderMarqueeElements()}
     </div>
   );
