@@ -76,7 +76,6 @@ export const SocialIcons = styled.span`
   padding: 10px;
   font-size: 3rem;
   &:hover {
-    background-color: #212d45;
     transform: scale(1.2);
     cursor: pointer;
   }

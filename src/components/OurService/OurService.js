@@ -32,7 +32,7 @@ const OurService = () => {
             <BsArrowRight className="text-5xl" />
           </div>
         </div>
-        <TalkExpertBox className="xl:flex md:flex-none md:mx-5 xl:mx-0  justify-center xl:my-48 my-20 dark:text-black text-white rounded-3xl ">
+        <TalkExpertBox className="xl:flex md:flex-none md:mx-5 xl:mx-0  justify-center xl:mt-32 my-20 dark:text-black text-white rounded-3xl ">
           <div className="xl:p-16 p-10">
             <h5 className="leading-relaxed">Let's Discuss Your Project</h5>
             <p className="font-extrabold text-4xl  leading-normal">

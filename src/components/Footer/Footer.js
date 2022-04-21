@@ -2,9 +2,10 @@ import React from "react";
 
 import { HeadingSection } from "./FooterStyles";
 import { SiAirchina } from "react-icons/si";
+import Link from "next/dist/client/link";
 const Footer = () => {
   return (
-    <div className="xl:mt-52 mt-20 bg-[#031B34] overflow-hidden text-white">
+    <div className="xl:mt-52 mt-20 bg-[#031B34] overflow-hidden absolute left-0 text-white">
       <div className="container mx-auto">
         <div className="xl:hidden items-center font-bold flex justify-center pt-8 ">
           <SiAirchina size="50px" />
@@ -40,9 +41,6 @@ const Footer = () => {
                 <li className="my-6">
                   <a href="#">Counters</a>
                 </li>
-                <li className="my-6">
-                  <a href="#">Contact</a>
-                </li>
               </ul>
             </div>
             <div className="xl:w-1/5 w-1/2">
@@ -57,7 +55,7 @@ const Footer = () => {
                   <a href="#">Privacy Policy</a>
                 </li>
                 <li className="my-6">
-                  <a href="#">Contact</a>
+                  <Link href="/Contact">Contact us</Link>
                 </li>
               </ul>
             </div>
@@ -67,10 +65,20 @@ const Footer = () => {
                   <a href="#">Get in touch</a>
                 </li>
                 <li className="my-6">
-                  <a href="#">6667, shashtrikunj society, Vadodra, 390016</a>
+                  <a href="#">
+                    6 ff, EF tower, Shreeji Gold, nr. C.K prajapati school,
+                    Laxmipura Rd, opp. Sona and Bandhan party plot, Subhanpura,
+                    Vadodara, Gujarat 390003, India
+                  </a>
                 </li>
                 <li className="my-6">
-                  <a href="#">+91 9913781537</a>
+                  <div className="cursor-pointer flex">
+                    <img src="/images/IN.png" className="w-10" /> +91 9913781537{" "}
+                  </div>
+                  <div className="cursor-pointer flex">
+                    <img src="/images/us-flag.png" className="w-10" /> +1
+                    321-613-8080{" "}
+                  </div>
                 </li>
                 <li className="my-6">
                   <a href="#">contact@threearrow.in</a>

@@ -18,7 +18,7 @@ const NavSlideBar = () => {
               <div
                 key={index}
                 onClick={() => SetIndex(index)}
-                className={`xl:w-3/12 w-10`}
+                className={`xl:w-3/12 `}
               >
                 {item.Heading}
                 <span style={{ display: "none" }}>{count++}</span>
@@ -28,7 +28,11 @@ const NavSlideBar = () => {
 
           <TextBottomBorder
             className={`border-b-2  absolute w-1/3 ${
-              index === 0 ? "left-0" : index === 1 ? "left-1/3" : "left-2/3"
+              index === 0
+                ? "left-0"
+                : index === 1
+                ? "md:left-1/3 left-[42%]"
+                : "left-2/3"
             } -bottom-1 transition-all delay-75 ease-linear duration-200`}
           />
         </div>

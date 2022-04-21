@@ -21,11 +21,11 @@ const Blog = () => {
               <img alt={data.blogs[0].imgsrc} src={data.blogs[0].imgsrc} />
               <div className="relative h-96 xl:p-10 p-5">
                 <div className="absolute xl:px-10  leading-normal">
-                  <h5 className="xl:text-2xl text-sm">{data.blogs[0].date}</h5>
-                  <p className="font-extrabold xl:text-5xl">
+                  <h5 className="xl:text-2xl text-1xl">{data.blogs[0].date}</h5>
+                  <p className="font-extrabold xl:text-5xl text-3xl">
                     {data.blogs[0].Heading}
                   </p>
-                  <div className="xl:text-2xl text-sm relative top-44">
+                  <div className="xl:text-2xl text-1xl relative top-44 transition-all duration-500 delay-75 cursor-pointer hover:text-[17px] ">
                     Read Full Article
                   </div>
                 </div>
@@ -51,7 +51,7 @@ const Blog = () => {
                           <p className="font-extrabold text-3xl">
                             {item.Heading}
                           </p>
-                          <div className="relative top-16 text-xl">
+                          <div className="relative top-16 text-xl transition-all duration-500 delay-75 cursor-pointer hover:text-[14px]">
                             Read Full Article
                           </div>
                         </div>
@@ -72,11 +72,11 @@ const Blog = () => {
               <img alt={data.blogs[1].imgsrc} src={data.blogs[1].imgsrc} />
               <div className="relative h-96 xl:p-10 p-5">
                 <div className="absolute xl:px-10  leading-normal">
-                  <h5 className="xl:text-2xl text-sm">{data.blogs[1].date}</h5>
-                  <p className="font-extrabold xl:text-5xl">
+                  <h5 className=" text-1xl">{data.blogs[1].date}</h5>
+                  <p className="font-extrabold text-3xl">
                     {data.blogs[1].Heading}
                   </p>
-                  <div className="xl:text-2xl text-sm relative top-44">
+                  <div className=" text-1xl relative top-44 transition-all duration-500 delay-75 cursor-pointer ">
                     Read Full Article
                   </div>
                 </div>

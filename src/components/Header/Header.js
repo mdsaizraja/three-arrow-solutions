@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { SiAirchina } from "react-icons/si";
 import { GiStripedSun } from "react-icons/gi";
-import { RiMenu4Fill, RiSunFill } from "react-icons/ri";
+import { RiMenu4Fill, RiSunFill, RiCloseFill } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
 import Lottie from "react-lottie-player";
 import lottieJson from "../../animation/HeaderNavImage.json";
@@ -15,11 +15,13 @@ import {
   HeadingSection,
 } from "./HeaderStyles";
 import { BsArrowRight, BsChatSquareText } from "react-icons/bs";
-
+import { gsap } from "gsap";
 import { FiPhoneCall } from "react-icons/fi";
+import Link from "next/link";
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [navWidth, setNavWidth] = useState("hidden");
+  const navBar = useRef();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleNav = () => {
@@ -30,7 +32,14 @@ const Header = () => {
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     if (currentTheme === "dark") {
-      return <GiStripedSun onClick={() => setTheme("light")} />;
+      return (
+        <img
+          src="/images/Vector.png"
+          alt="dark_mode.png"
+          width="30px"
+          onClick={() => setTheme("light")}
+        />
+      );
     } else {
       return (
         <img
@@ -43,15 +52,18 @@ const Header = () => {
     }
   };
 
+  useEffect(() => {
+    console.log(navBar);
+  }, []);
   return (
     <>
       {" "}
       <div
-        id="myNav"
+        ref={navBar}
         style={{
           background:
             currentTheme === "dark" || currentTheme === undefined
-              ? "radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%)"
+              ? "radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 94%) 0%, rgba(4, 12, 24, 94%) 25%)"
               : "white",
         }}
         className={`h-full w-full  ${navWidth} fixed z-10 top-0 -left-5  xl:overflow-hidden overflow-x-scroll  translate-x-5`}
@@ -60,20 +72,24 @@ const Header = () => {
           <div className="flex ">
             {" "}
             <NavLink className="flex items-center justify-between w-full font-bold ">
-              <div className="flex">
-                <SiAirchina
-                  size="3rem"
-                  className="text-black dark:text-white"
-                />
-                <Span className="ml-2 mt-2 text-black dark:text-white">
-                  Tech stagers
-                </Span>
-              </div>
+              <Link href="/">
+                <div className="flex">
+                  {" "}
+                  <SiAirchina
+                    size="3rem"
+                    className="text-black dark:text-white"
+                  />
+                  <Span className="ml-2 mt-2 text-black dark:text-white">
+                    Tech stagers
+                  </Span>
+                </div>
+              </Link>
               <Span onClick={() => setNavWidth("hidden")}>
-                {/* <GrClose /> */}
-                <span className="font-light text-5xl dark:text-white text-black">
-                  X
-                </span>
+                <div>
+                  {" "}
+                  <RiCloseFill color="white" size="40" />
+                </div>
+                <span className="font-light text-5xl dark:text-white text-black"></span>
               </Span>
             </NavLink>
           </div>
@@ -435,7 +451,7 @@ const Header = () => {
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                       >
-                        Contact Us
+                        <Link href="/Contact">Contact Us</Link>
                       </li>
                       <li
                         className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
@@ -455,21 +471,31 @@ const Header = () => {
           className=" border-t-2 border-[#BCC0CF] xl:fixed bottom-0 
         dark:text-white text-black p-4 text-lg
         w-full text-center"
+          style={{
+            background:
+              currentTheme === "dark" || currentTheme === undefined
+                ? "radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 94%) 0%, rgba(4, 12, 24, 94%) 25%)"
+                : "white",
+          }}
         >
           <span>© 2021 All rights reserved.</span>
         </div>
       </div>
       <div className="container mx-auto">
         <div className="flex justify-between mt-5">
-          <NavLink className="flex items-center font-bold ">
-            <SiAirchina size="3rem" className="text-black dark:text-white" />
-            <Span className="ml-2 mt-2 text-black dark:text-white">
-              Tech stagers
-            </Span>
-          </NavLink>
+          <Link href="/">
+            <NavLink className="flex items-center font-bold ">
+              <SiAirchina size="3rem" className="text-black dark:text-white" />
+              <Span className="ml-2 mt-2 text-black dark:text-white">
+                Tech stagers
+              </Span>
+            </NavLink>
+          </Link>
           <div className="flex">
-            <SocialIcons>{renderThemeChanger()}</SocialIcons>
-            <SocialIcons>
+            <SocialIcons className="dark:hover:bg-[#212d45] hover:bg-[#fff]">
+              {renderThemeChanger()}
+            </SocialIcons>
+            <SocialIcons className="dark:hover:bg-[#212d45] hover:bg-[#fff]">
               <RiMenu4Fill
                 className="text-black dark:text-white"
                 onClick={() => setNavWidth("block")}
