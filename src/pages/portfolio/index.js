@@ -3,8 +3,10 @@ import PortFolio from "../../components/PortfolioText.js/PortFolio";
 import { Layout } from "./../../layout/Layout";
 
 const index = () => {
+
   return (
     <Layout>
+     
       <PortFolio
         marqueeTexts={["Smile Kitchens Smile Kitchens Smile Kitchens"]}
         direction={"-"}
@@ -26,6 +28,7 @@ const index = () => {
         marqueeTexts={["Walker Lovell Walker Lovell Walker Lovell"]}
         direction={"+"}
       />
+
     </Layout>
   );
 };

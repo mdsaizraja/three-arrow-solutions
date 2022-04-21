@@ -1,8 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { Text } from "./HoveredRotatedTextStyles";
+import {
+  Text,
+  HoveredRotatedContainer,
+  HoveredImage,
+} from "./HoveredRotatedTextStyles";
 
-const HoveredRotatedText = ({ marqueeTexts, direction }) => {
+const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
   const marqueeElements = useRef([]);
   const marqueeTween = useRef();
 
@@ -26,7 +30,6 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
       ease: "none",
       repeat: -1,
       duration: 50,
-      rotation: -100,
       modifiers: {
         x: (x) => {
           return (parseFloat(x) % (screenWidth * 1.5)) + "px";
@@ -39,7 +42,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
     gsap.set(marqueeElements.current, {
       xPercent: -100,
       x: function (index) {
-        return (screenWidth / 2) * index - 500;
+        return (screenWidth / 2) * index;
       },
     });
   };
@@ -61,21 +64,28 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
       marqueeTexts[2] = marqueeTexts[0];
     }
 
-    return marqueeTexts.map((e, i) => (
-      <p
-        key={`marquee-${i}`}
-        ref={(el) => marqueeElementsRefHandler(el, i)}
-      >
-        <Text> {e}</Text>
-      </p>
-    ));
+    return (
+      <div>
+        {marqueeTexts.map((e, i) => (
+          <p
+            key={`marquee-${i}`}
+            ref={(el) => marqueeElementsRefHandler(el, i)}
+          >
+            <Text> {e}</Text>
+          </p>
+        ))}
+      </div>
+    );
   };
+
   return (
-    <div
-      className=" relative mt-8 py-4 flex overflow-hidden items-center"
-      style={{ minHeight: "150px" }}
-    >
-      {renderMarqueeElements()}
+    <div>
+      <HoveredRotatedContainer className=" relative mt-8 py-4 flex overflow-hidden items-center">
+        {renderMarqueeElements()}
+      </HoveredRotatedContainer>
+      {/* <HoveredImage>
+        <img src={src} alt="image" />
+      </HoveredImage> */}
     </div>
   );
 };

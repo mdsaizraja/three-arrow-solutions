@@ -1,20 +1,16 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Text } from "./PortfolioStyles";
-import { useContext } from "react/cjs/react.production.min";
-
-
+import HoveredRotatedText from "./HoveredRotatedText";
 
 const Portfolio = ({ marqueeTexts, direction }) => {
   const marqueeElements = useRef([]);
   const marqueeTween = useRef();
+  const [isMouseHover, setIsMouseHover] = useState(false);
 
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
   );
-
-
-  const [onMouseHover, setOnMouseHover] = useState()
 
   useEffect(() => {
     resizeHandler();
@@ -45,7 +41,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
     gsap.set(marqueeElements.current, {
       xPercent: -100,
       x: function (index) {
-        return (screenWidth / 2) * index - 500;
+        return (screenWidth / 2) * index ;
       },
     });
   };
@@ -61,13 +57,12 @@ const Portfolio = ({ marqueeTexts, direction }) => {
 
   const OnMouseEnter = () => {
     marqueeTween.current.pause();
-    setOnMouseHover(true)
-    
+    setIsMouseHover(true);
   };
 
   const OnMouseLeave = () => {
     marqueeTween.current.play();
-    setOnMouseHover(false)
+    setIsMouseHover(false);
   };
 
   const renderMarqueeElements = () => {
@@ -94,6 +89,17 @@ const Portfolio = ({ marqueeTexts, direction }) => {
       className=" relative mt-8 py-4 flex overflow-hidden items-center"
       style={{ minHeight: "120px" }}
     >
+      {isMouseHover === true ? (
+        <div>
+          <HoveredRotatedText
+            marqueeTexts={["View Case Study  Web Design"]}
+            direction={"-"}
+            src={"https://likely-story.co.uk/wp-content/uploads/2021/03/Mask-Group-262@2x-620x768.jpg"}
+          />
+        </div>
+      ) : (
+        ""
+      )}
       {renderMarqueeElements()}
     </div>
   );

@@ -17,9 +17,7 @@ export const Text = styled.h2`
   font-weight: 700;
   font-family: "GLD Display";
   color: black;
-  z-index:0
+  z-index: 99;
+  cursor: pointer;
 `;
 
-export const Container = styled.div`
-  overflow: hidden;
-`;

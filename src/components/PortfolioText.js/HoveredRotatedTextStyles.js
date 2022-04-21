@@ -1,14 +1,24 @@
 import styled from "styled-components";
 
 export const Text = styled.div`
-   color: white; 
-   font: bold 24px/45px Helvetica, Sans-Serif; 
-   letter-spacing: -1px;  
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.4);
-   padding: 10px;
-   position: absolute; 
-  top: 300px; 
-  left: 0; 
-  width: 100%; 
+  font-size: 2vw;
+  white-space: nowrap;
+  font-weight: 700;
+  font-family: "GLD Display";
+  color: black;
+  cursor: pointer;
+`;
+
+export const HoveredRotatedContainer = styled.div`
+  background: yellow;
+  height: 40px;
+  z-index: 999;
+  transform: rotate(-7deg);
+  width: 100vw;
+`;
+
+export const HoveredImage = styled.div` 
+  width:620;
+  height:768;
+  z-index: 999;
 `;
