@@ -66,9 +66,9 @@ const Contact = () => {
             ></span>
           </GoogleMapReact>
         </div>
-        <div className="xl:w-2/4 bg-black text-white items-center flex justify-center cursor-pointer transition-all duration-500 hover:bg-slate-900  ">
-          <div className="w-[60%] xl:py-0 py-20">
-            <h4 className="xl:text-8xl text-7xl mb-5">Meet Us</h4>
+        <div className="xl:w-[40%] bg-black text-white items-center flex justify-center cursor-pointer transition-all duration-500 hover:bg-slate-900  ">
+          <div className="w-[70%] xl:py-0 py-20">
+            <h4 className="xl:text-7xl text-5xl mb-5">Meet Us</h4>
             <div className="">
               <div className="flex mb-5">
                 <Icondiv>
@@ -96,17 +96,17 @@ const Contact = () => {
         </div>
         <div className="xl:w-2/4 bg-white text-black items-center flex justify-center cursor-pointer transition-all duration-500 hover:bg-slate-200   ">
           {" "}
-          <div className="w-[60%] xl:py-0 py-20">
-            <h4 className="xl:text-8xl text-7xl mb-5">Pitch us</h4>
-            <div className="leading-snug">
+          <div className="w-[80%] xl:py-0 py-20">
+            <h4 className="xl:text-7xl text-5xl mb-5">Pitch us</h4>
+            <div className="leading-relaxed">
               <p>
                 hello,
                 <br />
                 my name is <Icondiv>your name</Icondiv> and my e-mail address is
                 <Icondiv>your email</Icondiv> and I would like to discuss about
-                <Icondiv>this project.</Icondiv>
+                <Icondiv> this project.</Icondiv>
               </p>
-              <Buttondiv className="mt-3 rounded-full py-6 px-14 transition-all duration-700 delay-75">
+              <Buttondiv className="mt-5 rounded-full py-6 px-14 transition-all duration-700 delay-75">
                 send
               </Buttondiv>
             </div>

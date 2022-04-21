@@ -29,9 +29,9 @@ const Header = () => {
   };
   const currentTheme = theme === "system" ? systemTheme : theme;
   const renderThemeChanger = () => {
-    const currentTheme = theme === "system" ? systemTheme : theme;
+    const currentTheme1 = theme === "system" ? systemTheme : theme;
 
-    if (currentTheme === "dark") {
+    if (currentTheme1 === "dark") {
       return (
         <img
           src="/images/Vector.png"
@@ -451,7 +451,7 @@ const Header = () => {
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                       >
-                        <Link href="/Contact">Contact Us</Link>
+                        <Link href="/contact">Contact Us</Link>
                       </li>
                       <li
                         className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1

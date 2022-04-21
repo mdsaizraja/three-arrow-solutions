@@ -11,7 +11,4 @@ export const Icondiv = styled.span`
 export const Buttondiv = styled.button`
   background: linear-gradient(180deg, #02c897 0%, #00add8 100%);
   color: white;
-  &:hover {
-    background: black;
-  }
 `;

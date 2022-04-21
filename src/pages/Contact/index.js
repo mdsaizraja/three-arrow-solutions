@@ -12,7 +12,9 @@ const index = () => {
         }}
         className="pt-1 "
       >
-        <Layout> </Layout>
+        <div className="px-20">
+          <Header />
+        </div>
         <Contact />
       </div>
     </>
