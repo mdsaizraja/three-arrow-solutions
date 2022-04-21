@@ -10,7 +10,7 @@ export const Background = styled.div`
 export const Text = styled.h2`
   position: relative;
   transform: translateX(43%);
-  font-size: 10vw;
+  font-size: 21vw;
   white-space: nowrap;
   line-height: 0.9;
   left: -50%;

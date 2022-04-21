@@ -46,7 +46,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
 
   const resizeHandler = () => {
     gsap.set(marqueeElements.current, { clearProps: "all" });
-    setScreenWidth(window.innerWidth);
+    setScreenWidth(window.innerWidth );
   };
 
   const marqueeElementsRefHandler = (e, i) => {
