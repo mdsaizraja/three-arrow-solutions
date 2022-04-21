@@ -1,50 +1,65 @@
 import React, { useState } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { TextBottomBorder } from "./NavSlideBarStyles";
+import { data } from "../../data";
 const NavSlideBar = () => {
   const [index, SetIndex] = useState(0);
-
+  let count = 0;
   return (
     <>
-      {" "}
-      <div
-        value={index}
-        className="dark:text-white text-black flex relative border-b-2 
+      <div className="xl:w-2/5">
+        <div
+          className="dark:text-white text-black flex relative border-b-2 
         border-gray-500 justify-around text-center cursor-pointer
-          bg-transparent py-5 "
-      >
-        <div onClick={() => SetIndex(0)} className={`w-1/3`}>
-          Time wise model
+          bg-transparent py-5  w-full "
+        >
+          {data.buisnessModelSlider.map((item, index) => {
+            return (
+              <div
+                key={index}
+                onClick={() => SetIndex(index)}
+                className={`xl:w-3/12 w-10`}
+              >
+                {item.Heading}
+                <span style={{ display: "none" }}>{count++}</span>
+              </div>
+            );
+          })}
+
+          <TextBottomBorder
+            className={`border-b-2  absolute w-1/3 ${
+              index === 0 ? "left-0" : index === 1 ? "left-1/3" : "left-2/3"
+            } -bottom-1 transition-all delay-75 ease-linear duration-200`}
+          />
         </div>
-        <div onClick={() => SetIndex(1)} className="w-1/3">
-          Fix scope model
-        </div>
-        <div onClick={() => SetIndex(2)} className=" w-1/3">
-          Hire team
-        </div>
-        <TextBottomBorder
-          className={`border-b-2  absolute w-1/3  left-${
-            index === 0
-              ? "0"
-              : index === 1
-              ? "1/3"
-              : index === 2
-              ? "3/4 right-0"
-              : ""
-          } -bottom-1 transition-all duration-1000 ease-in delay-1000`}
-        ></TextBottomBorder>
+        <SwipeableViews index={index}>
+          {data.buisnessModelSlider.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className=" xl:flex hidden justify-center object-contain p-10"
+              >
+                <img alt={item.imgsrc} src={item.imgsrc} />
+              </div>
+            );
+          })}
+        </SwipeableViews>
       </div>
-      <SwipeableViews index={index}>
-        <div className="flex justify-center object-contain p-10">
-          <img src="/images/undraw_booked_re_vtod 1.png" />
-        </div>
-        <div className="flex justify-center object-contain p-10">
-          <img src="/images/undraw_booked_re_vtod 1.png" />
-        </div>
-        <div className="flex justify-center object-contain p-10">
-          <img src="/images/undraw_booked_re_vtod 1.png" />
-        </div>
-      </SwipeableViews>
+      <div className="xl:w-2/4 flex items-center">
+        {" "}
+        <SwipeableViews index={index}>
+          {data.buisnessModelSlider.map((item, index) => {
+            return (
+              <div key={index} className=" dark:text-white text-black">
+                <h1 className="text-3xl leading-relaxed font-bold">
+                  {item.Heading}
+                </h1>
+                <p className="text-2xl leading-normal">{item.Content}</p>
+              </div>
+            );
+          })}
+        </SwipeableViews>
+      </div>
     </>
   );
 };

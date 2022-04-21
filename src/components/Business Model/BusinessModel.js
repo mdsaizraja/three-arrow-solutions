@@ -3,24 +3,11 @@ import NavSlideBar from "./NavSlideBar";
 import { HeadingTitle } from "../../styles/GlobalComponents";
 const BusinessModel = () => {
   return (
-    <div className="mt-52">
-      <HeadingTitle TextCenter="center">BusinessModel</HeadingTitle>
-      <div className="flex  mt-28">
-        <div className="w-2/5">
+    <div className="container mx-auto">
+      <div className="xl:mt-52 mt-20 md:mx-5 mx-0 xl:p-0 px-5">
+        <HeadingTitle TextCenter="center">BusinessModel</HeadingTitle>
+        <div className="xl:flex justify-between xl:mt-28 mt-10">
           <NavSlideBar />
-        </div>
-        <div className="w-3/5 flex justify-center items-center ">
-          <div className="w-7/12 dark:text-white text-black">
-            <h1 className="text-3xl leading-relaxed font-bold">
-              Time wise model
-            </h1>
-            <p className="text-2xl leading-normal">
-              Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin
-              nisi, ac dignissim libero. Phasellus viverra sagittis sapien sed
-              interdum. Fusce ex diam, fringilla commodo ante id, aliquet porta
-              libero.
-            </p>
-          </div>
         </div>
       </div>
     </div>

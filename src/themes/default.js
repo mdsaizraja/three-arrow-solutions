@@ -8,7 +8,7 @@ export default {
   colors: {
     primary1: "#81AFDD",
     background1:
-      "radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%)",
+      "radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 0) 0%, rgba(4, 12, 24, 1) 25%)",
     accent1: "hsl(34.9,98.6%,72.9%)",
     button: "hsl(205.1,100%,36.1%)",
     background2: "hsl(232.7,27.3%,23.7%)",

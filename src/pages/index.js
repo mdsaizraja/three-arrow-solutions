@@ -15,20 +15,16 @@ const Home = () => {
   return (
     <>
       <Layout>
-        <Section>
-          <Hero />
-          <AboutUs />
-          <OurService />
-          <GitHubSection />
-          <Carousel />
-          <BusinessModel />
-          <TwoSection />
-          <Clients />
-          <Blog />
-
-          {/*<BgAnimation/>*/}
-        </Section>
-      </Layout>
+        <Hero />
+        <AboutUs />
+        <OurService />
+        <GitHubSection />
+        <Carousel />
+        <BusinessModel />
+        <TwoSection />
+        <Clients />
+        <Blog />
+      </Layout>{" "}
     </>
   );
 };

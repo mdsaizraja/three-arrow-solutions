@@ -17,10 +17,13 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
-    background: ${(props) =>
-      props.themeMode === "dark" ? props.theme.colors.background1 : "white"};
+  background:${({ themeMode }) =>
+    themeMode === "dark"
+      ? `${(props) => props.theme.colors.background1}`
+      : "white"};
     color: ${(props) => props.theme.colors.primary1};
     cursor: default;
+    opacity:1;
 
   }
   h1,h2,h3,h4,h5,h6,button {
