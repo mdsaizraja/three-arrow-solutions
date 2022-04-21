@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Text } from "./PortfolioStyles";
-import MouseHoverText from "./MouseHoverText";
+import {MouseHoverText} from "./MouseHoverText";
 
 const Portfolio = ({ marqueeTexts, direction }) => {
   const marqueeElements = useRef([]);
