@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import TextPlugin from "gsap/dist/TextPlugin";
 import GoogleMapReact from "google-map-react";
 import { AiTwotoneMinusCircle } from "react-icons/ai";
+import { ImLocation } from "react-icons/im";
 const Contact = () => {
   const Maplog = {
     center: {
@@ -83,7 +84,7 @@ const Contact = () => {
               </div>
               <div className="flex ">
                 <Icondiv>
-                  <IoIosCall />
+                  <ImLocation />
                 </Icondiv>
                 <span className="ml-10 text-xl w-full leading-relaxed ">
                   6 ff, EF tower, Shreeji Gold, nr. C.K prajapati school,
