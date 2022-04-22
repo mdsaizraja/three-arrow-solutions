@@ -78,10 +78,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
     }
 
     return marqueeTexts.map((e, i) => (
-      <p
-        key={`marquee-${i}`}
-        ref={(el) => marqueeElementsRefHandler(el, i)}
-      >
+      <p key={`marquee-${i}`} ref={(el) => marqueeElementsRefHandler(el, i)}>
         <Text> {e}</Text>
       </p>
     ));

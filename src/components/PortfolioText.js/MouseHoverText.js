@@ -33,7 +33,6 @@ export const MouseHoverText = ({
               className={`absolute z-[999] w-full `}
             >
               <div className="flex  items-center">
-                {" "}
                 <BsArrowUpRight />
               </div>
               <img

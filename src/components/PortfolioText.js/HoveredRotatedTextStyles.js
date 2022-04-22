@@ -11,9 +11,11 @@ export const Text = styled.div`
 `;
 
 export const HoveredRotatedContainer = styled.div`
-  background: yellow;
+  background: #eeac34;
   height: 40px;
   z-index: 999;
   transform: rotate(-7deg);
   width: 100vw;
+  postion: absolute;
+  left: -8px;
 `;

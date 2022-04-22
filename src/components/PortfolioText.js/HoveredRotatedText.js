@@ -1,9 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import {
-  Text,
-  HoveredRotatedContainer,
-} from "./HoveredRotatedTextStyles";
+import { Text, HoveredRotatedContainer } from "./HoveredRotatedTextStyles";
 
 const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
   const marqueeElements = useRef([]);
@@ -69,8 +66,10 @@ const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
           <p
             key={`marquee-${i}`}
             ref={(el) => marqueeElementsRefHandler(el, i)}
-            style={{overflow:"hidden"}}
+            style={{ overflow: "hidden" }}
+            onMouseMove={(e) => {}}
           >
+            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5"></span>{" "}
             <Text> {e}</Text>
           </p>
         ))}
@@ -80,7 +79,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
 
   return (
     <div>
-      <HoveredRotatedContainer className=" relative mt-8 py-4 flex overflow-hidden items-center">
+      <HoveredRotatedContainer className=" relative mt-8 py-4 flex  overflow-hidden items-center">
         {renderMarqueeElements()}
       </HoveredRotatedContainer>
       {/* <HoveredImage>
