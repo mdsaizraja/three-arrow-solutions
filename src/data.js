@@ -44,6 +44,12 @@ export const data = {
     { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
     { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
     { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
+    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
+    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
+    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
+    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
+    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
+    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
   ],
   sliderCarusel: [
     {
