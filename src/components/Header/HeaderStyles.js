@@ -1,8 +1,8 @@
-import {IoIosArrowDropdown} from 'react-icons/io';
-import styled from 'styled-components';
+import { IoIosArrowDropdown } from "react-icons/io";
+import styled from "styled-components";
 
 export const Span = styled.div`
-    font-size: 2rem;
+  font-size: 2rem;
 `;
 
 // Navigation Links
@@ -54,8 +54,8 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   display: flex;
   align-self: center;
   transition: 0.3s ease;
-  opacity: ${({isOpen}) => (isOpen ? '1' : '.75')};
-  transform: ${({isOpen}) => (isOpen ? 'scaleY(-1)' : 'scaleY(1)')};
+  opacity: ${({ isOpen }) => (isOpen ? "1" : ".75")};
+  transform: ${({ isOpen }) => (isOpen ? "scaleY(-1)" : "scaleY(1)")};
 
   &:hover {
     opacity: 1;
@@ -67,18 +67,38 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   }
 `;
 
-
-// Social Icons 
+// Social Icons
 
 export const SocialIcons = styled.span`
-transition: 0.3s ease;
-color: white;
-border-radius: 50px;
+  transition: 0.3s ease;
+  color: white;
+  border-radius: 60px;
   padding: 10px;
   font-size: 3rem;
-&:hover {
-    background-color: #212d45;
+  &:hover {
     transform: scale(1.2);
     cursor: pointer;
   }
-`
+`;
+
+export const HeaderDiv = styled.div`
+  position: absoluete;
+  widht: 100%;
+  height: 70px;
+  z-index: 99;
+`;
+export const Wrapper = styled.div`
+  position: relative;
+  padding: 0px 24px;
+  widht: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+`;
+
+export const HeadingSection = styled.h1`
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
