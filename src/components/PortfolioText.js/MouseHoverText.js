@@ -1,6 +1,6 @@
 import React from "react";
 import HoveredRotatedText from "./HoveredRotatedText";
-import { BsArrowUpRight } from 'react-icons/bs';
+import { BsArrowUpRight } from "react-icons/bs";
 
 export const MouseHoverText = ({
   marqueeTexts,
@@ -32,7 +32,10 @@ export const MouseHoverText = ({
               }}
               className={`absolute z-[999] w-full `}
             >
-              <div className={`content-center`}> <BsArrowUpRight /></div>
+              <div className="flex  items-center">
+                {" "}
+                <BsArrowUpRight />
+              </div>
               <img
                 src="https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
                 alt="image"
