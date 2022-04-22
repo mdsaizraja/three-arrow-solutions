@@ -7,6 +7,7 @@ export const Text = styled.div`
   font-family: "GLD Display";
   color: black;
   cursor: pointer;
+  overflow: hidden;
 `;
 
 export const HoveredRotatedContainer = styled.div`
@@ -15,10 +16,4 @@ export const HoveredRotatedContainer = styled.div`
   z-index: 999;
   transform: rotate(-7deg);
   width: 100vw;
-`;
-
-export const HoveredImage = styled.div` 
-  width:620;
-  height:768;
-  z-index: 999;
 `;

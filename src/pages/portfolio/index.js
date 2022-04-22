@@ -1,12 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PortFolio from "../../components/PortfolioText.js/PortFolio";
-import { Layout } from "./../../layout/Layout";
+import Footer from "../../components/Footer/Footer"
+import Header from "../../components/Header/Header";
 
 const index = () => {
-
   return (
-    <Layout>
-     
+    <Fragment>
+         <div className="xl:px-20">
+      <Header /></div>
       <PortFolio
         marqueeTexts={["Smile Kitchens Smile Kitchens Smile Kitchens"]}
         direction={"-"}
@@ -28,8 +29,8 @@ const index = () => {
         marqueeTexts={["Walker Lovell Walker Lovell Walker Lovell"]}
         direction={"+"}
       />
-
-    </Layout>
+      <Footer />
+    </Fragment>
   );
 };
 

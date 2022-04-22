@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Text } from "./PortfolioStyles";
-import {MouseHoverText} from "./MouseHoverText";
+import { MouseHoverText } from "./MouseHoverText";
 
 const Portfolio = ({ marqueeTexts, direction }) => {
   const marqueeElements = useRef([]);
@@ -11,6 +11,10 @@ const Portfolio = ({ marqueeTexts, direction }) => {
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
   );
+  const [imageStyle, setImageStyle] = React.useState({
+    screenX: 0,
+    screenY: 0,
+  });
 
   useEffect(() => {
     resizeHandler();
@@ -75,8 +79,6 @@ const Portfolio = ({ marqueeTexts, direction }) => {
 
     return marqueeTexts.map((e, i) => (
       <p
-        onMouseEnter={OnMouseEnter}
-        onMouseLeave={OnMouseLeave}
         key={`marquee-${i}`}
         ref={(el) => marqueeElementsRefHandler(el, i)}
       >
@@ -87,10 +89,20 @@ const Portfolio = ({ marqueeTexts, direction }) => {
 
   return (
     <div
+      onMouseEnter={OnMouseEnter}
+      onMouseLeave={OnMouseLeave}
+      onMouseMove={(e) => {
+        setImageStyle({ screenX: e.screenX, screenY: e.screenY });
+      }}
       className=" relative mt-8 py-4 flex overflow-hidden items-center"
       style={{ minHeight: "120px" }}
     >
-      <MouseHoverText marqueeTexts={marqueeTexts} isMouseHover={isMouseHover} />
+      <MouseHoverText
+        screenX={imageStyle.screenX}
+        screenY={imageStyle.screenY}
+        marqueeTexts={marqueeTexts}
+        isMouseHover={isMouseHover}
+      />
       {renderMarqueeElements()}
     </div>
   );

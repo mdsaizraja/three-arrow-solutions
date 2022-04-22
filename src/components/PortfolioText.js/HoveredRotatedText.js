@@ -3,7 +3,6 @@ import { gsap } from "gsap";
 import {
   Text,
   HoveredRotatedContainer,
-  HoveredImage,
 } from "./HoveredRotatedTextStyles";
 
 const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
@@ -70,6 +69,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
           <p
             key={`marquee-${i}`}
             ref={(el) => marqueeElementsRefHandler(el, i)}
+            style={{overflow:"hidden"}}
           >
             <Text> {e}</Text>
           </p>
