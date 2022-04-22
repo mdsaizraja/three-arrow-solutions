@@ -63,11 +63,12 @@ const Header = () => {
   };
 
   useEffect(() => {
-    let tl = gsap.timeline();
-    tl.to(navBar.current, {
-      ease: Power2.easeIn,
-    });
-  }, [navWidth]);
+    setTheme("dark");
+    // let tl = gsap.timeline();
+    // tl.to(navBar.current, {
+    //   ease: Power2.easeIn,
+    // });
+  }, []);
   return (
     <>
       <div
