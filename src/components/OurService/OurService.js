@@ -1,5 +1,5 @@
 import React from "react";
-import { TalkExpertBox } from "./OurServiceStyles";
+import { TalkExpertBox, Section } from "./OurServiceStyles";
 import { HeadingTitle } from "../../styles/GlobalComponents";
 
 import { BsArrowRight } from "react-icons/bs";
@@ -9,12 +9,12 @@ const OurService = () => {
     <div className="container mx-auto">
       <div className="xl:mt-52 mt-20 xl:p-0 px-5">
         <HeadingTitle TextCenter="center"> Our Service</HeadingTitle>
-        <div className="flex text-center xl:overflow-hidden overflow-auto text-gray-500 font-extrabold justify-between py-20">
+        <Section className="flex  text-center overflow-x-scroll  text-gray-500 font-extrabold justify-between py-20">
           {data.services.map((item, index) => {
             return (
               <div
                 key={index}
-                className="xl:m-0 mx-8 cursor-pointer transition-all delay-300 dark:hover:text-white hover:text-black "
+                className="xl:mx-20  mx-8 cursor-pointer transition-all delay-300 dark:hover:text-white hover:text-black "
               >
                 {item.icon}
                 <br />
@@ -22,7 +22,7 @@ const OurService = () => {
               </div>
             );
           })}
-        </div>
+        </Section>
         <div className="mt-10 flex justify-center">
           <div
             className="dark:text-white text-black border-black dark:border-white border-2 flex justify-around rounded-full p-2 w-80 cursor-pointer delay-75 duration-700 

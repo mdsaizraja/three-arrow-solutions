@@ -3,9 +3,10 @@ import { IoIosCall } from "react-icons/io";
 import { Icondiv, Buttondiv } from "./ContactStyle";
 import { gsap } from "gsap";
 import TextPlugin from "gsap/dist/TextPlugin";
-import GoogleMapReact from "google-map-react";
+
 import { AiTwotoneMinusCircle } from "react-icons/ai";
 import { ImLocation } from "react-icons/im";
+import GoogleMapComponentWithMarker from "./GoogleMapComponentWithMarker";
 const Contact = () => {
   const Maplog = {
     center: {
@@ -29,7 +30,7 @@ const Contact = () => {
       ease: "power2.inOut",
       repeat: -1,
     });
-    gsap.to(Cursor.current, { opacity: 1, ease: "power2.inOut", repeat: -1 });
+    gsap.to(Cursor.current, { opacity: 0, ease: "power2.inOut", repeat: -1 });
     let masterTl = gsap.timeline({ repeat: -1 });
     sentence.forEach((word) => {
       let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 });
@@ -53,8 +54,32 @@ const Contact = () => {
         <h2 className="md:text-6xl text-4xl">Contact Us</h2>
       </div>
       <div className="xl:flex xl:fixed bottom-0 h-[50%] w-full">
-        <div className="xl:w-2/4 bg-black">
-          <GoogleMapReact
+        <div
+          className="xl:w-2/4 bg-black w-full"
+          style={{
+            height: 400,
+
+            display: "flex",
+            flexFlow: "row nowrap",
+            justifyContent: "center",
+            padding: 0,
+          }}
+        >
+          <div
+            className="w-full 
+          "
+          >
+            <GoogleMapComponentWithMarker
+              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAAHIaBUEyFri65V9rDjm11wqz9bJ9RmnM"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `100%` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
+          </div>
+          {/* <GoogleMapReact
+            options={{
+              styles: [{ stylers: [{ saturation: -50 }, { gamma: -50 }] }],
+            }}
             bootstrapURLKeys={{
               key: "AIzaSyAAHIaBUEyFri65V9rDjm11wqz9bJ9RmnM",
             }}
@@ -65,7 +90,7 @@ const Contact = () => {
               ref={MapLocator}
               className="w-10 h-10 bg-blue-800 absolute rounded-full"
             ></span>
-          </GoogleMapReact>
+          </GoogleMapReact> */}
         </div>
         <div className="xl:w-[40%] bg-black text-white items-center flex justify-center cursor-pointer transition-all duration-500 hover:bg-slate-900  ">
           <div className="w-[70%] xl:py-0 py-20">

@@ -15,7 +15,8 @@ import {
   HeadingSection,
 } from "./HeaderStyles";
 import { BsArrowRight, BsChatSquareText } from "react-icons/bs";
-import { gsap } from "gsap";
+import { gsap, Power2 } from "gsap";
+
 import { FiPhoneCall } from "react-icons/fi";
 import Link from "next/link";
 const Header = () => {
@@ -62,16 +63,20 @@ const Header = () => {
   };
 
   useEffect(() => {
-    console.log(navBar);
+    setTheme("dark");
+    // let tl = gsap.timeline();
+    // tl.to(navBar.current, {
+    //   ease: Power2.easeIn,
+    // });
   }, []);
   return (
     <>
       <div
-        ref={navBar}
         className={`h-full w-full  ${navWidth} fixed z-10 top-0 xl:left-[5%] -left-5  xl:overflow-hidden overflow-x-scroll  translate-x-5`}
         onClick={() => setNavWidth("hidden")}
       >
         <div
+          ref={navBar}
           style={{
             background:
               currentTheme === "dark" || currentTheme === undefined
@@ -120,7 +125,7 @@ const Header = () => {
                   background:
                     "linear-gradient(90deg, #E99080 14.5%, #DF9B8E 88.12%)",
                 }}
-                className="flex md:flex-row flex-col mt-10 py-5 xl:px-10 px-5 justify-between rounded-xl xl:items-center"
+                className="flex md:flex-row flex-col mt-7 py-5 xl:px-10 px-5 justify-between rounded-xl xl:items-center"
               >
                 <div className="md:w-[20%]">
                   <h4 className="text-black text-4xl leading-normal font-extrabold">
@@ -163,10 +168,10 @@ const Header = () => {
                     Let's build your digital project together
                   </HeadingSection>{" "}
                 </div>
-                <div className="xl:w-[60%] xl:mx-0 mx-5 grid xl:mt-11 mt-20 md:grid-cols-3  gap-8 dark:text-white text-black text-lg ">
+                <div className="xl:w-[60%] xl:mx-0 mx-5 grid xl:mt-5 mt-20 md:grid-cols-3  gap-8 dark:text-white text-black text-lg ">
                   <div className="flex flex-col">
                     <div>
-                      <h5 className="font-bold text-2xl xl:mb-10 mb-16">
+                      <h5 className="font-bold text-2xl xl:mb-5 mb-16">
                         Mobile App Development
                       </h5>
                       <ol>
@@ -208,7 +213,7 @@ const Header = () => {
                       </ol>
                     </div>
                     <div>
-                      <h5 className="font-bold text-2xl xl:mb-10 mb-16 mt-8">
+                      <h5 className="font-bold text-2xl xl:mb-5 mb-16 mt-3">
                         Web Development
                       </h5>
                       <ol>
@@ -272,7 +277,7 @@ const Header = () => {
                     </div>
                   </div>
                   <div className="row-span-2">
-                    <h5 className="font-bold text-2xl xl:mb-10 mb-16">
+                    <h5 className="font-bold text-2xl xl:mb-5 mb-16">
                       Enterprise Mobility Solutions
                     </h5>
                     <ol>
@@ -371,7 +376,7 @@ const Header = () => {
                   </div>
                   <div className="flex flex-col">
                     <div>
-                      <h5 className="font-bold text-2xl xl:mb-10 mb-16">
+                      <h5 className="font-bold text-2xl xl:mb-5 mb-16">
                         Hire Dedicated Developers
                       </h5>
                       <ol>
@@ -490,7 +495,7 @@ const Header = () => {
           </div>
           <div
             className=" border-t-2 border-[#BCC0CF] xl:fixed bottom-0 
-        dark:text-white text-black p-4 text-lg
+        dark:text-white text-black p-2 text-lg
         w-[88%] text-center"
             style={{
               background:
