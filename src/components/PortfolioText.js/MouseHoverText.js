@@ -37,13 +37,12 @@ export const MouseHoverText = ({
                 className={`absolute left-[6%] -top-10 w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
               >
                 {" "}
-                <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
+                <BsArrowUpRight className="text-white relative -top-5 -left-5 text-5xl" />
               </div>
               <ImageSize>
                 <img
                   src="https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
                   alt="image"
-                  className="relative z-[999999]"
                 />
               </ImageSize>
             </div>

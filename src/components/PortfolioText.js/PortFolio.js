@@ -11,7 +11,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
   );
-  const [imageStyle, setImageStyle] = React.useState({
+  const [imageStyle, setImageStyle] = useState({
     screenX: 0,
     screenY: 0,
   });
@@ -26,6 +26,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
 
   useEffect(() => {
     marqueeInitialSet();
+
     marqueeTween.current && marqueeTween.current.pause().kill();
     marqueeTween.current = gsap.to(marqueeElements.current, {
       x: `${direction}=${screenWidth * 1.5}`,
@@ -76,7 +77,6 @@ const Portfolio = ({ marqueeTexts, direction }) => {
     if (marqueeTexts.length === 2) {
       marqueeTexts[2] = marqueeTexts[0];
     }
-
     return marqueeTexts.map((e, i) => (
       <p key={`marquee-${i}`} ref={(el) => marqueeElementsRefHandler(el, i)}>
         <Text> {e}</Text>

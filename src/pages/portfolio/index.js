@@ -9,7 +9,7 @@ const index = () => {
       <div className="xl:px-20">
         <Header />
       </div>
-      <div className="bg-[#ff001f]">
+      <div >
         <PortFolio
           marqueeTexts={["Smile Kitchens Smile Kitchens Smile Kitchens"]}
           direction={"-"}

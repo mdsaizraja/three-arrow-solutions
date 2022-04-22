@@ -7,7 +7,7 @@ export const Background = styled.div`
   width: 100%;
 `;
 
-export const Text = styled.h2`
+export const Text = styled.span`
   position: relative;
   transform: translateX(43%);
   font-size: 21vw;
@@ -25,5 +25,4 @@ export const ImageSize = styled.div`
   width: 300px;
   height: 500px;
   transform-origin: 100% 0%;
-  transform: rotate(343deg);
 `;

@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Text, HoveredRotatedContainer } from "./HoveredRotatedTextStyles";
 
-const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
+const HoveredRotatedText = ({ marqueeTexts, direction }) => {
   const marqueeElements = useRef([]);
   const marqueeTween = useRef();
 
@@ -82,9 +82,6 @@ const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
       <HoveredRotatedContainer className=" relative mt-8 py-4 flex  overflow-hidden items-center">
         {renderMarqueeElements()}
       </HoveredRotatedContainer>
-      {/* <HoveredImage>
-        <img src={src} alt="image" />
-      </HoveredImage> */}
     </div>
   );
 };
