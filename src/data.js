@@ -11,28 +11,28 @@ export const data = {
       image: "/images/image 15.png",
     },
     {
-      image: "/images/image 14.png",
+      image: "/images/apex.png",
     },
     {
-      image: "/images/image 15.png",
+      image: "/images/Logo_Red_cedbc299f1.png",
     },
     {
-      image: "/images/image 14.png",
+      image: "/images/bundle.png",
     },
     {
-      image: "/images/image 15.png",
+      image: "/images/cogminds.png",
     },
     {
-      image: "/images/image 14.png",
+      image: "/images/harptec.png",
     },
     {
-      image: "/images/image 15.png",
+      image: "/images/ishir.png",
     },
     {
-      image: "/images/image 14.png",
+      image: "/images/PowerCMS_Logo_Color.png",
     },
     {
-      image: "/images/image 15.png",
+      image: "/images/sjtech.png",
     },
   ],
   services: [
@@ -41,6 +41,8 @@ export const data = {
     { serviceName: "Node", icon: <FaNodeJs className="text-8xl" /> },
     { serviceName: "GraphQL", icon: <GrGraphQl className="text-8xl" /> },
     { serviceName: "Firebase", icon: <SiFirebase className="text-8xl" /> },
+    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
+    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
     { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
   ],
   sliderCarusel: [

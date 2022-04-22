@@ -16,6 +16,6 @@ export const HoveredRotatedContainer = styled.div`
   z-index: 999;
   transform: rotate(-7deg);
   width: 100vw;
-  postion: absolute;
+  position: absolute;
   left: -8px;
 `;

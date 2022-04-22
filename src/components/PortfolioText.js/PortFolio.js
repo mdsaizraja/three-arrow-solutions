@@ -91,8 +91,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
       onMouseMove={(e) => {
         setImageStyle({ screenX: e.screenX, screenY: e.screenY });
       }}
-      className=" relative mt-8 py-4 flex overflow-hidden items-center"
-      style={{ minHeight: "120px" }}
+      className=" relative mt-8 py-4 flex overflow-hidden items-center "
     >
       <MouseHoverText
         screenX={imageStyle.screenX}

@@ -1,6 +1,7 @@
 import React from "react";
 import HoveredRotatedText from "./HoveredRotatedText";
 import { BsArrowUpRight } from "react-icons/bs";
+import { ImageSize } from "./PortfolioStyles";
 
 export const MouseHoverText = ({
   marqueeTexts,
@@ -38,11 +39,13 @@ export const MouseHoverText = ({
                 {" "}
                 <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
               </div>
-              <img
-                src="https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
-                alt="image"
-                className="w-96 h-96"
-              />
+              <ImageSize>
+                <img
+                  src="https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
+                  alt="image"
+                  className="relative z-[999999]"
+                />
+              </ImageSize>
             </div>
           </div>
         );
