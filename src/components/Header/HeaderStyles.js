@@ -72,11 +72,10 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
 export const SocialIcons = styled.span`
   transition: 0.3s ease;
   color: white;
-  border-radius: 50px;
+  border-radius: 60px;
   padding: 10px;
   font-size: 3rem;
   &:hover {
-    background-color: #212d45;
     transform: scale(1.2);
     cursor: pointer;
   }

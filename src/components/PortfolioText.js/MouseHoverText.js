@@ -1,6 +1,7 @@
 import React from "react";
 import HoveredRotatedText from "./HoveredRotatedText";
 import { BsArrowUpRight } from "react-icons/bs";
+import { ImageSize } from "./PortfolioStyles";
 
 export const MouseHoverText = ({
   marqueeTexts,
@@ -35,11 +36,13 @@ export const MouseHoverText = ({
               <div className="flex  items-center">
                 <BsArrowUpRight />
               </div>
-              <img
-                src="https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
-                alt="image"
-                className="w-96 h-96"
-              />
+              <ImageSize>
+                <img
+                  src="https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
+                  alt="image"
+                  className="relative z-[999999]"
+                />
+              </ImageSize>
             </div>
           </div>
         );
@@ -56,11 +59,12 @@ export const MouseHoverText = ({
               }}
               className={`absolute z-[9999] w-full `}
             >
-              <img
-                src="https://likely-story.co.uk/wp-content/uploads/2021/08/Browns-Cover-01-1-620x768.png"
-                alt="image"
-                className="w-96 h-96"
-              />
+              <ImageSize>
+                <img
+                  src="https://likely-story.co.uk/wp-content/uploads/2021/08/Browns-Cover-01-1-620x768.png"
+                  alt="image"
+                />
+              </ImageSize>
             </div>
             <HoveredRotatedText
               marqueeTexts={["View Case Study  Web Design"]}
@@ -91,11 +95,12 @@ export const MouseHoverText = ({
               }}
               className={`absolute z-[9999] w-full `}
             >
-              <img
-                src="https://likely-story.co.uk/wp-content/uploads/2021/03/Mask-Group-262@2x-620x768.jpg"
-                alt="image"
-                className="w-96 h-96"
-              />
+              <ImageSize>
+                <img
+                  src="https://likely-story.co.uk/wp-content/uploads/2021/03/Mask-Group-262@2x-620x768.jpg"
+                  alt="image"
+                />
+              </ImageSize>
             </div>
           </div>
         );
@@ -119,11 +124,12 @@ export const MouseHoverText = ({
               }}
               className={`absolute z-[9999] w-full `}
             >
-              <img
-                src="https://likely-story.co.uk/wp-content/uploads/2021/04/YT-Cover-01-1-620x768.png"
-                alt="image"
-                className="w-96 h-96"
-              />
+              <ImageSize>
+                <img
+                  src="https://likely-story.co.uk/wp-content/uploads/2021/04/YT-Cover-01-1-620x768.png"
+                  alt="image"
+                />
+              </ImageSize>
             </div>
           </div>
         );
@@ -147,11 +153,12 @@ export const MouseHoverText = ({
               }}
               className={`absolute z-[999] w-full `}
             >
-              <img
-                src="https://likely-story.co.uk/wp-content/uploads/2022/01/ACOW-Cover-01-620x768.png"
-                alt="image"
-                className="w-96 h-96"
-              />
+              <ImageSize>
+                <img
+                  src="https://likely-story.co.uk/wp-content/uploads/2022/01/ACOW-Cover-01-620x768.png"
+                  alt="image"
+                />
+              </ImageSize>
             </div>
           </div>
         );
@@ -175,11 +182,12 @@ export const MouseHoverText = ({
               }}
               className={`absolute z-[999] w-full `}
             >
-              <img
-                src="https://likely-story.co.uk/wp-content/uploads/2021/03/LS-Walker-Lovell-Cover2@2x-620x768.png"
-                alt="image"
-                className="w-96 h-96"
-              />
+              <ImageSize>
+                <img
+                  src="https://likely-story.co.uk/wp-content/uploads/2021/03/LS-Walker-Lovell-Cover2@2x-620x768.png"
+                  alt="image"
+                />
+              </ImageSize>
             </div>
           </div>
         );

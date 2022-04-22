@@ -69,7 +69,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction, src }) => {
             style={{ overflow: "hidden" }}
             onMouseMove={(e) => {}}
           >
-            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5"></span>{" "}
+            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5"></span>
             <Text> {e}</Text>
           </p>
         ))}

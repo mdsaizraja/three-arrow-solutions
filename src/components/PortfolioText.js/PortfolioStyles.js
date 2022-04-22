@@ -21,3 +21,9 @@ export const Text = styled.h2`
   cursor: pointer;
 `;
 
+export const ImageSize = styled.div`
+  width: 300px;
+  height: 500px;
+  transform-origin: 100% 0%;
+  transform: rotate(343deg);
+`;
