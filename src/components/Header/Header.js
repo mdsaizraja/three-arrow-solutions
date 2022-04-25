@@ -14,16 +14,19 @@ import {
   HeaderDiv,
   HeadingSection,
 } from "./HeaderStyles";
+import TextPlugin from "gsap/dist/TextPlugin";
 import { BsArrowRight, BsChatSquareText } from "react-icons/bs";
-import { gsap, Power2 } from "gsap";
+import gsap from "gsap";
 
 import { FiPhoneCall } from "react-icons/fi";
 import Link from "next/link";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [navWidth, setNavWidth] = useState("hidden");
   const navBar = useRef();
-
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleNav = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -61,19 +64,61 @@ const Header = () => {
       );
     }
   };
+  useEffect(() => {
+    console.log("hit");
+    gsap.registerPlugin(TextPlugin);
+    var menu = gsap.timeline({ paused: true });
+    menu.fromTo(navBar.current, { x: -500 }, { x: 0, duration: 0.5 });
+    menu.fromTo(
+      ".Carrer_div",
+      { autoAlpha: 0 },
+      { autoAlpha: 1, duration: 0.5 }
+    );
+    menu.fromTo(
+      ".Header_nav",
+      { autoAlpha: 0 },
+      { autoAlpha: 1, duration: 0.5 }
+    );
+    menu.fromTo(".Logo_div", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 });
+    menu.fromTo(
+      "h5",
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        x: 30,
+        duration: 1,
+        stagger: 0.1,
+      }
+    );
+    menu.fromTo(
+      `ol`,
+      {
+        delay: 1,
+        autoAlpha: 0,
 
+        // duration: 1,
+        // stagger: 0.1,
+      },
+      { duration: 1, autoAlpha: 1, x: 30 }
+    );
+
+    document.querySelector("#MenuOpen").addEventListener("click", () => {
+      menu.timeScale(1).play();
+    });
+    document.querySelector(".CloseNav").addEventListener("click", () => {
+      menu.timeScale(2).play().reverse();
+      setNavWidth("hidden");
+    });
+  }, [navWidth]);
   useEffect(() => {
     setTheme("dark");
-    // let tl = gsap.timeline();
-    // tl.to(navBar.current, {
-    //   ease: Power2.easeIn,
-    // });
   }, []);
   return (
     <>
       <div
-        className={`h-full w-full  ${navWidth} fixed z-10 top-0 xl:left-[5%] -left-5  xl:overflow-hidden overflow-x-scroll  translate-x-5`}
-        onClick={() => setNavWidth("hidden")}
+        className={`h-full w-full  ${navWidth} fixed z-10 top-0 xl:left-[5%] -left-5  xl:overflow-hidden overflow-x-scroll  translate-x-5 CloseNav`}
       >
         <div
           ref={navBar}
@@ -86,7 +131,7 @@ const Header = () => {
           className="xl:w-[88%]"
         >
           <div className="xl:mx-32 xl:py-8 py-5 mx-5">
-            <div className="flex ">
+            <div className="flex Header_nav">
               {" "}
               <NavLink className="flex items-center justify-between w-full font-bold ">
                 <Link href="/">
@@ -101,7 +146,10 @@ const Header = () => {
                     </Span>
                   </div>
                 </Link>
-                <Span onClick={() => setNavWidth("hidden")}>
+                <Span
+                  className="CloseNav"
+                  onClick={() => setNavWidth("hidden")}
+                >
                   <div>
                     {" "}
                     <RiCloseFill
@@ -125,7 +173,7 @@ const Header = () => {
                   background:
                     "linear-gradient(90deg, #E99080 14.5%, #DF9B8E 88.12%)",
                 }}
-                className="flex md:flex-row flex-col mt-7 py-5 xl:px-10 px-5 justify-between rounded-xl xl:items-center"
+                className="flex md:flex-row flex-col mt-7 py-5 xl:px-10 px-5 justify-between rounded-xl xl:items-center Carrer_div"
               >
                 <div className="md:w-[20%]">
                   <h4 className="text-black text-4xl leading-normal font-extrabold">
@@ -157,7 +205,7 @@ const Header = () => {
                 </div>
               </div>
               <div className="flex xl:flex-row flex-col xl:items-center mt-5">
-                <div className="xl:w-[40%] md:flex md:flex-col md:items-center">
+                <div className="xl:w-[40%] md:flex md:flex-col md:items-center Logo_div">
                   <Lottie
                     ref={(c) => startLottieAnim(c)}
                     animationData={lottieJson}
@@ -496,7 +544,7 @@ const Header = () => {
           <div
             className=" border-t-2 border-[#BCC0CF] xl:fixed bottom-0 
         dark:text-white text-black p-2 text-lg
-        w-[88%] text-center"
+        w-full text-center"
             style={{
               background:
                 currentTheme === "dark" || currentTheme === undefined
@@ -509,7 +557,7 @@ const Header = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex justify-between mt-5">
+        <div className="flex justify-between mt-5" ref={ref}>
           <Link href="/">
             <NavLink className="flex items-center font-bold ">
               <SiAirchina size="3rem" className="text-black dark:text-white" />
@@ -524,6 +572,7 @@ const Header = () => {
             </SocialIcons>
             <SocialIcons className="dark:hover:bg-[#212d45] hover:bg-[#fff]">
               <RiMenu4Fill
+                id="MenuOpen"
                 className="text-black dark:text-white"
                 onClick={() => setNavWidth("block")}
               />

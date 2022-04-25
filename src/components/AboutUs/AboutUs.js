@@ -1,17 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-
+import { gsap } from "gsap";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 import { MainContentBox } from "./AboutUsStyles";
 import { GrClose } from "react-icons/gr";
 import { TextTopBorder, HeadingTitle } from "../../styles/GlobalComponents";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 const AboutUs = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = React.useState(false);
+  useEffect(() => {
+    // gsap.to(ref.current, {
+    //   duration: 1,
+    //   color: "red",
+    //   ease: "power1.out",
+    //   scrollTrigger: {
+    //     trigger: ref.current,
+    //     start: "top+=0 ",
+    //     end: "+=500",
+    //     scrub: true,
+    //     markers: true,
+    //   },
+    // });
+  }, []);
   return (
-    <div className="container mx-auto">
-      <MainContentBox className="xl:p-20  p-5  xl:mt-52 mt-20 xl:mx-0 md:mx-5 xl:flex">
+    <div className="container mx-auto" ref={ref}>
+      <MainContentBox className="xl:p-20  p-5 gs_reveal xl:mt-52 mt-20 xl:mx-0 md:mx-5 xl:flex">
         <div className="xl:w-7/12 md:w-full xl:p-0 xl:text-left text-center">
           <HeadingTitle>Who we are</HeadingTitle>
           <div className="xl:flex mt-28  hidden">
