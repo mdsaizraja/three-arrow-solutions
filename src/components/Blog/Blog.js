@@ -1,18 +1,39 @@
 import { data } from "../../data";
-import React from "react";
+import React, { useEffect } from "react";
 import { HeadingSection } from "./BlogStyles";
-
+import { gsap } from "gsap";
 const Blog = () => {
+  useEffect(() => {
+    let t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".Main_Bog_div",
+        start: "top 90%",
+        end: "bottom 0%",
+        scrub: true,
+      },
+    });
+    t1.from(".Blog_text", { y: -100, autoAlpha: 0, duration: 2 })
+      .fromTo(
+        ".F_blog",
+        { duration: 1, autoAlpha: 0 },
+        { autoAlpha: 1, duration: 1 }
+      )
+      .fromTo(
+        ".Rest_blog ",
+        { duration: 1, autoAlpha: 0 },
+        { autoAlpha: 1, duration: 5, x: 100, stagger: 0.1 }
+      );
+  }, []);
   return (
     <div className="container mx-auto">
-      <div className="xl:mt-52 mt-32 md:mx-5 mx-0 xl:p-0 px-5">
-        <HeadingSection className="font-extrabold xl:text-8xl md:text-7xl text-5xl leading-tight tracking-wide xl:w-3/5 pb-3">
+      <div className="xl:mt-52 mt-32 md:mx-5 mx-0 xl:p-0 px-5 Main_Bog_div">
+        <HeadingSection className="font-extrabold xl:text-8xl md:text-7xl text-5xl leading-tight tracking-wide xl:w-3/5 pb-3 Blog_text">
           A lot is happening, We are blogging about it.
         </HeadingSection>
         <div className="grid grid-rows-1 xl:mt-40 mt-10 text-white  xl:grid-flow-col grid-flow-row gap-24 w-full">
-          <div className="row-span-2 col-span-3  bg-[#042C54] text-white">
+          <div className="row-span-2 col-span-3  bg-[#042C54] text-white F_blog">
             <div
-              className="xl:max-w-fit md:w-full  flex flex-col"
+              className="xl:max-w-fit md:w-full  flex flex-col "
               style={{
                 clipPath:
                   "polygon(0% 7%,10% 0%, 100% 0%, 100% 5%, 100% 95%, 95% 100%,5% 100%,0 95%)",
@@ -36,7 +57,7 @@ const Blog = () => {
             {data.blogs.map((item, index) => {
               if (index !== 0)
                 return (
-                  <div key={index} className="w-2/5   bg-[#042C54]">
+                  <div key={index} className="w-2/5   bg-[#042C54] Rest_blog">
                     <div
                       className="max-w-fit flex flex-col"
                       style={{

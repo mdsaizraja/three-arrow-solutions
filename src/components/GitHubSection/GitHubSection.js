@@ -6,8 +6,7 @@ const GitHubSection = () => {
     let t1 = gsap.timeline({
       scrollTrigger: {
         trigger: ".Git_text",
-        start: "top 80%",
-        end: "bottom 90%",
+
         scrub: true,
       },
     });

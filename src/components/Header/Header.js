@@ -65,7 +65,6 @@ const Header = () => {
     }
   };
   useEffect(() => {
-    console.log("hit");
     gsap.registerPlugin(TextPlugin);
     var menu = gsap.timeline({ paused: true });
     menu.fromTo(navBar.current, { x: -500 }, { x: 0, duration: 0.5 });
