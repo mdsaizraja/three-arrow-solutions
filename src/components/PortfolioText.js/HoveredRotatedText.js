@@ -37,9 +37,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
   const marqueeInitialSet = () => {
     gsap.set(marqueeElements.current, {
       xPercent: -100,
-      x: function (index) {
-        return (screenWidth / 2) * index;
-      },
+      x: screenWidth * 1.5
     });
   };
 
@@ -66,8 +64,6 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
           <p
             key={`marquee-${i}`}
             ref={(el) => marqueeElementsRefHandler(el, i)}
-            style={{ overflow: "hidden" }}
-            onMouseMove={(e) => {}}
           >
             <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5"></span>
             <Text> {e}</Text>
@@ -76,7 +72,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
       </div>
     );
   };
-
+``
   return (
     <div>
       <HoveredRotatedContainer className=" relative mt-8 py-4 flex  overflow-hidden items-center">

@@ -3,13 +3,7 @@ import HoveredRotatedText from "./HoveredRotatedText";
 import { BsArrowUpRight } from "react-icons/bs";
 import { ImageSize } from "./PortfolioStyles";
 
-export const MouseHoverText = ({
-  marqueeTexts,
-  isMouseHover,
-  screenX,
-  screenY,
-}) => {
-  console.log(screenX);
+export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
   const MouseHover = () => {
     if (typeof isMouseHover != undefined && isMouseHover === true) {
       if (
@@ -19,7 +13,9 @@ export const MouseHoverText = ({
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={["View Case Study  Web Design"]}
+              marqueeTexts={[
+                "View Case Study Web Design View Case Study Web Design View Case Study Web Design",
+              ]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
@@ -74,7 +70,9 @@ export const MouseHoverText = ({
               />
             </div>
             <HoveredRotatedText
-              marqueeTexts={["View Case Study  Web Design"]}
+              marqueeTexts={[
+                "View Case Study Web Design View Case Study Web Design View Case Study Web Design",
+              ]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/08/Browns-Cover-01-1-620x768.png"
@@ -89,7 +87,9 @@ export const MouseHoverText = ({
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={["View Case Study  Brand Identity & Web Design"]}
+              marqueeTexts={[
+                "View Case Study Brand Identity & Web Design View Case Study Brand Identity & Web Design View Case Study Brand Identity & Web Design",
+              ]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/03/Mask-Group-262@2x-620x768.jpg"
@@ -123,7 +123,9 @@ export const MouseHoverText = ({
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={["View Case Study  Brand Identity & Web Design"]}
+              marqueeTexts={[
+                "View Case Study Brand Identity & Web Design View Case Study Brand Identity & Web Design View Case Study Brand Identity & Web Design",
+              ]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/04/YT-Cover-01-1-620x768.png"
@@ -157,7 +159,9 @@ export const MouseHoverText = ({
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={["View Case Study  Characted Design & Web Design"]}
+              marqueeTexts={[
+                "View Case Study Characted Design & Web Design View Case Study Characted Design & Web Design View Case Study Characted Design & Web Design",
+              ]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2022/01/ACOW-Cover-01-620x768.png"
@@ -191,7 +195,9 @@ export const MouseHoverText = ({
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={["View Case Study  Brand & Web Design"]}
+              marqueeTexts={[
+                "View Case Study Brand & Web Design View Case Study Brand & Web Design View Case Study Brand & Web Design",
+              ]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/03/LS-Walker-Lovell-Cover2@2x-620x768.png"

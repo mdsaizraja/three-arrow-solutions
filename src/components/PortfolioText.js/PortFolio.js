@@ -13,7 +13,6 @@ const Portfolio = ({ marqueeTexts, direction }) => {
   );
   const [imageStyle, setImageStyle] = useState({
     screenX: 0,
-    screenY: 0,
   });
 
   useEffect(() => {
@@ -33,7 +32,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
       ease: "none",
       repeat: -1,
       duration: 50,
-      rotation: 0.1,
+      rotation: 0.01,
       modifiers: {
         x: (x) => {
           return (parseFloat(x) % (screenWidth * 1.5)) + "px";
@@ -45,8 +44,8 @@ const Portfolio = ({ marqueeTexts, direction }) => {
   const marqueeInitialSet = () => {
     gsap.set(marqueeElements.current, {
       xPercent: -100,
-      x: function (index) {
-        return (screenWidth / 2) * index;
+      x: function () {
+        return screenWidth * 1.5;
       },
     });
   };
@@ -89,13 +88,13 @@ const Portfolio = ({ marqueeTexts, direction }) => {
       onMouseEnter={OnMouseEnter}
       onMouseLeave={OnMouseLeave}
       onMouseMove={(e) => {
-        setImageStyle({ screenX: e.screenX, screenY: e.screenY });
+        setImageStyle({ screenX: e.screenX });
       }}
-      className=" relative mt-8 py-4 flex overflow-hidden items-center "
+      className=" relative w-screen mt-8 py-4 flex overflow-hidden items-center "
+      
     >
       <MouseHoverText
         screenX={imageStyle.screenX}
-        screenY={imageStyle.screenY}
         marqueeTexts={marqueeTexts}
         isMouseHover={isMouseHover}
       />
