@@ -511,7 +511,8 @@ const Header = () => {
                     before:border-2 hover:before:bg-[#E99080] before:border-[#E99080] before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
                         >
-                          Work
+                          {" "}
+                          <Link href="/portfolio">Work</Link>
                         </li>
                         <li
                           className="relative mb-5 cursor-pointer  px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
