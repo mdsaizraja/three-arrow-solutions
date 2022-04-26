@@ -1,18 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-
+import { gsap } from "gsap";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 import { MainContentBox } from "./AboutUsStyles";
 import { GrClose } from "react-icons/gr";
 import { TextTopBorder, HeadingTitle } from "../../styles/GlobalComponents";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 const AboutUs = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
+  const Mobile_img = useRef(null);
+  const Content_box = useRef(null);
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = React.useState(false);
+  useEffect(() => {
+    let t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "top 90%",
+        end: "bottom 60%",
+
+        scrub: true,
+      },
+    });
+    t1.from(Mobile_img.current, { x: 100, opacity: 0, duration: 0.5 }).from(
+      Content_box.current,
+      { y: 200, opacity: 0, duration: 1 }
+    );
+  }, []);
   return (
-    <div className="container mx-auto">
-      <MainContentBox className="xl:p-20  p-5  xl:mt-52 mt-20 xl:mx-0 md:mx-5 xl:flex">
-        <div className="xl:w-7/12 md:w-full xl:p-0 xl:text-left text-center">
+    <div className="container mx-auto" ref={ref}>
+      <MainContentBox className="xl:p-20  p-5 gs_reveal xl:mt-52 mt-20 xl:mx-0 md:mx-5 xl:flex">
+        <div
+          className="xl:w-7/12 md:w-full xl:p-0 xl:text-left text-center"
+          ref={Content_box}
+        >
           <HeadingTitle>Who we are</HeadingTitle>
           <div className="xl:flex mt-28  hidden">
             <div className="w-5/12">
@@ -51,6 +74,7 @@ const AboutUs = () => {
         </div>
         <div className="xl:w-5/12 p-8 md:w-full flex justify-center ">
           <img
+            ref={Mobile_img}
             alt="undraw_video_upload_3d4u 1.png"
             src="/images/undraw_video_upload_3d4u 1.png"
             className="cursor-pointer md:max-w-[500px] md:max-h-[400px] "

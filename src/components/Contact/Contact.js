@@ -41,6 +41,7 @@ const Contact = () => {
       masterTl.add(tl);
     });
   }, []);
+
   return (
     <div>
       <div className="text-center pb-[20%] text-white">
@@ -70,7 +71,7 @@ const Contact = () => {
           "
           >
             <GoogleMapComponentWithMarker
-              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAAHIaBUEyFri65V9rDjm11wqz9bJ9RmnM"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAqXuLdPt6JQj8AcoTH12seV1bcAuNoEEA"
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `100%` }} />}
               mapElement={<div style={{ height: `100%` }} />}

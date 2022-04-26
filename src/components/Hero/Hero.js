@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Lottie from "react-lottie-player";
 import lottieJson from "../../animation/lf20_fjv8qxqn.json";
 import { HeadingSection } from "./HeroStyles";
-
+import { gsap } from "gsap";
 const Hero = () => {
+  const Main_div = useRef(null);
+  const Content_sec = useRef(null);
+  const Img_sec = useRef(null);
+
   const startLottieAnim = (anim) => {
     this.lottieAnim = anim;
     if (anim) {
       this.lottieAnim.play();
     }
   };
+  useEffect(() => {
+    let t1 = gsap.timeline();
+    t1.from(Img_sec.current, {
+      x: 200,
+      autoAlpha: 0,
+      duration: 1,
+    }).from(Content_sec.current, {
+      y: 500,
+      autoAlpha: 0,
+      duration: 1,
+    });
+  }, []);
+
   return (
     <div className="container mx-auto">
       <div
         className="flex xl:justify-between justify-center flex-wrap xl:my-20  xl:p-0 px-5
       "
+        ref={Main_div}
       >
-        <div className="md:w-[80%] xl:w-6/12">
+        <div className="md:w-[80%] xl:w-6/12 " ref={Content_sec}>
           <HeadingSection
             className={`font-extrabold xl:text-8xl  xl:leading-tight tracking-tighter py-4`}
           >
@@ -39,7 +57,10 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="md:w-full xl:w-6/12 mt-8 flex md:justify-center xl:justify-end">
+        <div
+          ref={Img_sec}
+          className="md:w-full xl:w-6/12 mt-8 flex md:justify-center xl:justify-end"
+        >
           <Lottie
             ref={(c) => startLottieAnim(c)}
             animationData={lottieJson}

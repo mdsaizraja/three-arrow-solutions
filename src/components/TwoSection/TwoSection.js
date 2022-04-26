@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import { SecondSec } from "./TwoSectionStyles";
 const TwoSection = () => {
+  const First_div = useRef(null);
+  const Second_div = useRef(null);
+  useEffect(() => {
+    let t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".Sections",
+        start: "top 80%",
+        end: "bottom 90%",
+        scrub: true,
+      },
+    });
+    t1.from(First_div.current, { x: -100, opacity: 0, duration: 0.5 }).from(
+      Second_div.current,
+      { x: 100, opacity: 0, duration: 0.5 }
+    );
+  }, []);
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto Sections">
       <div className="flex justify-center xl:flex-row flex-col xl:mt-52 md:mx-5 mx-0 mt-20 text-white xl:p-0 px-5">
-        <div className="xl:w-3/6 bg-[#313a5a] xl:px-28 px-10 py-20">
+        <div
+          className="xl:w-3/6 bg-[#313a5a] xl:px-28 px-10 py-20"
+          ref={First_div}
+        >
           <h1 className="xl:text-4xl text-3xl">
             Can't find a service you are looking for?
           </h1>
@@ -16,7 +36,7 @@ const TwoSection = () => {
             Explore all Services
           </button>
         </div>
-        <SecondSec className="xl:w-3/6 xl:px-28 px-10 py-20">
+        <SecondSec className="xl:w-3/6 xl:px-28 px-10 py-20" ref={Second_div}>
           <h1 className="xl:text-4xl text-3xl">
             Want to hire a resource to work with you?
           </h1>

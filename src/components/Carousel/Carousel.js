@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { gsap } from "gsap";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { data } from "../../data";
@@ -6,10 +7,20 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Carousel = () => {
   const [index, setIndex] = useState(0);
-
+  useEffect(() => {
+    let t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".Carousel_container",
+        start: "top 80%",
+        end: "bottom 90%",
+        scrub: true,
+      },
+    });
+    t1.from(".Carousel_container", { y: 200, opacity: 0, duration: 0.5 });
+  }, []);
   return (
     <div className="container mx-auto">
-      <div className="xl:mt-52 mt-20 relative md:mx-5 mx-0 xl:p-0 px-5">
+      <div className="xl:mt-52 mt-20 relative md:mx-5 mx-0 xl:p-0 px-5 Carousel_container">
         <AutoPlaySwipeableViews
           index={index}
           onChangeIndex={setIndex}
