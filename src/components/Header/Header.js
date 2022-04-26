@@ -14,6 +14,7 @@ import {
   HeaderDiv,
   HeadingSection,
 } from "./HeaderStyles";
+import { useRouter } from "next/router";
 import { BsArrowRight, BsChatSquareText } from "react-icons/bs";
 import { gsap, Power2 } from "gsap";
 
@@ -23,6 +24,17 @@ const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [navWidth, setNavWidth] = useState("hidden");
   const navBar = useRef();
+  const router = useRouter();
+
+  const [hideThemeChanger, setHideThemeChanger] = useState();
+
+  useEffect(() => {
+    if (router.pathname === "/Contact") {
+      setHideThemeChanger(true);
+    } else {
+      setHideThemeChanger(false);
+    }
+  });
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleNav = () => {
@@ -520,7 +532,7 @@ const Header = () => {
           </Link>
           <div className="flex">
             <SocialIcons className="dark:hover:bg-[#212d45] hover:bg-[#fff]">
-              {renderThemeChanger()}
+              {hideThemeChanger === false && renderThemeChanger()}
             </SocialIcons>
             <SocialIcons className="dark:hover:bg-[#212d45] hover:bg-[#fff]">
               <RiMenu4Fill

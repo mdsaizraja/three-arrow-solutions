@@ -1,6 +1,15 @@
 import React, { useRef, useEffect } from "react";
 import { IoIosCall } from "react-icons/io";
-import { Icondiv, Buttondiv } from "./ContactStyle";
+import {
+  Icondiv,
+  Buttondiv,
+  SendText,
+  TextHello,
+  MeetUsText,
+  MeetUs,
+  PitchUs,
+  MeetUsContainer,
+} from "./ContactStyle";
 import { gsap } from "gsap";
 import TextPlugin from "gsap/dist/TextPlugin";
 
@@ -93,12 +102,12 @@ const Contact = () => {
           </GoogleMapReact> */}
         </div>
         <div className="xl:w-[40%] bg-black text-white items-center flex justify-center cursor-pointer transition-all duration-500 hover:bg-slate-900  ">
-          <div className="w-[70%] xl:py-0 py-20">
-            <h4 className="xl:text-7xl text-5xl mb-5">Meet Us</h4>
-            <div className="">
+          <MeetUsContainer>
+            <MeetUs>Meet Us</MeetUs>
+            <MeetUsText>
               <div className="flex mb-5">
                 <Icondiv>
-                  <IoIosCall />{" "}
+                  <IoIosCall />
                 </Icondiv>
 
                 <span className="ml-10 text-xl">+91 1234567890</span>
@@ -117,25 +126,28 @@ const Contact = () => {
                   Vadodara, Gujarat 390003, India
                 </span>
               </div>
-            </div>
-          </div>
+            </MeetUsText>
+          </MeetUsContainer>
         </div>
+
         <div className="xl:w-2/4 bg-white text-black items-center flex justify-center cursor-pointer transition-all duration-500 hover:bg-slate-200   ">
-          {" "}
           <div className="w-[80%] xl:py-0 py-20">
-            <h4 className="xl:text-7xl text-5xl mb-5">Pitch us</h4>
-            <div className="leading-relaxed">
+            <PitchUs>Pitch us</PitchUs>
+            <TextHello>
               <p>
                 hello,
                 <br />
-                my name is <Icondiv>your name</Icondiv> and my e-mail address is
-                <Icondiv>your email</Icondiv> and I would like to discuss about
+                my name is
+                  <input className="bg-white text-#02C897"  style={{  border:"none", textDecoration:"none", width:"80px"}} placeholder = " your name " />
+                
+                and my e-mail address is
+                <Icondiv> your email</Icondiv> and I would like to discuss about
                 <Icondiv> this project.</Icondiv>
               </p>
-              <Buttondiv className="mt-5 rounded-full py-6 px-14 transition-all duration-700 delay-75">
-                send
-              </Buttondiv>
-            </div>
+            </TextHello>
+            <Buttondiv>
+              <SendText>send</SendText>
+            </Buttondiv>
           </div>
         </div>
       </div>
