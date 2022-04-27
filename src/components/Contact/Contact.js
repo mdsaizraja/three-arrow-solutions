@@ -138,15 +138,27 @@ const Contact = () => {
                 hello,
                 <br />
                 my name is
-                  <input className="bg-white text-#02C897"  style={{  border:"none", textDecoration:"none", width:"80px"}} placeholder = " your name " />
+                  <input className="bg-transparent text-[#00add8] w-[80px] text-2xl font-light not-italic h-6 focus:outline-none mx-2"
+                  onKeyDown={(e)=>{
+e.target.style.width=((e.target.value.length+1)*8)+'px'
+                    }
+                  }   placeholder = " your name " />
                 
-                and my e-mail address is
-                <Icondiv> your email</Icondiv> and I would like to discuss about
-                <Icondiv> this project.</Icondiv>
+                 and my e-mail address is
+                 <input className="bg-transparent text-[#00add8] w-[80px] text-2xl font-light not-italic h-6 focus:outline-none mx-2"
+                  onKeyDown={(e)=>{
+e.target.style.width=((e.target.value.length+1)*8)+'px'
+                    }
+                  }   placeholder = " your email " /> and I would like to discuss about
+                 <input className="bg-transparent text-[#00add8] w-[82px] text-2xl font-light not-italic h-6 focus:outline-none mx-2"
+                  onKeyDown={(e)=>{
+e.target.style.width=((e.target.value.length+1)*8)+'px'
+                    }
+                  }   placeholder = " this Project " />
               </p>
             </TextHello>
             <Buttondiv>
-              <SendText>send</SendText>
+              <SendText><div onClick={() => window.location = 'mailto:contact@threearrow.in'}>send</div></SendText>
             </Buttondiv>
           </div>
         </div>
