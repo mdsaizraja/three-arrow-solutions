@@ -8,7 +8,8 @@ import GitHubSection from "../components/GitHubSection/GitHubSection";
 import Carousel from "../components/Carousel/Carousel";
 import BusinessModel from "../components/Business Model/BusinessModel";
 import TwoSection from "../components/TwoSection/TwoSection";
-import Clients from "../components/Clients/Clients";
+// import Clients from "../components/Clients/Clients";
+import Clients from "../components/Client_animated/client"
 import Blog from "../components/Blog/Blog";
 import Footer from "../components/Footer/Footer";
 const Home = () => {
@@ -24,8 +25,8 @@ const Home = () => {
         <TwoSection />
         <Clients />
         <Blog />
-        <Footer />
       </Layout>
+      <Footer />
     </>
   );
 };

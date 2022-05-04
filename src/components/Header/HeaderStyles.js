@@ -21,7 +21,7 @@ export const NavLink = styled.a`
   }
 `;
 
-/// DropDown Contact
+/// DropDown contact
 export const ContactDropDown = styled.button`
   border: none;
   display: flex;

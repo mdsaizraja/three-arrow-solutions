@@ -5,35 +5,39 @@ import { AiFillGitlab } from "react-icons/ai";
 export const data = {
   client: [
     {
-      image: "/images/image 14.png",
+      image: "/images/clients/sjtech.png",
+      link: 'http://www.sjtechonline.com/'
     },
     {
-      image: "/images/image 15.png",
+      image: "/images/clients/Aventus.png",
+      link: 'https://aventussoftware.com/'
     },
     {
-      image: "/images/apex.png",
+      image: "/images/clients/bundle.png",
+      link: 'https://bundlen.com/'
     },
     {
-      image: "/images/Logo_Red_cedbc299f1.png",
+      image: "/images/clients/PowerCMS.png",
+      link: 'https://www.powercms.in/'
     },
     {
-      image: "/images/bundle.png",
+      image: "/images/clients/cogminds.png",
+      link: 'https://cogminds.com/'
     },
     {
-      image: "/images/cogminds.png",
+      image: "/images/clients/harptec.png",
+      link: 'https://www.harptec.com/'
     },
     {
-      image: "/images/harptec.png",
+      image: "/images/clients/helpNow.png",
+      link: 'https://www.gethelpnow.in/'
     },
     {
-      image: "/images/ishir.png",
+      image: "/images/clients/ishir.png",
+      link: 'https://www.ishir.com/'
     },
-    {
-      image: "/images/PowerCMS_Logo_Color.png",
-    },
-    {
-      image: "/images/sjtech.png",
-    },
+
+
   ],
   services: [
     { serviceName: "React", icon: <FaReact className="text-8xl " /> },
@@ -41,14 +45,6 @@ export const data = {
     { serviceName: "Node", icon: <FaNodeJs className="text-8xl" /> },
     { serviceName: "GraphQL", icon: <GrGraphQl className="text-8xl" /> },
     { serviceName: "Firebase", icon: <SiFirebase className="text-8xl" /> },
-    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
-    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
-    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
-    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
-    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
-    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
-    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
-    { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
     { serviceName: "GIT", icon: <AiFillGitlab className="text-8xl" /> },
   ],
   sliderCarusel: [
