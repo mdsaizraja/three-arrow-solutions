@@ -5,10 +5,12 @@ export const Background = styled.div`
   height: 1614px;
   pointer-events: all;
   width: 100%;
+  overflow: hidden;
 `;
 
 export const Text = styled.span`
   position: relative;
+  overflow: hidden;
   transform: translateX(43%);
   font-size: 21vw;
   white-space: nowrap;
@@ -16,7 +18,6 @@ export const Text = styled.span`
   left: -50%;
   font-weight: 700;
   font-family: "GLD Display";
-  color: black;
   z-index: 99;
   cursor: pointer;
 `;

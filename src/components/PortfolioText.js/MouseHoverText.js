@@ -13,9 +13,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={[
-                "View Case Study Web Design View Case Study Web Design View Case Study Web Design",
-              ]}
+              marqueeTexts={["View Case Study Web Design "]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
@@ -33,12 +31,13 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
                 className={`absolute left-[6%] -top-10 w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
               >
                 {" "}
-                <BsArrowUpRight className="text-white relative -top-5 -left-5 text-5xl" />
+                <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
               </div>
               <ImageSize>
                 <img
                   src="https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
                   alt="image"
+                  className="w-96 h-96"
                 />
               </ImageSize>
             </div>
@@ -70,9 +69,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
               />
             </div>
             <HoveredRotatedText
-              marqueeTexts={[
-                "View Case Study Web Design View Case Study Web Design View Case Study Web Design",
-              ]}
+              marqueeTexts={["View Case Study Web Design"]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/08/Browns-Cover-01-1-620x768.png"
@@ -123,9 +120,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={[
-                "View Case Study Brand Identity & Web Design View Case Study Brand Identity & Web Design View Case Study Brand Identity & Web Design",
-              ]}
+              marqueeTexts={["View Case Study Brand Identity & Web Design "]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/04/YT-Cover-01-1-620x768.png"
@@ -159,9 +154,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={[
-                "View Case Study Characted Design & Web Design View Case Study Characted Design & Web Design View Case Study Characted Design & Web Design",
-              ]}
+              marqueeTexts={["View Case Study Characted Design & Web Design "]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2022/01/ACOW-Cover-01-620x768.png"
@@ -195,9 +188,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
         return (
           <div>
             <HoveredRotatedText
-              marqueeTexts={[
-                "View Case Study Brand & Web Design View Case Study Brand & Web Design View Case Study Brand & Web Design",
-              ]}
+              marqueeTexts={["View Case Study Brand & Web Design "]}
               direction={"-"}
               src={
                 "https://likely-story.co.uk/wp-content/uploads/2021/03/LS-Walker-Lovell-Cover2@2x-620x768.png"
