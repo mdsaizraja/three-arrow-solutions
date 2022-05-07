@@ -11,10 +11,8 @@ const Portfolio = ({ marqueeTexts, direction }) => {
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
   );
-  const [imageStyle, setImageStyle] = useState({
-    screenX: 0,
-  });
 
+  var MarqueeText = gsap.timeline();
   useEffect(() => {
     resizeHandler();
     window.addEventListener("resize", resizeHandler);
@@ -33,6 +31,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
       repeat: -1,
       duration: 50,
       rotation: 0.01,
+
       modifiers: {
         x: (x) => {
           return (parseFloat(x) % (screenWidth * 1.5)) + "px";
@@ -61,14 +60,39 @@ const Portfolio = ({ marqueeTexts, direction }) => {
 
   const OnMouseEnter = () => {
     marqueeTween.current.pause();
+
+    marqueeTween.current = gsap.to(marqueeElements.current, {
+      color: "white",
+    });
     setIsMouseHover(true);
   };
 
   const OnMouseLeave = () => {
     marqueeTween.current.play();
+
+    marqueeTween.current = gsap.to(marqueeElements.current, {
+      color: "black",
+    });
+    marqueeTween.current = gsap.to(marqueeElements.current, {
+      x: `${direction}=${screenWidth * 1.5}`,
+      ease: "none",
+      repeat: -1,
+      duration: 50,
+      rotation: 0.01,
+
+      modifiers: {
+        x: (x) => {
+          return (parseFloat(x) % (screenWidth * 1.5)) + "px";
+        },
+      },
+    });
     setIsMouseHover(false);
   };
-
+  // useEffect(() => {
+  //   if (isMouseHover) {
+  //     gsap.registerPlugin(SplitText);
+  //   }
+  // }, [isMouseHover]);
   const renderMarqueeElements = () => {
     if (marqueeTexts.length === 1) {
       marqueeTexts[2] = marqueeTexts[1] = marqueeTexts[0];
@@ -80,7 +104,7 @@ const Portfolio = ({ marqueeTexts, direction }) => {
       <p
         key={`marquee-${i}`}
         ref={(el) => marqueeElementsRefHandler(el, i)}
-        className={isMouseHover?"text-[#FFFF]":"text-black "}
+        className={`${"text-black "} MarqueeText transition-all `}
       >
         <Text> {e}</Text>
       </p>
@@ -91,16 +115,9 @@ const Portfolio = ({ marqueeTexts, direction }) => {
     <div
       onMouseEnter={OnMouseEnter}
       onMouseLeave={OnMouseLeave}
-      onMouseMove={(e) => {
-        setImageStyle({ screenX: e.screenX });
-      }}
-      className=" relative w-screen mt-8 py-4 flex overflow-hidden items-center "
+      className=" relative mt-8 py-4 flex overflow-hidden items-center "
     >
-      <MouseHoverText
-        screenX={imageStyle.screenX}
-        marqueeTexts={marqueeTexts}
-        isMouseHover={isMouseHover}
-      />
+      <MouseHoverText marqueeTexts={marqueeTexts} isMouseHover={isMouseHover} />
       {renderMarqueeElements()}
     </div>
   );

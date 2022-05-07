@@ -3,7 +3,7 @@ import HoveredRotatedText from "./HoveredRotatedText";
 import { BsArrowUpRight } from "react-icons/bs";
 import { ImageSize } from "./PortfolioStyles";
 
-export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
+export const MouseHoverText = ({ marqueeTexts, isMouseHover }) => {
   const MouseHover = () => {
     if (typeof isMouseHover != undefined && isMouseHover === true) {
       if (
@@ -20,15 +20,9 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
               }
             />
 
-            <div
-              style={{
-                left: screenX - 200,
-                top: 50,
-              }}
-              className={`absolute z-[999] w-full `}
-            >
+            <div className={`absolute z-[999] w-full flex  justify-center`}>
               <div
-                className={`absolute left-[6%] -top-10 w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
+                className={`relative left-[10%] top-[-120px]  w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
               >
                 {" "}
                 <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
@@ -37,7 +31,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
                 <img
                   src="https://likely-story.co.uk/wp-content/uploads/2021/11/SMILE-COVER-%E2%80%93-2-copy-620x768.jpg"
                   alt="image"
-                  className="w-96 h-96"
+                  className="w-96 h-96 relative top-[-100px] z-[-1]"
                 />
               </ImageSize>
             </div>
@@ -49,15 +43,9 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
       ) {
         return (
           <div>
-            <div
-              style={{
-                left: screenX - 200,
-                top: 50,
-              }}
-              className={`absolute z-[9999] w-full `}
-            >
+            <div className={`absolute z-[9999] w-full   flex justify-center`}>
               <div
-                className={`absolute left-[6%] -top-10 w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
+                className={`relative left-[10%] top-[-120px] w-20 h-20 bg-black p-10 rounded-full shadow-xl `}
               >
                 {" "}
                 <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
@@ -65,7 +53,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
               <img
                 src="https://likely-story.co.uk/wp-content/uploads/2021/08/Browns-Cover-01-1-620x768.png"
                 alt="image"
-                className="w-96 h-96"
+                className="w-96 h-96 relative z-[-1] top-[-100px]"
               />
             </div>
             <HoveredRotatedText
@@ -92,15 +80,9 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
                 "https://likely-story.co.uk/wp-content/uploads/2021/03/Mask-Group-262@2x-620x768.jpg"
               }
             />
-            <div
-              style={{
-                left: screenX - 200,
-                top: 50,
-              }}
-              className={`absolute z-[9999] w-full `}
-            >
+            <div className={`absolute z-[9999] w-full  flex justify-center`}>
               <div
-                className={`absolute left-[6%] -top-10 w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
+                className={`relative left-[10%] top-[-120px] w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
               >
                 {" "}
                 <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
@@ -108,7 +90,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
               <img
                 src="https://likely-story.co.uk/wp-content/uploads/2021/03/Mask-Group-262@2x-620x768.jpg"
                 alt="image"
-                className="w-96 h-96"
+                className="w-96 h-96 relative z-[-1] top-[-100px]"
               />
             </div>
           </div>
@@ -126,15 +108,9 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
                 "https://likely-story.co.uk/wp-content/uploads/2021/04/YT-Cover-01-1-620x768.png"
               }
             />
-            <div
-              style={{
-                left: screenX - 200,
-                top: 50,
-              }}
-              className={`absolute z-[9999] w-full `}
-            >
+            <div className={`absolute z-[9999] w-full  flex justify-center`}>
               <div
-                className={`absolute left-[6%] -top-10 w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
+                className={`relative left-[10%] top-[-120px] w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
               >
                 {" "}
                 <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
@@ -142,7 +118,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
               <img
                 src="https://likely-story.co.uk/wp-content/uploads/2021/04/YT-Cover-01-1-620x768.png"
                 alt="image"
-                className="w-96 h-96"
+                className="w-96 h-96 relative z-[-1] top-[-100px]"
               />
             </div>
           </div>
@@ -160,15 +136,9 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
                 "https://likely-story.co.uk/wp-content/uploads/2022/01/ACOW-Cover-01-620x768.png"
               }
             />
-            <div
-              style={{
-                left: screenX - 200,
-                top: 50,
-              }}
-              className={`absolute z-[999] w-full `}
-            >
+            <div className={`absolute z-[999] w-full  flex justify-center`}>
               <div
-                className={`absolute left-[6%] -top-10 w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
+                className={`relative left-[10%] top-[-120px] w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
               >
                 {" "}
                 <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
@@ -176,7 +146,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
               <img
                 src="https://likely-story.co.uk/wp-content/uploads/2022/01/ACOW-Cover-01-620x768.png"
                 alt="image"
-                className="w-96 h-96"
+                className="w-96 h-96 relative z-[-1] top-[-100px]"
               />
             </div>
           </div>
@@ -194,15 +164,9 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
                 "https://likely-story.co.uk/wp-content/uploads/2021/03/LS-Walker-Lovell-Cover2@2x-620x768.png"
               }
             />
-            <div
-              style={{
-                left: screenX - 200,
-                top: 50,
-              }}
-              className={`absolute z-[999] w-full `}
-            >
+            <div className={`absolute z-[999] w-full  flex justify-center`}>
               <div
-                className={`absolute left-[6%] -top-10 w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
+                className={`relative left-[10%] top-[-120px] w-20 h-20 bg-black p-10 rounded-full shadow-xl`}
               >
                 {" "}
                 <BsArrowUpRight className="text-white relative -top-5 -left-6 text-5xl" />
@@ -210,7 +174,7 @@ export const MouseHoverText = ({ marqueeTexts, isMouseHover, screenX }) => {
               <img
                 src="https://likely-story.co.uk/wp-content/uploads/2021/03/LS-Walker-Lovell-Cover2@2x-620x768.png"
                 alt="image"
-                className="w-96 h-96"
+                className="w-96 h-96 relative z-[-1] top-[-100px]"
               />
             </div>
           </div>

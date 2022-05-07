@@ -25,7 +25,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
       x: `${direction}=${screenWidth * 1.5} `,
       ease: "none",
       repeat: -1,
-      duration: 50,
+      duration: 40,
       rotation: 0.01,
       modifiers: {
         x: (x) => {
@@ -39,7 +39,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
     gsap.set(marqueeElements.current, {
       xPercent: -100,
       x: function () {
-        return screenWidth * 1.5;
+        return screenWidth * 1;
       },
     });
   };
@@ -72,7 +72,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
             key={`marquee-${i}`}
             ref={(el) => marqueeElementsRefHandler(el, i)}
           >
-            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5 overflow-hidden"></span>
+            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5  overflow-hidden"></span>
 
             {ReturnInfiniteText(e)}
           </p>
