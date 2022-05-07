@@ -22,10 +22,11 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
     marqueeInitialSet();
     marqueeTween.current && marqueeTween.current.pause().kill();
     marqueeTween.current = gsap.to(marqueeElements.current, {
-      x: `${direction}=${screenWidth * 1.5}`,
+      x: `${direction}=${screenWidth * 1.5} `,
       ease: "none",
       repeat: -1,
       duration: 50,
+      rotation: 0.01,
       modifiers: {
         x: (x) => {
           return (parseFloat(x) % (screenWidth * 1.5)) + "px";
@@ -37,7 +38,9 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
   const marqueeInitialSet = () => {
     gsap.set(marqueeElements.current, {
       xPercent: -100,
-      x: screenWidth * 1.5
+      x: function () {
+        return screenWidth * 1.5;
+      },
     });
   };
 
@@ -48,6 +51,10 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
 
   const marqueeElementsRefHandler = (e, i) => {
     marqueeElements.current[i] = e;
+  };
+
+  const ReturnInfiniteText = (e) => {
+    return <Text>{e}</Text>;
   };
 
   const renderMarqueeElements = () => {
@@ -65,17 +72,18 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
             key={`marquee-${i}`}
             ref={(el) => marqueeElementsRefHandler(el, i)}
           >
-            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5"></span>
-            <Text> {e}</Text>
+            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5 overflow-hidden"></span>
+
+            {ReturnInfiniteText(e)}
           </p>
         ))}
       </div>
     );
   };
-``
+  ``;
   return (
     <div>
-      <HoveredRotatedContainer className=" relative mt-8 py-4 flex  overflow-hidden items-center">
+      <HoveredRotatedContainer className="relative mt-8 py-4 flex  overflow-hidden items-center">
         {renderMarqueeElements()}
       </HoveredRotatedContainer>
     </div>

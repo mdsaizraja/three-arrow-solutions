@@ -77,7 +77,11 @@ const Portfolio = ({ marqueeTexts, direction }) => {
       marqueeTexts[2] = marqueeTexts[0];
     }
     return marqueeTexts.map((e, i) => (
-      <p key={`marquee-${i}`} ref={(el) => marqueeElementsRefHandler(el, i)}>
+      <p
+        key={`marquee-${i}`}
+        ref={(el) => marqueeElementsRefHandler(el, i)}
+        className={isMouseHover?"text-[#FFFF]":"text-black "}
+      >
         <Text> {e}</Text>
       </p>
     ));
@@ -91,7 +95,6 @@ const Portfolio = ({ marqueeTexts, direction }) => {
         setImageStyle({ screenX: e.screenX });
       }}
       className=" relative w-screen mt-8 py-4 flex overflow-hidden items-center "
-      
     >
       <MouseHoverText
         screenX={imageStyle.screenX}
