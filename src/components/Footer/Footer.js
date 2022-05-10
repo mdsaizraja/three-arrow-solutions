@@ -28,7 +28,6 @@ const Footer = () => {
                 <div>
                     <div className="flex py-28 flex-wrap gap-y-10 mx-auto px-5">
                         <div className="xl:flex items-center font-bold w-2/5 pl-52 hidden ">
-                            <SiAirchina size="50px"/>
                             <span className="ml-2 mt-2">Tech stagers</span>
                         </div>
                         <div className="xl:w-1/5 w-1/2">
@@ -77,10 +76,10 @@ const Footer = () => {
                                 </li>
                                 <li className="my-6 List_item mb-10">
                                     <div className="cursor-pointer flex mb-5">
-                                        <img src="/images/IN.png" className="w-10"/> +91 9913781537{" "}
+                                        <img src="/images/IN.png" alt='' className="w-10"/> +91 9913781537{" "}
                                     </div>
                                     <div className="cursor-pointer flex">
-                                        <img src="/images/us-flag.png" className="w-10"/> +1
+                                        <img src="/images/us-flag.png" alt='' className="w-10"/> +1
                                         321-613-8080{" "}
                                     </div>
                                 </li>

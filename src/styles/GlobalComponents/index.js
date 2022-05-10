@@ -293,6 +293,7 @@ export const LinkIconImg = styled.div`
     height: ${({ large }) => (large ? "32px" : "16px")};
   }
 `;
+
 export const TextTopBorder = styled.span`
   width: 250px;
   height: 250px;
@@ -301,15 +302,16 @@ export const TextTopBorder = styled.span`
 
   border-top: 3px solid transparent;
 
-  -moz-border-image: -moz-linear-gradient(top, #f49867 0%, #3a4ed5 10%);
+  -moz-border-image: -moz-linear-gradient(top, var(--gradient-two) 0%, var(--gradient-one) 10%);
   -webkit-border-image: -webkit-linear-gradient(
     right,
-    #f49867 0%,
-    #3a4ed5 100%
+    var(--gradient-two) 0%,
+    var(--gradient-one) 100%
   );
   padding-top: ${(prop) => prop.SpacebtText};
   border-image-slice: 1;
 `;
+
 export const HeadingTitle = styled.h1`
   font-family: "Manrope";
   font-style: normal;
@@ -319,8 +321,12 @@ export const HeadingTitle = styled.h1`
   text-align: ${(props) => props.TextCenter};
   background: ${(props) =>
     props.TextCenter === "center"
-      ? "linear-gradient(91deg,#ae67fa 49.16%,#f49867 51.67%)"
-      : "linear-gradient(91deg, #ae67fa 8.16%, #f49867 20.67%)"};
+      ? "linear-gradient(91deg, var(--gradient-one) 49.16%, var(--gradient-two) 51.67%)"
+      : "linear-gradient(91deg, var(--gradient-one) 8.16%, var(--gradient-two) 20.67%)"};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+`;
+
+export const SocialLink = styled.div`
+    color: var(--gradient-one);
 `;

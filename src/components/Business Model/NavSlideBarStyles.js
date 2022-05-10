@@ -4,11 +4,11 @@ export const TextBottomBorder = styled.span`
 
   border-bottom: 2px solid transparent;
 
-  -moz-border-image: -moz-linear-gradient(top, #f49867 0%, #3a4ed5 10%);
+  -moz-border-image: -moz-linear-gradient(top, var(--gradient-two) 0%, var(--gradient-one) 10%);
   -webkit-border-image: -webkit-linear-gradient(
     right,
-    #f49867 0%,
-    #3a4ed5 100%
+    var(--gradient-two) 0%,
+    var(--gradient-one) 100%
   );
   border-image-slice: 1;
 `;

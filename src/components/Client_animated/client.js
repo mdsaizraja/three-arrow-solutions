@@ -4,10 +4,10 @@ import {Wrap} from "./style"
 import {data} from "../../data";
 import {HeadingTitle} from "../../styles/GlobalComponents";
 
-function Client(props) {
+function Client() {
     return (
         <div className='flex justify-center items-center'>
-            <p className='w-1/2'>
+            <div className='w-1/2'>
                 <HeadingTitle className="Title_div">
                     Clients
                 </HeadingTitle>
@@ -17,7 +17,7 @@ function Client(props) {
                 viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.
                 Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus
                 viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.
-            </p>
+            </div>
             <Wrap className='w-1/2'>
                 <div className='orbit'>
                     <div className="center-image">
@@ -27,7 +27,7 @@ function Client(props) {
                     <ul>
                         {data.client.map((item, index) => {
                             return (
-                                <li>
+                                <li key={index}>
                                     <div>
                                         <a href={item.link} target='_blank'>
                                             <img src={item.image} alt={item.image}/>

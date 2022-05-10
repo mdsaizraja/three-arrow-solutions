@@ -1,5 +1,5 @@
 import React from "react";
-import {TextTopBorder, HeadingTitle} from "../../styles/GlobalComponents";
+import {TextTopBorder, HeadingTitle, SocialLink} from "../../styles/GlobalComponents";
 
 const GitHubSection = () => {
     return (
@@ -7,14 +7,14 @@ const GitHubSection = () => {
             <div className="xl:flex xl:mt-52 mt-20 md:mx-5 xl:p-0 px-5">
                 <div className="xl:w-7/12 xl:pr-24 Git_text">
                     <HeadingTitle>Ut id tincidunt libero, ac luctus libero.</HeadingTitle>
-                    <div
-                        className=" flex xl:flex-col flex-row xl:w-full md:w-1/2 w-full justify-between font-black xl:text-8xl text-5xl xl:leading-[80px] underline text-[#ff8a71]">
+                    <SocialLink
+                        className=" flex xl:flex-col flex-row xl:w-full md:w-1/2 w-full justify-between font-black xl:text-8xl text-5xl xl:leading-[80px] underline">
                         <h2>Dribble</h2>
                         <h2> Github</h2>
-                    </div>
+                    </SocialLink>
                 </div>
                 <div className="flex flex-col mt-8">
-                    <div className="xl:flex xl:m-10 my-10  justify-between">
+                    <div className="xl:flex xl:m-10 my-10 justify-between">
                         <div
                             className="Git_text xl:w-1/3 dark:text-white text-black font-black text-3xl leading-normal">
                             <TextTopBorder SpacebtText="5px">Ut id</TextTopBorder> tincidunt

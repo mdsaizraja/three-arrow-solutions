@@ -1,23 +1,15 @@
-import React, {useRef, useEffect} from "react";
+import React from "react";
 import Lottie from "react-lottie-player";
 import lottieJson from "../../animation/lf20_fjv8qxqn.json";
-import {HeadingSection} from "./HeroStyles";
+import {HeadingSection, Button} from "./HeroStyles";
 
 const Hero = () => {
-
-    const startLottieAnim = (anim) => {
-        this.lottieAnim = anim;
-        if (anim) {
-            this.lottieAnim.play();
-        }
-    };
-
     return (
         <div className="container mx-auto">
             <div className="flex xl:justify-between justify-center flex-wrap xl:my-20  xl:p-0 px-5">
                 <div className="md:w-[80%] xl:w-6/12">
                     <HeadingSection
-                        className={`font-extrabold xl:text-8xl  xl:leading-tight tracking-tighter py-4`}
+                        className='font-extrabold xl:text-8xl xl:leading-tight tracking-tighter py-4'
                     >
                         Let's Build Something amazing with three arrow technologies
                     </HeadingSection>
@@ -33,15 +25,14 @@ const Hero = () => {
                             type="text"
                             placeholder="Your Email Address"
                         />
-                        <button
-                            className="xl:w-3/12 md:w-[20%] w-[30%] max-w-[200px]  text-white rounded-br-lg rounded-tr-lg bg-[#ff8a71]">
+                        <Button
+                            className="xl:w-3/12 md:w-[20%] w-[30%] max-w-[200px]  text-white rounded-br-lg rounded-tr-lg">
                             Get Started
-                        </button>
+                        </Button>
                     </div>
                 </div>
                 <div className="md:w-full xl:w-6/12 mt-8 flex md:justify-center xl:justify-end">
                     <Lottie
-                        ref={(c) => startLottieAnim(c)}
                         animationData={lottieJson}
                         play
                         className="xl:w-9/12 max-w-[500px] max-h-[500px]"

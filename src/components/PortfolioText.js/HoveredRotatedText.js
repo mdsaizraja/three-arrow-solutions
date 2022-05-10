@@ -72,7 +72,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
             key={`marquee-${i}`}
             ref={(el) => marqueeElementsRefHandler(el, i)}
           >
-            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5  overflow-hidden"></span>
+            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5  overflow-hidden"/>
 
             {ReturnInfiniteText(e)}
           </p>

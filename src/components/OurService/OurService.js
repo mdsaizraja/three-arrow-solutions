@@ -11,9 +11,7 @@ const OurService = () => {
                 <HeadingTitle TextCenter="center">
                     Our Service
                 </HeadingTitle>
-                <Section
-                    className="flex text-center scrollbar-hide overflow-x-scroll text-gray-500 font-extrabold justify-between py-20"
-                >
+                <Section className="flex text-center scrollbar-hide overflow-x-scroll text-gray-500 font-extrabold justify-between py-20">
                     {data.services.map((item, index) => {
                         return (
                             <div
@@ -37,7 +35,7 @@ const OurService = () => {
                     </div>
                 </div>
                 <TalkExpertBox
-                    className="xl:flex md:flex-none md:mx-5 xl:mx-0  justify-center xl:mt-32 my-20 dark:text-black text-white rounded-3xl "
+                    className="xl:flex md:flex-none md:mx-5 xl:mx-0 justify-center xl:mt-32 my-20 dark:text-black text-white rounded-3xl "
                 >
                     <div className="xl:p-16 p-10">
                         <h4 className="leading-relaxed">Let's Discuss Your Project</h4>

@@ -11,7 +11,7 @@ export const Text = styled.div`
 `;
 
 export const HoveredRotatedContainer = styled.div`
-  background: #eeac34;
+  background: linear-gradient(91deg, var(--gradient-two) 8.16%, var(--gradient-one) 20.67%);
   height: 40px;
   z-index: 999;
   transform: rotate(-7deg);
