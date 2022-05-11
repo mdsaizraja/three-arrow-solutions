@@ -54,7 +54,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
   };
 
   const ReturnInfiniteText = (e) => {
-    return <Text>{e}</Text>;
+    return <Text className="md:text-[25px]">{e}</Text>;
   };
 
   const renderMarqueeElements = () => {
@@ -72,7 +72,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
             key={`marquee-${i}`}
             ref={(el) => marqueeElementsRefHandler(el, i)}
           >
-            <span className="w-5 h-5 bg-white absolute -left-6 rounded-full top-5  overflow-hidden"/>
+            <span className="md:w-5 md:h-5 w-2 h-2  bg-white absolute -left-6 rounded-full top-5  overflow-hidden" />
 
             {ReturnInfiniteText(e)}
           </p>
@@ -83,7 +83,7 @@ const HoveredRotatedText = ({ marqueeTexts, direction }) => {
   ``;
   return (
     <div>
-      <HoveredRotatedContainer className="relative mt-8 py-4 flex  overflow-hidden items-center">
+      <HoveredRotatedContainer className="relative xl:mt-8 md:h-[40px] h-[10px] md:left-[-8px] py-4   flex  overflow-hidden items-center">
         {renderMarqueeElements()}
       </HoveredRotatedContainer>
     </div>
