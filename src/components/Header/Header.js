@@ -52,11 +52,7 @@ const Header = ({SelectedTheme}) => {
     };
 
     useEffect(() => {
-        if(pathname === '/404'){
-            setTheme("light");
-        } else{
-            setTheme("dark");
-        }
+        setTheme("dark");
         document.body.classList.remove('overflow-hidden');
     }, []);
 

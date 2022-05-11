@@ -36,13 +36,13 @@ const Blog = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-3 row-span-2 gap-y-32 xl:flex justify-around flex-wrap ">
+                    <div className="col-span-3 row-span-2 gap-y-32 flex justify-around flex-wrap ">
                         {data.blogs.map((item, index) => {
                             if (index !== 0)
                                 return (
-                                    <div key={index} className="xl:w-2/5 w-full xl:mb-0 mb-10 bg-[#042C54] Rest_blog">
+                                    <div key={index} className="xl:w-2/5 sm:w-full md:w-2/5 xl:mb-0 mb-10 bg-[#042C54] Rest_blog">
                                         <div
-                                            className="max-w-fit flex flex-col"
+                                            className="xl:max-w-fit flex flex-col"
                                             style={{
                                                 clipPath:
                                                     "polygon(0% 5%,10% 0%, 100% 0%, 100% 5%, 100% 100%, 95% 100%,5% 100%,0 100%)",
