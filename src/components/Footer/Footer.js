@@ -10,7 +10,6 @@ const Footer = () => {
         >
             <div className="container mx-auto">
                 <div className="xl:hidden items-center font-bold flex justify-center pt-8 List_item">
-                    <SiAirchina size="50px"/>
                     <span className="ml-2 mt-2">Tech stagers</span>
                 </div>
                 <div className="xl:px-96 xl:py-10 px-5">

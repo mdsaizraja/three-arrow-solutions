@@ -8,4 +8,9 @@ export const MainContentBox = styled.div`
     #052d56 20%,
     #052d56 56%
   );
+  
+  @media screen and (max-width: 480px) {
+    background: none;
+  }
+  
 `;

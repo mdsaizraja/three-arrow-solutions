@@ -6,8 +6,8 @@ import {HeadingSection, Button} from "./HeroStyles";
 const Hero = () => {
     return (
         <div className="container mx-auto">
-            <div className="flex xl:justify-between justify-center flex-wrap xl:my-20  xl:p-0 px-5">
-                <div className="md:w-[80%] xl:w-6/12">
+            <div className="flex xl:justify-between flex-wrap xl:my-20  xl:p-0 px-5">
+                <div className="xl:w-6/12">
                     <HeadingSection
                         className='font-extrabold xl:text-8xl xl:leading-tight tracking-tighter py-4'
                     >
@@ -19,7 +19,7 @@ const Hero = () => {
                         We design a road map towards the success of your Business in this
                         Digital World.
                     </div>
-                    <div className=" flex flex-row justify-center xl:mt-32 mt-16 ">
+                    <div className=" flex flex-row xl:mt-32 mt-16 ">
                         <input
                             className="p-8 xl:w-9/12 md:w-[40%] w-[70%] max-w-[500px] xl:h-28  rounded-bl-lg rounded-tl-lg dark:bg-[#052d56] bg-[#DDDDDD] focus:outline-none"
                             type="text"

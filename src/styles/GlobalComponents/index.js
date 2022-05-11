@@ -325,6 +325,7 @@ export const HeadingTitle = styled.h1`
       : "linear-gradient(91deg, var(--gradient-one) 8.16%, var(--gradient-two) 20.67%)"};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 `;
 
 export const SocialLink = styled.div`

@@ -12,9 +12,9 @@ const AboutUs = () => {
     const [showModal, setShowModal] = React.useState(false);
     return (
         <div className="container mx-auto">
-            <MainContentBox className="xl:p-20  p-5 gs_reveal xl:mt-52 mt-20 xl:mx-0 md:mx-5 xl:flex">
+            <MainContentBox className="xl:p-20 p-10 gs_reveal xl:mt-52 mt-20 xl:mx-0 md:mx-5 xl:flex">
                 <div
-                    className="xl:w-7/12 md:w-full xl:p-0 xl:text-left text-center"
+                    className="xl:w-7/12 md:w-full xl:p-0"
                 >
                     <HeadingTitle>Who we are</HeadingTitle>
                     <div className="xl:flex mt-28  hidden">
