@@ -5,7 +5,7 @@ import {HeadingSection} from "./BlogStyles";
 const Blog = () => {
     return (
         <div className="container mx-auto">
-            <div className="mt-32 md:mx-5 mx-0 xl:p-0 px-5 Main_Bog_div">
+            <div className="mt-20 md:mx-5 mx-0 xl:p-0 px-5 Main_Bog_div">
                 <HeadingSection
                     className="font-extrabold xl:text-8xl md:text-7xl text-5xl leading-tight tracking-wide xl:w-3/5 pb-3 Blog_text">
                     A lot is happening, We are blogging about it.

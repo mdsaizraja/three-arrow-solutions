@@ -76,6 +76,26 @@ picture {
     margin-right: 240px;
 }
 
+@media screen and (max-width: 480px) {
+    .orbit {
+        transform: scale(0.7);
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 991px) {
+    .orbit {
+        transform: scale(1);
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+    .orbit {
+        margin-right: 0;
+    }
+}
+
 .orbit .center-image {
     width: var(--size);
     position: relative;
