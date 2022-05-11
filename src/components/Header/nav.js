@@ -12,7 +12,7 @@ function Nav({currentTheme, handleModal}) {
 
     return (
         <div
-            className={`h-full w-full dark:bg-black bg-white fixed z-10 top-0 left-0 overflow-x-scroll CloseNav`}
+            className={`h-full w-full dark:bg-black bg-white fixed z-10 top-0 left-0 overflow-y-auto CloseNav`}
         >
             <div
                 className='h-full'
@@ -70,7 +70,7 @@ function Nav({currentTheme, handleModal}) {
                                     <div className="w-[70%]">+91 1234567890</div>
                                 </div>
                             </div>
-                            <div className="md:w-1/5 md:mt-0 mt-3 flex justify-end items-center">
+                            <div className="md:w-1/5 md:mt-0 mt-3 flex xl:justify-end xl:mt-0 mt-12 items-center">
                                 <div
                                     className="bg-black flex justify-around rounded-full p-2 w-80 cursor-pointer delay-75 duration-700
                                                     transition-all text-white hover:bg-white hover:text-black"
@@ -212,13 +212,13 @@ function Nav({currentTheme, handleModal}) {
                         </div>
                     </div>
                 </div>
-                <div
-                    className=" border-t-2 border-[#BCC0CF] xl:fixed bottom-0
-                                    dark:text-white text-black p-5 text-lg
-                                    w-full text-center dark:bg-black bg-white"
-                >
-                    <span className='font-bold'>© 2021 All rights reserved.</span>
-                </div>
+                {/*<div*/}
+                {/*    className=" border-t-2 border-[#BCC0CF] xl:fixed bottom-0*/}
+                {/*                    dark:text-white text-black p-5 text-lg*/}
+                {/*                    w-full text-center dark:bg-black bg-white"*/}
+                {/*>*/}
+                {/*    <span className='font-bold'>© 2021 All rights reserved.</span>*/}
+                {/*</div>*/}
             </div>
         </div>
     );
