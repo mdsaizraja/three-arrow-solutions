@@ -1,0 +1,62 @@
+{
+  "Carousel": [
+    {
+      "date": "12-5-2022",
+      "title": "15 Elements of Modern Web Design That You Need to Know"
+    },
+    {
+      "date": "12-5-2022",
+      "title": "15 Elements of Modern Web Design That You Need to Know"
+    },
+    {
+      "date": "12-5-2022",
+      "title": "15 Elements of Modern Web Design That You Need to Know"
+    }
+  ],
+  "BlogData": [
+    {
+      "imgsrc": "./images/blog_img1.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img2.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img2.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img1.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img1.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img2.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img2.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img1.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img1.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img2.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    },
+    {
+      "imgsrc": "./images/blog_img2.png",
+      "title": "Top 11 Mobile App Ideas and Latest Trends for Sports Industry"
+    }
+  ]
+}
