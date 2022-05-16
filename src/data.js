@@ -135,7 +135,8 @@ export const data = {
   FAQ:{
     Development:[{
       question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
-      answer:"Zeba"
+      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+
     },
     {
       question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -148,7 +149,8 @@ export const data = {
     }],
     Business:[{
       question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Business",
-      answer:"Zeba"
+      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+
     },
     {
       question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -161,7 +163,7 @@ export const data = {
     }],
     Hire:[{
       question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hire",
-      answer:"Zeba"
+      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
     },
     {
       question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
