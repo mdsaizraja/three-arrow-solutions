@@ -26,7 +26,6 @@ const index = () => {
             <Header SelectedTheme={(e) => SetTheme(e)} />
           </div>
           <FAQ theme={theme}/>
-          <TwoSection />
           <Footer />
         </div>
       )}
