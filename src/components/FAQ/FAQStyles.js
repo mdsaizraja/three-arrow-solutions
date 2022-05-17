@@ -1,11 +1,11 @@
 import styled from "styled-components";
-export const HeadingSection = styled.h1`
+export const HeadingSection = styled.div`
   background: linear-gradient(89.97deg, var(--gradient-one) 1.84%, var(--gradient-two) 102.67%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 10 px !important;
 `;
-export const Span = styled.h1`
+export const Span = styled.div`
   font-size: 2rem;
-  margin: 10px !important;
 `;
+  // margin: 10 px !important;
+  // margin: 10px !important;

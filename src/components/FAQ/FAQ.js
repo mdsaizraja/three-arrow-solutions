@@ -15,13 +15,14 @@ const FAQ = ({theme}) => {
   };
   return (
     <div className="px-10">
-      <HeadingSection className=" font-extrabold xl:text-7xl text-6xl xl:text-center text-left leading-tight tracking-wide py-3 Footer_head">
+      <HeadingSection className=" font-extrabold xl:text-7xl text-6xl xl:text-center text-left leading-tight tracking-wide py-3 Footer_head mt-20">
         Frequently Asked Questions
       </HeadingSection>
-      <div className=" flex flex-row justify-between flex-wrap px-5">
-        <div>
-          {FAQType === "Development" ? (
-            <HeadingSection className=" font-extrabold text-4xl text-left leading-tight tracking-wide py-3 Footer_head">
+      <div className="mt-32">
+      <div className=" flex flex-row justify-between ">
+        <div className="w-[25.1%] ml-2 mt-2">
+        {FAQType === "Development" ? (
+            <HeadingSection className=" font-extrabold text-4xl leading-tight tracking-wide Footer_head mb-8">
               <div
                 onClick={() => {
                   setFAQType("Development");
@@ -34,7 +35,7 @@ const FAQ = ({theme}) => {
           ) : (
             <Span>
               <div
-                className="text-black dark:text-white py-3 text-left font-extrabold text-4xl"
+                className="text-black dark:text-white font-extrabold text-4xl mb-8"
                 onClick={() => {
                   setFAQType("Development");
                   setActiveItemIndex(null);
@@ -45,8 +46,8 @@ const FAQ = ({theme}) => {
             </Span>
           )}
 
-          {FAQType === "Business" ? (
-            <HeadingSection className=" font-extrabold text-4xl  text-left leading-tight tracking-wide py-3 Footer_head">
+{FAQType === "Business" ? (
+            <HeadingSection className=" font-extrabold text-4xl  leading-tight tracking-wide Footer_head mb-8">
               <div
                 onClick={() => {
                   setFAQType("Business");
@@ -59,7 +60,7 @@ const FAQ = ({theme}) => {
           ) : (
             <Span>
               <div
-                className="text-black dark:text-white py-3 text-left font-extrabold text-4xl"
+                className="text-black dark:text-white font-extrabold text-4xl mb-8"
                 onClick={() => {
                   setFAQType("Business");
                   setActiveItemIndex(null);
@@ -69,9 +70,8 @@ const FAQ = ({theme}) => {
               </div>
             </Span>
           )}
-
           {FAQType === "Hire" ? (
-            <HeadingSection className=" font-extrabold text-4xl text-left leading-tight tracking-wide py-3 Footer_head">
+            <HeadingSection className=" font-extrabold text-4xl  leading-tight tracking-wide Footer_head mb-8">
               <div
                 onClick={() => {
                   setFAQType("Hire");
@@ -84,7 +84,7 @@ const FAQ = ({theme}) => {
           ) : (
             <Span>
               <div
-                className="text-black dark:text-white py-3 text-left font-extrabold text-4xl ml-1"
+                className="text-black dark:text-white font-extrabold text-4xl mb-8"
                 onClick={() => {
                   setFAQType("Hire");
                   setActiveItemIndex(null);
@@ -94,17 +94,16 @@ const FAQ = ({theme}) => {
               </div>
             </Span>
           )}
-        </div>
-
+</div>
         <div className="w-[80%]">
           {data.FAQ[FAQType].map((item, index) => {
             return (
               <div key={index} onClick={() => toogle(index)}>
-                <div className="flex  justify-between px-40 mt-5">
-                  <div className="mx-2 text-black dark:text-white font-medium">
+                <div className="flex  justify-between items-start">
+                  <div className="text-black dark:text-white font-medium">
                     {item.question}
                   </div>
-                  <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white">
+                  <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white mb-5">
                     {activeItemIndex == index ? (
                       <IoIosArrowUp id="CloseQuestion" className="text-black" />
                     ) : (
@@ -115,9 +114,9 @@ const FAQ = ({theme}) => {
                     )}
                   </div>
                 </div>
-                <div className="w-[80%] px-40 mt-5">
+                <div className="w-[80%]">
                   {activeItemIndex == index && (
-                    <p className="text-justify text-black dark:text-white font-thin text-xl px-2">
+                    <p className="text-justify text-black dark:text-white font-thin text-xl mb-5">
                       {item.answer}
                     </p>
                   )}
@@ -126,6 +125,7 @@ const FAQ = ({theme}) => {
             );
           })}
         </div>
+      </div>
       </div>
     </div>
   );
