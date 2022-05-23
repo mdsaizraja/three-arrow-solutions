@@ -28,13 +28,13 @@ function Nav({ currentTheme, handleModal, state }) {
   const onClose=()=>{
     staggerRevealClose(menuLayer)
     setTimeout(()=>{
-      handleModal()
-    },80000)
+      handleModal(false)
+    },3000)
   }
 
   const staggerReveal = (node1) => {
     gsap.from([node1], {
-      duration: 0.8,
+      duration: 0.7,
       height: 0,
       transformOrigin: " right top",
       skewY: 2,

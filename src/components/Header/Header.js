@@ -64,8 +64,8 @@ const Header = ({ SelectedTheme }) => {
   }, []);
 
   const handleModal = (type) => {
+    console.log(1111, state.clicked,type);
     if (type) {
-      console.log(1111, state.clicked,type);
       document.body.classList.add("overflow-hidden");
       setNavWidth("block");
       setState({
@@ -76,7 +76,7 @@ const Header = ({ SelectedTheme }) => {
       setNavWidth("hidden");
       setState({
         initial: null,
-        clicked: !state.clicked,
+        clicked: false
       });
     }
     console.log(3333);
@@ -102,7 +102,7 @@ const Header = ({ SelectedTheme }) => {
                 <RiMenu4Fill
                   id="MenuOpen"
                   className="text-black dark:text-white"
-                  onClick={() => handleModal("open")}
+                  onClick={() => handleModal("block")}
                 />
               </SocialIcons>
             </div>
