@@ -14,16 +14,23 @@ function Nav({ currentTheme, handleModal, state }) {
   let info = useRef(null);
 
   useEffect(() => {
-    if (state.clicked === false) {
-      staggerRevealClose(menuLayer);
-    } else if (
+   if (
       state.clicked === true ||
       (state.clicked === true && state.initial === null)
     ) {
       staggerReveal(menuLayer);
       fadeInUp(info);
     }
+    console.log("sss2")
+
   }, [state]);
+
+  const onClose=()=>{
+    staggerRevealClose(menuLayer)
+    setTimeout(()=>{
+      handleModal()
+    },80000)
+  }
 
   const staggerReveal = (node1) => {
     gsap.from([node1], {
@@ -72,7 +79,7 @@ function Nav({ currentTheme, handleModal, state }) {
                   </Span>
                 </div>
               </Link>
-              <Span className="CloseNav" onClick={() => handleModal()}>
+              <Span className="CloseNav" onClick={() =>  onClose()}>
                 <div>
                   <RiCloseFill
                     color={`${

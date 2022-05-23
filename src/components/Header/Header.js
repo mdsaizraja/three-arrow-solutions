@@ -6,12 +6,13 @@ import { useTheme } from "next-themes";
 import { NavLink, SocialIcons, Span } from "./HeaderStyles";
 import { RiMenu4Fill } from "react-icons/ri";
 import Nav from "./nav";
-
+import gsap from "gsap";
 const Header = ({ SelectedTheme }) => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [navWidth, setNavWidth] = useState("hidden");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { pathname } = useRouter();
+  let menuLayer = useRef(null);
 
   const [state, setState] = useState({
     initial: false,
@@ -59,10 +60,12 @@ const Header = ({ SelectedTheme }) => {
   useEffect(() => {
     setTheme("dark");
     document.body.classList.remove("overflow-hidden");
+    
   }, []);
 
   const handleModal = (type) => {
     if (type) {
+      console.log(1111, state.clicked,type);
       document.body.classList.add("overflow-hidden");
       setNavWidth("block");
       setState({
@@ -73,9 +76,10 @@ const Header = ({ SelectedTheme }) => {
       setNavWidth("hidden");
       setState({
         initial: null,
-        clicked: false,
+        clicked: !state.clicked,
       });
     }
+    console.log(3333);
   };
 
   return (
