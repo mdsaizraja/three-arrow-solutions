@@ -98,33 +98,37 @@ const FAQ = ({ theme }) => {
           <div className="w-[80%] ml-32">
             {data.FAQ[FAQType].map((item, index) => {
               return (
-                <div key={index} onClick={() => toogle(index)}>
-                  <div className="flex  justify-between items-start">
-                    <div className="text-black dark:text-white font-medium">
-                      {item.question}
-                    </div>
-                    <div className="mb-5 mr-14 flex">
-                      <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white">
-                        {activeItemIndex == index ? (
-                          <IoIosArrowUp
-                            id="CloseQuestion"
-                            className="text-black"
-                          />
-                        ) : (
-                          <IoIosArrowDown
-                            id="OpenQuestion"
-                            className=" text-black"
-                          />
-                        )}
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header mb-0" id="headingOne">
+                      <button
+                        class="accordion-button relative flex
+                        items-center
+                        w-full
+                        py-4
+                        px-5
+                      text-white text-left
+                        border-0
+                        rounded-none
+                        transition
+                        focus:outline-none font-bold text-2xl"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne">
+                        {item.question}
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class=" accordion-body font-sans py-4 px-5 text-justify text-black dark:text-white font-thin text-xl">
+                        {item.answer}
                       </div>
                     </div>
-                  </div>
-                  <div className="w-[80%]">
-                    {activeItemIndex == index && (
-                      <p className="text-justify text-black dark:text-white font-thin text-xl mb-5">
-                        {item.answer}
-                      </p>
-                    )}
                   </div>
                 </div>
               );
