@@ -14,23 +14,21 @@ function Nav({ currentTheme, handleModal, state }) {
   let info = useRef(null);
 
   useEffect(() => {
-   if (
+    if (
       state.clicked === true ||
       (state.clicked === true && state.initial === null)
     ) {
       staggerReveal(menuLayer);
       fadeInUp(info);
     }
-    console.log("sss2")
-
   }, [state]);
 
-  const onClose=()=>{
-    staggerRevealClose(menuLayer)
-    setTimeout(()=>{
-      handleModal(false)
-    },3000)
-  }
+  const onClose = () => {
+    staggerRevealClose(menuLayer);
+    setTimeout(() => {
+      handleModal(false);
+    }, 1000);
+  };
 
   const staggerReveal = (node1) => {
     gsap.from([node1], {
@@ -79,7 +77,7 @@ function Nav({ currentTheme, handleModal, state }) {
                   </Span>
                 </div>
               </Link>
-              <Span className="CloseNav" onClick={() =>  onClose()}>
+              <Span className="CloseNav" onClick={() => onClose()}>
                 <div>
                   <RiCloseFill
                     color={`${
@@ -117,11 +115,8 @@ function Nav({ currentTheme, handleModal, state }) {
                   <div className="w-[70%]">+91 1234567890</div>
                 </div>
               </div>
-              <div className="md:w-1/5 md:mt-0 mt-3 flex xl:justify-end xl:mt-0 mt-12 items-center">
-                <div
-                  className="bg-black flex justify-around rounded-full p-2 w-80 cursor-pointer delay-75 duration-700
-                                                    transition-all text-white hover:bg-white hover:text-black"
-                >
+              <div className="md:w-1/5 md:mt-0 flex xl:justify-end xl:mt-0 mt-12 items-center">
+                <div className="bg-black flex justify-around rounded-full p-2 w-80 cursor-pointer delay-75 duration-700 transition-all text-white hover:bg-white hover:text-black">
                   <button className="font-extrabold">Explore more</button>
                   <BsArrowRight className="text-5xl" />
                 </div>

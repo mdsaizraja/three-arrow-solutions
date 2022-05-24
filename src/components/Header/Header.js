@@ -60,11 +60,9 @@ const Header = ({ SelectedTheme }) => {
   useEffect(() => {
     setTheme("dark");
     document.body.classList.remove("overflow-hidden");
-    
   }, []);
 
   const handleModal = (type) => {
-    console.log(1111, state.clicked,type);
     if (type) {
       document.body.classList.add("overflow-hidden");
       setNavWidth("block");
@@ -79,7 +77,6 @@ const Header = ({ SelectedTheme }) => {
         clicked: false
       });
     }
-    console.log(3333);
   };
 
   return (
@@ -102,7 +99,7 @@ const Header = ({ SelectedTheme }) => {
                 <RiMenu4Fill
                   id="MenuOpen"
                   className="text-black dark:text-white"
-                  onClick={() => handleModal("block")}
+                  onClick={() => handleModal("open")}
                 />
               </SocialIcons>
             </div>
