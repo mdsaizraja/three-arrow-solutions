@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from "react";
-import SwipeableViews from "react-swipeable-views";
-import {autoPlay} from "react-swipeable-views-utils";
 
 const CompanyDescription = () => {
 
@@ -17,12 +15,13 @@ const CompanyDescription = () => {
                     high-performance, and single-page applications (SPA).
                 </p>
                 <div className="flex items-center py-36 dark:text-white text-black">
-                <button
-                    className="font-extrabold rounded-full  dark:bg-black bg-white  cursor-pointer delay-75  duration-700
-         transition-all dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white xl:px-16 xl:py-7 px-10  xl:m-0 py-8 xl:text-1xl text-xl"
-                >
-                    Talk to our Experts
-                </button>
+                    <button
+                        className="font-extrabold rounded-full  dark:bg-black bg-white  cursor-pointer delay-75  duration-700
+                                 transition-all dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white xl:px-16 xl:py-7
+                                 px-10  xl:m-0 py-8 xl:text-1xl text-xl"
+                    >
+                        Talk to our Experts
+                    </button>
                 </div>
             </div>
         </div>

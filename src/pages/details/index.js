@@ -1,19 +1,9 @@
 import React from "react";
-import Hero from "../../components/Hero/Hero";
-import { Layout } from "../../layout/Layout";
-import AboutUs from "../../components/AboutUs/AboutUs";
+import {Layout} from "../../layout/Layout";
 import CompanyDescription from "../../components/CompanyDescription/CompanyDescription";
-import OurService from "../../components/OurService/OurService";
-import GitHubSection from "../../components/GitHubSection/GitHubSection";
-import Carousel from "../../components/Carousel/Carousel";
-import BusinessModel from "../../components/Business Model/BusinessModel";
-import TwoSection from "../../components/TwoSection/TwoSection";
-import Clients from "../../components/Client_animated/client"
 import Blog from "../../components/Blog/Blog";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
-import Header from "../../components/Header/Header";
-import Contact from "../../components/Contact/Contact";
 import CompanyDetailsContact from "../../components/Contact/CompanyDetailsContact";
 
 export const Wrap = styled.div`
@@ -35,29 +25,12 @@ const index = () => {
                 <Layout>
                     <CompanyDescription/>
                 </Layout>
-
-
-
-                {/*<Contact/>*/}
             </Wrap>
             <Container>
                 <CompanyDetailsContact/>
+                <Blog/>
+                <Footer/>
             </Container>
-            {/*<Layout>*/}
-            {/*    <Wrap>*/}
-            {/*        <Hero />*/}
-            {/*        <AboutUs />*/}
-            {/*    </Wrap>*/}
-
-                <OurService />
-                <GitHubSection />
-                <Carousel />
-                <BusinessModel />
-                <TwoSection />
-                <Clients />
-                <Blog />
-            {/*</Layout>*/}
-            <Footer />
         </>
     );
 };
