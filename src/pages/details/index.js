@@ -1,13 +1,18 @@
 import React from "react";
-import {Layout} from "../../layout/Layout";
+import { Layout } from "../../layout/Layout";
 import CompanyDescription from "../../components/CompanyDescription/CompanyDescription";
 import Blog from "../../components/Blog/Blog";
 import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import CompanyDetailsContact from "../../components/Contact/CompanyDetailsContact";
+import Statics from "../../components/BrandInfo/Statics";
 
 export const Wrap = styled.div`
-  background: linear-gradient(-89.97deg, var(--gradient-one) 1.84%, var(--gradient-two) 102.67%);
+  background: linear-gradient(
+    -89.97deg,
+    var(--gradient-one) 1.84%,
+    var(--gradient-two) 102.67%
+  );
 `;
 
 export const Container = styled.div`
@@ -17,22 +22,21 @@ export const Container = styled.div`
 `;
 
 const index = () => {
-    return (
-        <>
-            <Wrap
-                className="pt-1 "
-            >
-                <Layout>
-                    <CompanyDescription/>
-                </Layout>
-            </Wrap>
-            <Container>
-                <CompanyDetailsContact/>
-                <Blog/>
-                <Footer/>
-            </Container>
-        </>
-    );
+  return (
+    <>
+      <Wrap className="pt-1 ">
+        <Layout>
+          <CompanyDescription />
+        </Layout>
+      </Wrap>
+      <Container>
+        <CompanyDetailsContact />
+        <Statics />
+        <Blog />
+        <Footer />
+      </Container>
+    </>
+  );
 };
 
 export default index;
