@@ -32,17 +32,17 @@ const CompanyDetailsContact = () => {
   return (
     <div className="w-full mt-16 lg:mt-52 lg:flex lg:grid-cols-2 lg:gap-20 ">
       <div className="lg:w-3/5 relative">
-        <h3 className="text-3xl font-medium text-black dark:text-white sm:text-7xl">
+        <h3 className="text-3xl font-semibold text-black dark:text-white sm:text-7xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </h3>
-        <p className="mt-28 text-3xl leading-10  text-black dark:text-white">
+        <p className="mt-28 text-3xl leading-relaxed  text-black dark:text-white">
           Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies
           odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec
           pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat, sit
           amet imperdiet velit auctor. Etiam elementum pharetra nisi nec
           convallis. Mauris eu pulvinar ante.
         </p>
-        <p className="mt-16 text-3xl leading-10  text-black dark:text-white">
+        <p className="mt-16 text-3xl leading-relaxed  text-black dark:text-white">
           Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies
           odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec
           pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,

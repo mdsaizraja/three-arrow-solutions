@@ -6,6 +6,9 @@ import Footer from "../../components/Footer/Footer";
 import styled from "styled-components";
 import CompanyDetailsContact from "../../components/Contact/CompanyDetailsContact";
 import Statics from "../../components/BrandInfo/Statics";
+import Paragraph from "../../components/BrandInfo/Paragraph";
+import FeaturesList from "../../components/BrandInfo/FeaturesList";
+import TwoSection from "../../components/TwoSection/TwoSection";
 
 export const Wrap = styled.div`
   background: linear-gradient(
@@ -32,9 +35,12 @@ const index = () => {
       <Container>
         <CompanyDetailsContact />
         <Statics />
+        <Paragraph />
+        <FeaturesList />
+        <TwoSection />
         <Blog />
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 };

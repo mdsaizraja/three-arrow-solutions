@@ -4,8 +4,8 @@ import { InfoSection } from "./StaticsStyles";
 const Statics = () => {
   return (
     <div className="bg-transparent">
-      <div className=" mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-28">
-        <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
+      <div className="mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-28">
+        <dl className="mt-10 sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
           <div className="flex flex-col">
             <dt className="order-2 mt-2 text-3xl leading-6 font-medium text-black dark:text-white">
               Professionals
