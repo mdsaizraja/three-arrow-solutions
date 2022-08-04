@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { HeadingSection, Span, Title } from "./FAQStyles";
+import { HeadingSection, Span, Title, Res } from "./FAQStyles";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { data } from "../../data";
 import TwoSection from "../../components/TwoSection/TwoSection";
@@ -13,13 +13,14 @@ const FAQ = ({ theme }) => {
       setActiveItemIndex(index);
     }
   };
+  
   return (
     <div className="px-10">
       <Title className=" font-extrabold xl:text-7xl text-6xl xl:text-center text-left leading-tight tracking-wide py-3 Footer_head mt-20">
         Frequently Asked Questions
       </Title>
       <div className="mt-32">
-        <div className=" flex flex-row justify-between ">
+        <Res className=" flex flex-row justify-between " >
           <div className=" px-11">
             {FAQType === "Development" ? (
               <HeadingSection className=" font-extrabold text-4xl leading-tight tracking-wide Footer_head mb-8">
@@ -98,11 +99,11 @@ const FAQ = ({ theme }) => {
           <div className="w-[80%] ml-32">
             {data.FAQ[FAQType].map((item, index) => {
               return (
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header mb-0" id="headingOne">
+                <div  key={index} className="accordion" id="accordionExample">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header mb-0" id="headingOne">
                       <button
-                        class="accordion-button relative flex
+                        className="accordion-button relative flex
                         items-center
                         w-full
                         py-4
@@ -122,10 +123,10 @@ const FAQ = ({ theme }) => {
                     </h2>
                     <div
                       id="collapseOne"
-                      class="accordion-collapse collapse show"
+                      className="accordion-collapse collapse show"
                       aria-labelledby="headingOne"
                       data-bs-parent="#accordionExample">
-                      <div class=" accordion-body font-sans py-4 px-5 text-justify text-black dark:text-white font-thin text-xl">
+                      <div className=" accordion-body font-sans py-4 px-5 text-justify text-black dark:text-white font-thin text-xl">
                         {item.answer}
                       </div>
                     </div>
@@ -134,8 +135,8 @@ const FAQ = ({ theme }) => {
               );
             })}
           </div>
-        </div>
-        <div className="ml-5">
+        </Res>
+        <div >
           <TwoSection />
         </div>
       </div>

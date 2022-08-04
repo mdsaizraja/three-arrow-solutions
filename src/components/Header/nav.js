@@ -10,6 +10,7 @@ import { data } from "../../header_data";
 
 function Nav({ currentTheme, handleModal }) {
   return (
+    <>
     <div
       className={`h-full w-full dark:bg-black bg-white fixed z-10 top-0 left-0 overflow-y-auto CloseNav`}
     >
@@ -193,15 +194,24 @@ function Nav({ currentTheme, handleModal }) {
             </div>
           </div>
         </div>
-        {/*<div*/}
+        <div className="border-t-2 text-center p-10 border-[#BCC0CF] xl:text-2xl text-sm">
+                © 2021 All rights reserved.
+            </div>
+    
+        {/* <div*/}
         {/*    className=" border-t-2 border-[#BCC0CF] xl:fixed bottom-0*/}
         {/*                    dark:text-white text-black p-5 text-lg*/}
         {/*                    w-full text-center dark:bg-black bg-white"*/}
         {/*>*/}
         {/*    <span className='font-bold'>© 2021 All rights reserved.</span>*/}
-        {/*</div>*/}
+        {/*</div> */}
       </div>
+      
     </div>
+    
+    </>
+
+
   );
 }
 

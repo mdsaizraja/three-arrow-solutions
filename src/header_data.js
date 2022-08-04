@@ -158,11 +158,11 @@ export const data = {
         },
         {
             text: 'Blog',
-            link: ''
+            link: 'blog'
         },
         {
             text: 'FAQ',
-            link: ''
+            link: 'faq'
         },
         {
             text: 'Contact Us',

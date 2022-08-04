@@ -4,6 +4,7 @@ import {HeadingTitle} from "../../styles/GlobalComponents";
 import {BsArrowRight} from "react-icons/bs";
 import {data} from "../../data";
 
+
 const OurService = () => {
     return (
         <div className="container mx-auto">
