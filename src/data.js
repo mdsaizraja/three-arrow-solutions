@@ -130,93 +130,138 @@ export const data = {
       date: "Sep 26, 2021",
     },
   ],
-  
-    
-  FAQ:{
-    Development:[{
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
 
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+  FAQ: {
+    Development: [
+      {
+        id:1,
+        question:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        id:2,
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+    ],
+    Business: [
+      {
+        question:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Business",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+    ],
+    Hire: [
+      {
+        question:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hire",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+      {
+        question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        answer:
+          "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      },
+    ],
+  },
 
+  btData: [
+    {
+      text: "Nam nunc odio, semper ut sem non, mattis congue ligula.",
+      link: "",
     },
     {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
+      text: "Ut ultricies odio non mattis feugiat.",
+      link: "",
     },
     {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
+      text: "Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis.",
+      link: "",
     },
     {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
+      text: "Nam nunc odio, semper ut sem non, mattis congue ligula.",
+      link: "",
     },
     {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-    }],
-    Business:[{
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Business",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
+      text: "Ut ultricies odio non mattis feugiat.",
+      link: "",
     },
     {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
+      text: "Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis.",
+      link: "",
     },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-    }],
-    Hire:[{
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hire",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-
-    },
-    {
-      question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      answer: "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
-    }]}
-  
-  
+  ],
 };
-

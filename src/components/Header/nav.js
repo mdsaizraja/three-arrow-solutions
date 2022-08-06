@@ -7,14 +7,15 @@ import { FiPhoneCall } from "react-icons/fi";
 import Lottie from "react-lottie-player";
 import lottieJson from "../../animation/HeaderNavImage.json";
 import { data } from "../../header_data";
+import { Container } from "../../layout/LayoutStyles";
 
 function Nav({ currentTheme, handleModal }) {
   return (
-    <>
-    <div
-      className={`h-full w-full dark:bg-black bg-white fixed z-10 top-0 left-0 overflow-y-auto CloseNav`}
+    < >
+    <Container 
+     
     >
-      <div className="h-full">
+      <div  className={`h-full w-full dark:bg-[#040C18] bg-white fixed z-10 top-0 left-0 overflow-y-auto CloseNav`}>
         <div className="xl:mx-16 xl:py-8 py-5 mx-5">
           <div className="flex Header_nav">
             <NavLink className="flex items-center justify-between w-full font-bold ">
@@ -207,7 +208,7 @@ function Nav({ currentTheme, handleModal }) {
         {/*</div> */}
       </div>
       
-    </div>
+    </Container>
     
     </>
 

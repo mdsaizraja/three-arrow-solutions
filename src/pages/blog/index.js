@@ -14,7 +14,7 @@ import { SubscribeCard } from "../../components/SubscribeCard/SubscribeCard";
 
 export const index = () => {
   return (
-    <div>
+    <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
       <Layout>
         <div className="container mx-auto">
           <div className="mt-20 md:mx-5 mx-0 xl:p-0 px-5 Main_Bog_div">

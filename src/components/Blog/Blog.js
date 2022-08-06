@@ -37,7 +37,7 @@ const Blog = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-3 row-span-2 gap-y-32 flex justify-around flex-wrap ">
+                    <div className="col-span-3 row-span-2 gap-y-5 flex justify-around flex-wrap ">
                         {data.blogs.map((item, index) => {
                             if (index !== 0)
                                 return (

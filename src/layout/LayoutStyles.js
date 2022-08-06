@@ -5,4 +5,7 @@ export const Container = styled.div`
   width: 100%;
   margin: auto;
   
+  @media only screen and (max-width:480px){
+    padding:15px;
+  }
 `;

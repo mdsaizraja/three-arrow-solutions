@@ -161,6 +161,10 @@ export const data = {
             link: 'blog'
         },
         {
+            text: 'Details',
+            link: 'details'
+        },
+        {
             text: 'FAQ',
             link: 'faq'
         },

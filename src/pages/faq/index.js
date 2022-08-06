@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import Loading from "./../../components/Loader/Loading";
 import TwoSection from "../../components/TwoSection/TwoSection";
 
+
 const index = () => {
     const [loading, SetLoading] = useState(true);
     const [theme, SetTheme] = useState(true);
@@ -17,9 +18,10 @@ const index = () => {
     }, []);
 
     return (
-        <Fragment>
+        <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
             {loading === true ? (
                 <Loading/>
+
             ) : (
                 <>
                     <div className="container mx-auto">
@@ -28,10 +30,11 @@ const index = () => {
                         </div>
                         <FAQ theme={theme}/>
                     </div>
+                    
                     <Footer />
                 </>
             )}
-        </Fragment>
+       </div>
     );
 };
 

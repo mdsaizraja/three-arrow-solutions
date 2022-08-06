@@ -34,6 +34,7 @@ export const Res = styled.div`
   flex-direction: column;
   .ml-32 {
     margin-left: 0;
+    width-100%;
 }
   
 

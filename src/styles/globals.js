@@ -35,6 +35,10 @@ const GlobalStyles = createGlobalStyle`
   li{
     list-style: none;
   }
+  
+.DetailTextHeading1{
+  color:${(props) => props.theme.fonts.title};
+}
 
 `;
 
