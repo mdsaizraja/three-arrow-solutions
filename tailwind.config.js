@@ -5,6 +5,9 @@ module.exports = {
     darkMode: 'class',
     content: ['./src/**/*.{js,ts,jsx,tsx,html,css}'],
     theme: {
+        // colors: {
+        //     'pencil': '#A7A7A7',
+        // },
         extend: {},
     },
     plugins: [
