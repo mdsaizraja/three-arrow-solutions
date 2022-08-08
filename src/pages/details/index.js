@@ -25,6 +25,7 @@ background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
 
 const index = () => {
   return (
+
     <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
       <DetailHero />
 
