@@ -136,7 +136,7 @@ export const data = {
       {
         id:1,
         question:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
@@ -153,7 +153,7 @@ export const data = {
       },
       {
         question:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },

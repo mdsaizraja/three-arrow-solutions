@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import { HeadingSection, Span, Title, Res } from "./FAQStyles";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { data } from "../../data";
 import TwoSection from "../../components/TwoSection/TwoSection";
+import Accordion from "./Accordian";
 const FAQ = ({ theme }) => {
   const [activeItemIndex, setActiveItemIndex] = useState(null);
   const [FAQType, setFAQType] = useState("Development");
@@ -16,12 +16,14 @@ const FAQ = ({ theme }) => {
 
   return (
     <div className="px-10">
-      <Title className=" font-extrabold xl:text-7xl text-6xl xl:text-center text-left leading-tight tracking-wide py-3 Footer_head mt-20">
+      <Title className=" font-extrabold xl:text-7xl text-6xl xl:text-center text-left leading-tight tracking-wide py-3 Footer_head mt-20 ">
         Frequently Asked Questions
       </Title>
       <div className="mt-32">
-        <Res className=" flex flex-row justify-between ">
-          <div className=" px-11">
+   
+        <Res className=" flex flex-row  ">
+               <div className="mr-30">
+          <div className=" px-11 mr-6 ">
             {FAQType === "Development" ? (
               <HeadingSection className=" font-extrabold text-4xl leading-tight tracking-wide Footer_head mb-8">
                 <div
@@ -95,8 +97,18 @@ const FAQ = ({ theme }) => {
                 </div>
               </Span>
             )}
+            </div>
           </div>
-          <div className="w-[80%] ml-32 accordion" id="accordionExample">
+          <div className="accordion  ">
+        {data.FAQ[FAQType].map(({ question, answer }) => (
+          <Accordion title={question} content={answer} />
+        ))}
+      </div>
+
+
+
+          {/* {data.FAQ[FAQType].map((item, index) => { */}
+          {/* <div className="w-[80%] ml-32 accordion" id="accordionExample">
             {data.FAQ[FAQType].map((item, index) => {
               return (
                 <div key={index}>
@@ -140,7 +152,7 @@ const FAQ = ({ theme }) => {
                 </div>
               );
             })}
-          </div>
+          </div> */}
         </Res>
         <div>
           <TwoSection />
