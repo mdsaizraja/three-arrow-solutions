@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../components/Footer/Footer";
 import { data } from "../../data";
 import Link from "next/dist/client/link";
-
+import Blog from "../../components/Blog/Blog"
 import { HeadingSection } from "../../components/Blog/BlogStyles";
 import {
   TalkExpertBox,
@@ -16,7 +16,8 @@ export const index = () => {
   return (
     <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
       <Layout>
-        <div className="container mx-auto">
+        <Blog/>
+        {/* <div className="container mx-auto">
           <div className="mt-20 md:mx-5 mx-0 xl:p-0 px-5 Main_Bog_div">
             <div className="grid grid-rows-1 xl:mt-40 mt-10 text-white  xl:grid-flow-col grid-flow-row gap-24 w-full">
               <div className="row-span-2 col-span-3 xl:block hidden bg-[#042C54] text-white F_blog">
@@ -71,9 +72,9 @@ export const index = () => {
 
             <div className="flex justify-center mt-24"></div>
           </div>
-        </div>
+        </div> */}
         <SubscribeCard/>
-        <div className="col-span-3 row-span-2 gap-y-32 flex justify-around flex-wrap ">
+        <div className="col-span-3 row-span-2 gap-y-28 flex justify-around flex-wrap ">
           {data.blogs.map((item, index) => {
             if (index !== 0)
               return (
