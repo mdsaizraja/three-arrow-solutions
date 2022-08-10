@@ -1,17 +1,40 @@
-import React, { useState } from 'react';
-import { IoIosArrowDropdownCircle, IoIosArrowDropupCircle } from "react-icons/io";
+import React, { useState } from "react";
+import {
+  IoIosArrowDropdownCircle,
+  IoIosArrowDropupCircle,
+} from "react-icons/io";
+import { Container } from "../../layout/LayoutStyles";
+import { Contents } from "./FAQStyles";
 
-const Accordion = ({ title, content }) => {
-  const [isActive, setIsActive] = useState(false);
+const Accordion = ({ title, content, onToggle, active, multiple }) => {
+  const [visiblity, setVisiblity] = useState(false);
+
+  const isActive = () => (multiple ? visiblity : active);
+
+  const toogleVisiblity = () => {
+    setVisiblity((v) => !v);
+    onToggle();
+  };
 
   return (
-    <div className="accordion-item">
-      <div className="accordion-title text-black dark:text-white font-extrabold text-4xl mb-9 " onClick={() => setIsActive(!isActive)}>
-        <div>{title} <span className='float-right ml-10'>{isActive ? <IoIosArrowDropdownCircle size="3rem" /> : < IoIosArrowDropupCircle  size="3rem"/>}</span></div>
-       
-      </div>
-      {isActive && <div className="accordion-content text-black dark:text-white font-extrabold text-2xl mb-8">{content}</div>}
-    </div>
+    <Container className="text-black dark:text-white">
+<div className={`card ${isActive() ? "accordion-active" : ""}`}>
+            <div className="card-header text-black dark:text-white" onClick={toogleVisiblity}>
+                {title}
+                <span className="accordion-icon text-black dark:text-white float-right">
+            {isActive ? (
+              <IoIosArrowDropdownCircle size="3rem" />
+            ) : (
+              <IoIosArrowDropupCircle size="3rem" />
+            )}
+          </span>
+                
+            </div>
+            <div className="card-body text-black dark:text-white">{content}</div>
+        </div>
+
+</Container>
+    
   );
 };
 

@@ -23,10 +23,11 @@ const index = () => {
                 <Loading/>
 
             ) : (
-                <>
+                <> 
+                <Header SelectedTheme={(e) => SetTheme(e)}/>
                     <div className="container mx-auto">
                         <div className="xl:px-20">
-                            <Header SelectedTheme={(e) => SetTheme(e)}/>
+                           
                         </div>
                         <FAQ theme={theme}/>
                     </div>

@@ -147,22 +147,26 @@ export const data = {
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:3,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:4,
         question:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:5,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:6,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
@@ -170,33 +174,39 @@ export const data = {
     ],
     Business: [
       {
+        id:1,
         question:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Business",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:2,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:3,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:4,
         question:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:5,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:6,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
@@ -204,33 +214,39 @@ export const data = {
     ],
     Hire: [
       {
+        id:1,
         question:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hire",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:2,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:3,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:4,
         question:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Devlopment",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:5,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",
       },
       {
+        id:6,
         question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         answer:
           "Nam nunc odio, semper ut sem non, mattis congue ligula. Ut ultricies odio non mattis feugiat. Nulla semper neque eget dui consectetur, nec pulvinar lectus mollis. Cras efficitur eros sed ipsum consequat,",

@@ -13,7 +13,6 @@ function Nav({ currentTheme, handleModal }) {
   return (
     < >
     <Container 
-     
     >
       <div  className={`h-full w-full dark:bg-[#040C18] bg-white fixed z-10 top-0 left-0 overflow-y-auto CloseNav`}>
         <div className="xl:mx-16 xl:py-8 py-5 mx-5">

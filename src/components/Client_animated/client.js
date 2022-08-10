@@ -12,13 +12,16 @@ function Client() {
                     <HeadingTitle className="Title_div">
                         Clients
                     </HeadingTitle>
+                    <p className='dark:text-[#fff] text-black'>
                     Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus
                     viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.
                     Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus
                     viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.
                     Aenean rutrum erat quis eleifend dignissim. Duis in sollicitudin nisi, ac dignissim libero. Phasellus
                     viverra sagittis sapien sedinterdum. Fusce ex diam, fringilla commodo ante id, aliquet porta libero.
+                  </p>
                 </div>
+              
                 <Wrap className='xl:w-1/2 xl:mt-0 mt-10'>
              
                     <div className='orbit'>

@@ -27,7 +27,7 @@ const index = () => {
   return (
 
     <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
-      <DetailHero />
+      <DetailHero  />
 
       <Container>
         <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-0 mx-0 mt-0  xl:p-0 px-0">
