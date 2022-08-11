@@ -17,7 +17,7 @@ const OurService = () => {
         <Marquee direction="right" speed={50} delay={5} pauseOnHover>
           {data.services.map((item, index) => {
             return (
-              <Section className="  flex text-center scrollbar-hide overflow-x-scroll text-gray-500 font-extrabold  py-20">
+              <Section key={index} className="  flex text-center scrollbar-hide overflow-x-scroll text-gray-500 font-extrabold  py-20">
                 <div
                   key={index}
                   className="xl:mx-20 mx-8 cursor-pointer transition-all delay-300 dark:hover:text-white hover:text-black Services_div "

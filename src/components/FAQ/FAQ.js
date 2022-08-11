@@ -3,7 +3,6 @@ import { HeadingSection, Span, Title, Res } from "./FAQStyles";
 import { data } from "../../data";
 import TwoSection from "../../components/TwoSection/TwoSection";
 import Accordion from "./Accordian";
-import index from "../../pages/Details";
 import { Container } from "../../layout/LayoutStyles";
 const FAQ = ({ theme, multiple = false }) => {
   const [activeItemIndex, setActiveItemIndex] = useState(null);
