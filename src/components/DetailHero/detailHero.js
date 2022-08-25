@@ -12,9 +12,10 @@ background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
 
 const DetaiHero = () => {
   return (
-    <div className="  ">
-    <Wrap className="pt-1  pb-[6%] ">
-      <Header />
+    <Wrap className="pt-1 pb-[6%]">
+      <div className="xl:px-20">
+        <Header />
+      </div>
       <Container>
         <h1 className="Git_text text-white  font-thin text-8xl leading-normal mb-0">
           Mern stack development{" "}
@@ -32,17 +33,15 @@ const DetaiHero = () => {
           and single-page applications (SPA).
         </p>
         <div className="flex items-center mt-16  dark:text-white text-black  ">
-                        <button
-                            className="font-extrabold rounded-full  dark:bg-black bg-white  cursor-pointer delay-75  duration-700
+          <button
+            className="font-extrabold rounded-full  dark:bg-black bg-white  cursor-pointer delay-75  duration-700
          transition-all dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white xl:px-16 xl:py-7 px-10  xl:m-0 m-6 py-1 xl:text-1xl text-xl"
-                        >
-                            Talk to our Experts
-                        </button>
-                    </div>
+          >
+            Talk to our Experts
+          </button>
+        </div>
       </Container>
     </Wrap>
-    </div>
   );
 };
 export default DetaiHero;
-

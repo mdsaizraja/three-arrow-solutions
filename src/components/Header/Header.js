@@ -8,7 +8,7 @@ import { RiMenu4Fill } from "react-icons/ri";
 import Nav from "./nav";
 
 const Header = ({ SelectedTheme }) => {
-  const { systemTheme, theme, setTheme } = useTheme(undefined);
+  const { systemTheme, theme, setTheme } = useTheme("undefined");
   const [navWidth, setNavWidth] = useState("hidden");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { pathname } = useRouter();
@@ -35,34 +35,20 @@ const Header = ({ SelectedTheme }) => {
           onClick={() => setTheme("dark")}
         />
       );
-    } else {
-      return (
-        <img
-          src="/images/Vector.png"
-          alt="dark_mode.png"
-          width="30px"
-          onClick={() => setTheme("light")}
-        />
-      );
     }
+    //  else {
+    //   return (
+    //     <img
+    //       src="/images/Vector.png"
+    //       alt="dark_mode.png"
+    //       width="30px"
+    //       onClick={() => setTheme("light")}
+    //     />
+    //   );
+    // }
   };
 
-  //   useEffect(() => {
-  //     if (theme !== undefined) {
-  //       if (currentTheme) {
-  //         // Set value of  darkmode to dark
-  //         document.documentElement.setAttribute('data-theme', 'dark');
-  //         window.localStorage.setItem('theme', 'dark');
-  //       } else {
-  //         // Set value of  darkmode to light
-  //         document.documentElement.removeAttribute('data-theme');
-  //         window.localStorage.setItem('theme', 'light');
-  //       }
-  //     }
-  //   }, [theme]);
-
   useEffect(() => {
-    setTheme("dark");
     document.body.classList.remove("overflow-hidden");
   }, []);
 
@@ -89,7 +75,7 @@ const Header = ({ SelectedTheme }) => {
           </Link>
           {pathname !== "/404" && (
             <div className="flex">
-              <SocialIcons className="dark:hover:bg-[#212d45] hover:bg-[#fff]">
+              <SocialIcons className=" dark:hover:bg-[#212d45] hover:bg-[#fff] ">
                 {renderThemeChanger()}
               </SocialIcons>
               <SocialIcons className="dark:hover:bg-[#212d45] hover:bg-[#fff]">

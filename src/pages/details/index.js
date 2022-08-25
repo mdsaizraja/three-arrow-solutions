@@ -16,12 +16,6 @@ import DetailHero from "../../components/DetailHero/detailHero";
 import styled from "styled-components";
 import { Container } from "../../layout/LayoutStyles";
 
-export const Wrap = styled.div`
-margin-top-0px;
-
-background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
-
-`;
 
 const index = () => {
   return (

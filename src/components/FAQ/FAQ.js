@@ -7,7 +7,7 @@ import { Container } from "../../layout/LayoutStyles";
 const FAQ = ({ theme, multiple = false }) => {
   const [activeItemIndex, setActiveItemIndex] = useState(null);
   const [FAQType, setFAQType] = useState("Development");
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState("");
 
   return (
     <Container>

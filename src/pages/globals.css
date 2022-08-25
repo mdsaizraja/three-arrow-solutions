@@ -48,28 +48,20 @@ ol[role="list"] {
 }
 
 .accordion-icon {
-  position: absolute;
- 
   transition: all 0.3s;
 }
 
 .card-body {
-  display: none;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
 }
 .accordion-active .card-body {
   display: block;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
   line-height: 25px;
-  transition: max-height 0.6s ease;
-
-  text-transform: capitalize;
-}
-
-.accordion-active .card-body {
-  transition: max-height 0.6s ease;
 }
 
 .accordion-active .accordion-icon {
@@ -82,12 +74,15 @@ ol[role="list"] {
   font-weight: 700;
   font-size: 25px;
   line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .active,
 .card-header:hover {
   color: #81afdd;
 }
 
-.accordion-active .card-header {
-  transition: 0.4s;
+.card.accordion-active .card-body {
+  max-height: 300px;
 }
