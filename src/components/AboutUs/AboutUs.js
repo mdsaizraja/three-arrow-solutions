@@ -136,9 +136,10 @@ const AboutUs = () => {
                                         <p className="my-4 text-slate-500 text-lg w-full h-full leading-relaxed">
                                             <iframe
                                                 className="w-full h-full"
-                                                src="/Vedios/Odisha.mp4"
+                                                src="/video/card.mp4"
                                                 allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen
+                                                width={1000} height={500} sandbox='allow-scripts allow-modal' loading='eager'
                                             />
                                         </p>
                                     </div>

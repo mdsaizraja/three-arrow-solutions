@@ -1,41 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap");
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default margin and padding and reset fonts */
 * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-    list-style: none;
+  list-style: none;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.overlay {
+  display: none;
+}
+
+.marquee {
+  justify-content: space-around;
+}
+
+.accordion-icon {
+  transition: all 0.3s;
+}
+
+.card-body {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+.accordion-active .card-body {
+  display: block;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.accordion-active .accordion-icon {
+  transform: rotate(180deg);
+}
+.card-header {
+  cursor: pointer;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.active,
+.card-header:hover {
+  color: #81afdd;
+}
+
+.card.accordion-active .card-body {
+  max-height: 300px;
 }

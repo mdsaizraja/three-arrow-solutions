@@ -1,6 +1,7 @@
 import {data} from "../../data";
 import React from "react";
 import {HeadingSection} from "./BlogStyles";
+import Link from "next/dist/client/link";
 
 const Blog = () => {
     return (
@@ -36,7 +37,7 @@ const Blog = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-3 row-span-2 gap-y-32 flex justify-around flex-wrap ">
+                    <div className="col-span-3 row-span-2 gap-y-5 flex justify-around flex-wrap ">
                         {data.blogs.map((item, index) => {
                             if (index !== 0)
                                 return (
@@ -69,10 +70,12 @@ const Blog = () => {
                 </div>
 
                 <div className="flex justify-center mt-24">
+                <Link href="/blog">
                     <button
                         className="py-5 px-10 font-black text-xl rounded-full dark:border-white border-black border-2 dark:text-white text-black transition-all delay-100 duration-700 dark:hover:text-black dark:hover:bg-white hover:text-white hover:bg-black">
                         View all blogs
                     </button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -5,6 +5,8 @@ export const Wrap = styled.div`
     min-height: calc(100vh - 170px);
     place-content: center end;
     
+
+    
     @media screen and (max-width: 480px) {
         min-height: 280px;
     }

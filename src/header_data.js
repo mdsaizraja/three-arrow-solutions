@@ -2,7 +2,7 @@ export const data = {
     mobile_app_development: [
         {
             text: 'Iphone App Development',
-            link: 'iphone-app-development'
+            link: 'details'
         },
         {
             text: 'React Native App Development',
@@ -158,11 +158,15 @@ export const data = {
         },
         {
             text: 'Blog',
-            link: ''
+            link: 'blog'
+        },
+        {
+            text: 'Details',
+            link: 'details'
         },
         {
             text: 'FAQ',
-            link: ''
+            link: 'faq'
         },
         {
             text: 'Contact Us',

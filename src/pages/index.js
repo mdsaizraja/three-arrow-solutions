@@ -12,8 +12,9 @@ import Blog from "../components/Blog/Blog";
 import Footer from "../components/Footer/Footer";
 const Home = () => {
   return (
-    <>
-      <Layout>
+
+    <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
+      <Layout >
         <Hero />
         <AboutUs />
         <OurService />
@@ -25,7 +26,8 @@ const Home = () => {
         <Blog />
       </Layout>
       <Footer />
-    </>
+      </div>
+   
   );
 };
 

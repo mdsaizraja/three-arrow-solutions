@@ -263,13 +263,13 @@ picture {
 
 @keyframes orbit {
     100% {
-        rotate: 1turn;
+     -webkit-transform: rotate(1turn);
     }
 }
 
 @keyframes hold-position {
     100% {
-        rotate: -1turn;
+        -webkit-transform: rotate(-1turn);
     }
 }
 
@@ -278,5 +278,6 @@ picture {
         scale: 1.05;
     }
 }
+
 
 /*# sourceMappingURL=client.css.map */

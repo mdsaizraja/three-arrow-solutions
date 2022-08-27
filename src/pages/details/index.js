@@ -1,47 +1,45 @@
 import React from "react";
-import { Layout } from "../../layout/Layout";
-import CompanyDescription from "../../components/CompanyDescription/CompanyDescription";
-import Blog from "../../components/Blog/Blog";
+
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import styled from "styled-components";
-import CompanyDetailsContact from "../../components/Contact/CompanyDetailsContact";
-import Statics from "../../components/BrandInfo/Statics";
-import Paragraph from "../../components/BrandInfo/Paragraph";
-import FeaturesList from "../../components/BrandInfo/FeaturesList";
+import { Layout } from "../../layout/Layout";
+import Blog from "../../components/Blog/Blog";
+import FAQ from "../../components/FAQ/FAQ";
 import TwoSection from "../../components/TwoSection/TwoSection";
+import EnquiryForm from "../../components/ Enquiry form/ enquiryForm";
+import MeetUs from "../../components/MeetUs/meetUs";
+import DetailsText from "../../components/DetailsText.js/detailsText";
+import TalkExpertCard from "../../components/TalkExpertCard/talkExpertCard";
+import CompanyProgressCard from "../../components/CompanyProgressNoCard/companyProgressCard";
+import TextBulletopt from "../../components/TextBulletOpt/textBulletOpt";
+import DetailHero from "../../components/DetailHero/detailHero";
+import styled from "styled-components";
+import { Container } from "../../layout/LayoutStyles";
 
-export const Wrap = styled.div`
-  background: linear-gradient(
-    -89.97deg,
-    var(--gradient-one) 1.84%,
-    var(--gradient-two) 102.67%
-  );
-`;
-
-export const Container = styled.div`
-  max-width: 1280px;
-  width: 100%;
-  margin: auto;
-`;
 
 const index = () => {
   return (
-    <>
-      <Wrap className="pt-1 ">
-        <Layout>
-          <CompanyDescription />
-        </Layout>
-      </Wrap>
+
+    <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
+      <DetailHero  />
+
       <Container>
-        <CompanyDetailsContact />
-        <Statics />
-        <Paragraph />
-        <FeaturesList />
-        <TwoSection />
+        <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-0 mx-0 mt-0  xl:p-0 px-0">
+          <TextBulletopt />
+          <EnquiryForm />
+        </div>
+        <CompanyProgressCard />
+        <TalkExpertCard />
+        <DetailsText />
+        <FAQ />
         <Blog />
+        <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-5 mx-0 mt-0  xl:p-0 px-5">
+          <MeetUs />
+          <EnquiryForm />
+        </div>
       </Container>
       <Footer />
-    </>
+    </div>
   );
 };
 

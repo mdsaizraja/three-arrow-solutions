@@ -5,8 +5,8 @@ import { Container } from "./LayoutStyles";
 export const Layout = ({ children }) => {
   return (
     <>
+      <Header />
       <Container>
-        <Header />
         <main>{children}</main>
       </Container>
     </>
