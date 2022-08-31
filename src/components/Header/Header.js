@@ -36,16 +36,7 @@ const Header = ({ SelectedTheme }) => {
         />
       );
     }
-    //  else {
-    //   return (
-    //     <img
-    //       src="/images/Vector.png"
-    //       alt="dark_mode.png"
-    //       width="30px"
-    //       onClick={() => setTheme("light")}
-    //     />
-    //   );
-    // }
+  
   };
 
   useEffect(() => {

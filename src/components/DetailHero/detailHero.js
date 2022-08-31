@@ -17,13 +17,13 @@ const DetaiHero = () => {
         <Header />
       </div>
       <Container>
-        <h1 className="Git_text text-white  font-thin text-8xl leading-normal mb-0">
+        <h1 className="Git_text text-white  font-thin text-8xl leading-normal mb-0 md:mx-16 sm:mx-16 ">
           Mern stack development{" "}
         </h1>
-        <h2 className="Git_text text-white  font-black text-5xl leading-normal mt-0">
+        <h2 className="Git_text text-white  font-black text-5xl leading-normal mt-0 md:mx-16">
           COMPANY
         </h2>
-        <p className="Git_text   text-[#fff] text-3xl leading-normal mt-20 ">
+        <p className="Git_text   text-[#fff] text-3xl leading-normal mt-20 md:mx-16 ">
           A combination of technologies that are used to develop web
           applications is known as a stack. MERN stack demand is increasing day
           by day because it is an open-source combination of technologies. This
@@ -35,7 +35,7 @@ const DetaiHero = () => {
         <div className="flex items-center mt-16  dark:text-white text-black  ">
           <button
             className="font-extrabold rounded-full  dark:bg-black bg-white  cursor-pointer delay-75  duration-700
-         transition-all dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white xl:px-16 xl:py-7 px-10  xl:m-0 m-6 py-1 xl:text-1xl text-xl"
+         transition-all dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white xl:px-16 xl:py-7 px-10  xl:m-0 m-6 py-1 xl:text-1xl text-xl md:mx-16 px-10 py-7"
           >
             Talk to our Experts
           </button>

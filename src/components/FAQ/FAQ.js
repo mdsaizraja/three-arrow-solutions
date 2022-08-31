@@ -11,14 +11,14 @@ const FAQ = ({ theme, multiple = false }) => {
 
   return (
     <Container>
-    <div className="px-10">
+    <div className="">
       <Title className=" font-extrabold xl:text-7xl text-6xl xl:text-center text-left leading-tight tracking-wide py-3 Footer_head mt-20 ">
         Frequently Asked Questions
       </Title>
       <div className="mt-32">
         <Res className=" flex flex-row  ">
           <div className="mr-30">
-            <div className=" px-11 mr-6 ">
+            <div className=" mr-6 ">
               {FAQType === "Development" ? (
                 <HeadingSection className=" font-extrabold text-4xl leading-tight tracking-wide Footer_head mb-8">
                   <div

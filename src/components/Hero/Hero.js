@@ -6,7 +6,7 @@ import {HeadingSection, Button} from "./HeroStyles";
 const Hero = () => {
     return (
         <div className="container mx-auto">
-            <div className="flex xl:justify-between flex-wrap xl:my-20  xl:p-0 px-5">
+            <div className="flex justify-center xl:justify-between flex-wrap xl:my-20  xl:p-0 px-5">
                 <div className="xl:w-6/12">
                     <HeadingSection
                         className='font-extrabold xl:text-8xl xl:leading-tight tracking-tighter py-4'
@@ -31,7 +31,7 @@ const Hero = () => {
                         </Button>
                     </div>
                 </div>
-                <div className="md:w-full xl:w-6/12 mt-8 flex md:justify-center xl:justify-end">
+                <div className="md:w-full xl:w-6/12 mt-8 flex md:justify-center  xl:justify-end">
                     <Lottie
                         animationData={lottieJson}
                         play

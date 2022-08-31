@@ -5,7 +5,7 @@ import { Subscribe } from './SubscribeCardStyle'
 export const SubscribeCard = () => {
     return (
         <div>
-             <Subscribe className="  xl:flex md:flex-none md:mx-5 xl:mx-0 justify-center xl:mt-32 my-20 dark:text-black text-white rounded-3xl  ">
+             <Subscribe className="  xl:flex md:flex-none md:mx-20 xl:mx-0 justify-center xl:mt-32 my-20 dark:text-black text-white rounded-3xl  ">
           <div className="xl:p-16 p-10">
             <h4 className="leading-relaxed">Join 5000+ Subscribers</h4>
             <p className="font-extrabold text-4xl  leading-normal">
