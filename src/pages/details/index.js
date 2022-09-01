@@ -19,25 +19,25 @@ import { Container } from "../../layout/LayoutStyles";
 const index = () => {
   return (
     <>
-      <div className="h-full w-full dark:bg-[#040C18] bg-white">
-        <DetailHero  />
-      </div>
+      <div className="h-full w-full dark:bg-[#040C18] bg-white ">
+        <DetailHero />
 
-      <Container>
-        <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-0 mt-0  xl:p-0 px-0">
-          <TextBulletopt />
-          <EnquiryForm />
-        </div>
-        <CompanyProgressCard />
-        <TalkExpertCard />
-        <DetailsText />
-        <FAQ />
-        <Blog />
-        <div className="flex justify-center xl:flex-row flex-col xl:mt-0 mb-5 md:mx-5 mx-0 mt-0  xl:p-0 px-5">
-          <MeetUs />
-          <EnquiryForm />
-        </div>
-      </Container>
+        <Container>
+          <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-0 mt-0  xl:p-0 px-0">
+            <TextBulletopt />
+            <EnquiryForm />
+          </div>
+          <CompanyProgressCard />
+          <TalkExpertCard />
+          <DetailsText />
+          <FAQ />
+          <Blog />
+          <div className="flex justify-center xl:flex-row flex-col xl:mt-0 mb-5 md:mx-5 mx-0 mt-0  xl:p-0 px-5">
+            <MeetUs />
+            <EnquiryForm />
+          </div>
+        </Container>
+      </div>
       <Footer />
     </>
   );
