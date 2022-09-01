@@ -14,5 +14,6 @@ export const Wrap = styled.div`
     @media screen and (min-width: 480px) and (max-width: 991px) {
         min-height: 390px;
     }
+   
     
 `;

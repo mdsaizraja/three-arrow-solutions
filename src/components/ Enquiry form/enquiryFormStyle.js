@@ -6,6 +6,14 @@ export const Label = styled.label`
   font-size: 20px;
   line-height: 50px;
   color: #a7a7a7;
+
+@media screen and (min-width: 90px) and (max-width: 680px) {
+  line-height: 20px;
+  font-size: 15px;
+
+}
+
+
 `;
 
 export const sharedStyles = css`

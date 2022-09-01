@@ -19,7 +19,7 @@ const Accordion = ({ title, content, onToggle, active, multiple }) => {
   return (
     <Container className="text-black dark:text-white">
 <div className={`card ${isActive() ? "accordion-active" : ""}`}>
-            <div className="card-header text-black dark:text-white" onClick={toogleVisiblity}>
+            <div className="card-header text-black dark:text-white " onClick={toogleVisiblity}>
                 {title}
                 <span className="accordion-icon text-black dark:text-white float-right">
             {isActive ? (

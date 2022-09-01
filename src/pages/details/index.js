@@ -16,15 +16,15 @@ import DetailHero from "../../components/DetailHero/detailHero";
 import styled from "styled-components";
 import { Container } from "../../layout/LayoutStyles";
 
-
 const index = () => {
   return (
-
-    <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
-      <DetailHero  />
+    <>
+      <div className="h-full w-full dark:bg-[#040C18] bg-white">
+        <DetailHero  />
+      </div>
 
       <Container>
-        <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-0 mx-0 mt-0  xl:p-0 px-0">
+        <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-0 mt-0  xl:p-0 px-0">
           <TextBulletopt />
           <EnquiryForm />
         </div>
@@ -33,13 +33,13 @@ const index = () => {
         <DetailsText />
         <FAQ />
         <Blog />
-        <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-5 mx-0 mt-0  xl:p-0 px-5">
+        <div className="flex justify-center xl:flex-row flex-col xl:mt-0 mb-5 md:mx-5 mx-0 mt-0  xl:p-0 px-5">
           <MeetUs />
           <EnquiryForm />
         </div>
       </Container>
       <Footer />
-    </div>
+    </>
   );
 };
 

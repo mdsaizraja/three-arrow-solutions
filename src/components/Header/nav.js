@@ -15,7 +15,7 @@ function Nav({ currentTheme, handleModal }) {
     <Container 
     >
       <div  className={`h-full w-full dark:bg-[#040C18] bg-white fixed z-10 top-0 left-0 overflow-y-auto CloseNav`}>
-        <div className="xl:mx-32 md:mx-36 mt-5  xl:py-8 py-5 mx-5">
+        <div className="xl:mx-32 md:mx-36   xl:py-8 py-5 mx-5">
           <div className="flex Header_nav">
             <NavLink className="flex items-center justify-between w-full font-bold ">
               <Link href="/">

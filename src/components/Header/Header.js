@@ -55,8 +55,8 @@ const Header = ({ SelectedTheme }) => {
 
   return (
     <>
-      <div className="container mx-auto">
-        <div className="flex justify-between mt-5">
+      <div className="container mx-auto mt-5">
+        <div className="flex justify-between ">
           <Link href="/">
             <NavLink className="flex items-center font-bold ">
               <Span className="ml-2 mt-2 text-black dark:text-white">

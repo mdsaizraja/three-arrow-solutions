@@ -19,6 +19,7 @@ export const Title = styled.div`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 34px;
+
 `;
 export const Span = styled.div`
   font-size: 34px;
@@ -42,6 +43,10 @@ export const Res = styled.div`
 }
   
 
+}
+
+@media only screen and (max-width: 480px) {
+  padding: 0px;
 }
 
 `;

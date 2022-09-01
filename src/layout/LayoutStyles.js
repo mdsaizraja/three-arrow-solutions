@@ -9,7 +9,7 @@ export const Container = styled.div`
   overflow-y: visible;
 
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 640px) {
     padding: 15px;
   }
 `;

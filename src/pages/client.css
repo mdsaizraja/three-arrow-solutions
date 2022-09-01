@@ -90,7 +90,7 @@ picture {
     }
 }
 
-@media screen and (min-width: 991px) and (max-width: 1200px) {
+@media screen and (min-width: 991px) and (max-width: 1280px) {
     .orbit {
         margin-right: 0;
     }

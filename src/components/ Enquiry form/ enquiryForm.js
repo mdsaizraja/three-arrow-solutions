@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className=" mx-auto">
       <StyledFormWrapper className="">
         <StyledForm onSubmit={handleSubmit}>
           <h1 className="dark:text-white text-black font-weight-bold">
@@ -105,7 +105,7 @@ function App() {
           </Buttondiv>
         </StyledForm>
       </StyledFormWrapper>
-    </>
+    </div>
   );
 }
 

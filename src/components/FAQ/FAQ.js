@@ -10,15 +10,15 @@ const FAQ = ({ theme, multiple = false }) => {
   const [active, setActive] = useState("");
 
   return (
-    <Container>
-    <div className="">
-      <Title className=" font-extrabold xl:text-7xl text-6xl xl:text-center text-left leading-tight tracking-wide py-3 Footer_head mt-20 ">
+    < Container>
+    <div className="container mx-auto">
+      <Title className=" font-extrabold xl:text-7xl text-5xl xl:text-center text-left leading-tight tracking-wide py-3 Footer_head mt-20 ">
         Frequently Asked Questions
       </Title>
-      <div className="mt-32">
+      <div className="mt-32 ">
         <Res className=" flex flex-row  ">
-          <div className="mr-30">
-            <div className=" mr-6 ">
+          <div className="">
+            <div className=" xl:mr-6 xl:w-96 lg:w-96 md:w-96 mr-5 ">
               {FAQType === "Development" ? (
                 <HeadingSection className=" font-extrabold text-4xl leading-tight tracking-wide Footer_head mb-8">
                   <div
@@ -94,7 +94,7 @@ const FAQ = ({ theme, multiple = false }) => {
               )}
             </div>
           </div>
-          <div className="accordion  ">
+          <div className="accordion ">
             {data.FAQ[FAQType].map(({ question, answer }, index) => (
               <div>
                 <Accordion
