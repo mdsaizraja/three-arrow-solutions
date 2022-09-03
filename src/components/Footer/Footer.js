@@ -5,7 +5,7 @@ import Link from "next/dist/client/link";
 
 const Footer = () => {
   return (
-    <div className="xl:mt-52 mt-20 bg-[#031B34] sm:overflow-hidden md:px-10 xl:px-0 px-0 text-white">
+    <div className="xl:mt-0 mt-0 bg-[#031B34] sm:overflow-hidden md:px-10 xl:px-0 px-0 text-white">
       <div className="container mx-auto">
         <div className="xl:hidden items-center font-bold flex justify-center pt-8 List_item">
           <span className="ml-2 mt-2">Tech stagers</span>

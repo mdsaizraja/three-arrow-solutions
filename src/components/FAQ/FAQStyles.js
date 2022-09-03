@@ -47,7 +47,9 @@ export const Res = styled.div`
 
 @media only screen and (max-width: 480px) {
   padding: 0px;
+
 }
+
 
 `;
 export const Contents = styled.div`

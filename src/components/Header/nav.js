@@ -94,8 +94,8 @@ function Nav({ currentTheme, handleModal }) {
                     <ol className="text-2xl mt-10">
                       {data.mobile_app_development.map((item, index) => {
                         return (
-                          <Link key={index} href={item.link}>
-                            <List
+                          <Link key={index} href={`/${item.text.replace(/\s/g,"-")}`}  >
+                            <List onClick={() => handleModal()}
                               className="relative mb-5 cursor-pointer hover:font-bold duration-100 transition-all px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
@@ -114,8 +114,8 @@ function Nav({ currentTheme, handleModal }) {
                     <ol className="text-2xl mt-10">
                       {data.web_development.map((item, index) => {
                         return (
-                          <Link key={index} href={item.link}>
-                            <List
+                          <Link key={index} href={`/${item.text.replace(/\s/g,"-")}`}>
+                            <List onClick={() => handleModal()}
                               className="relative mb-5 cursor-pointer hover:font-bold duration-100 transition-all px-16 before:ml-8 before:absolute before:-left-4 before:bottom-1
                     before:border-2 before:border-solid before:rounded-full before:contents:(' ') before:w-5
                     before:h-5"
@@ -195,7 +195,7 @@ function Nav({ currentTheme, handleModal }) {
             </div>
           </div>
         </div>
-        <div className="border-t-2 text-center p-10 border-[#BCC0CF] xl:text-2xl text-sm">
+        <div className="border-t-2 text-center p-10 border-[#BCC0CF] text-black dark:text-white xl:text-2xl text-sm">
                 © 2021 All rights reserved.
             </div>
     

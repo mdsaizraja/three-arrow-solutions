@@ -36,7 +36,6 @@ const Header = ({ SelectedTheme }) => {
         />
       );
     }
-  
   };
 
   useEffect(() => {

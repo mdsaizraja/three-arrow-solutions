@@ -6,7 +6,7 @@ import Link from "next/dist/client/link";
 const Blog = () => {
     return (
         <div className="container mx-auto">
-            <div className="mt-20 md:mx-0 mx-0 xl:p-0 px-5 Main_Bog_div">
+            <div className="mt-20 md:mx-0 mx-0 xl:p-0 px-5 Main_Bog_div mb-20">
                 <HeadingSection
                     className="font-extrabold xl:text-8xl md:text-7xl text-5xl leading-tight tracking-wide xl:w-3/5 pb-3 Blog_text">
                     A lot is happening, We are blogging about it.
@@ -41,7 +41,7 @@ const Blog = () => {
                         {data.blogs.map((item, index) => {
                             if (index !== 0)
                                 return (
-                                    <div key={index} className="xl:w-2/5 sm:w-full md:w-2/5 xl:mb-0 mb-10 bg-[#042C54] Rest_blog">
+                                    <div key={index} className="xl:w-[45%] sm:w-full md:w-[45%] xl:mb-0 mb-10 bg-[#042C54] Rest_blog">
                                         <div
                                             className="xl:max-w-fit flex flex-col"
                                             style={{

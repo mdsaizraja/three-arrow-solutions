@@ -1,22 +1,22 @@
-export const data = {
+export const data =  {
     mobile_app_development: [
-        {
+        {   id:1,
             text: 'Iphone App Development',
             link: 'details'
         },
-        {
+        {   id:2,
             text: 'React Native App Development',
             link: ''
         },
-        {
+        {   id:3,
             text: 'Android Application Development',
             link: ''
         },
-        {
+        {   id:4,
             text: 'Flutter App Development',
             link: ''
         },
-        {
+        {   id:5,
             text: 'Swift App Development',
             link: ''
         }
@@ -160,10 +160,7 @@ export const data = {
             text: 'Blog',
             link: 'blog'
         },
-        {
-            text: 'Details',
-            link: 'details'
-        },
+        
         {
             text: 'FAQ',
             link: 'faq'

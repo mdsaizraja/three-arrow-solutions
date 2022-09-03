@@ -11,5 +11,10 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 640px) {
     padding: 15px;
+    .accord {
+      padding:0px;
+    }
   }
+
+
 `;

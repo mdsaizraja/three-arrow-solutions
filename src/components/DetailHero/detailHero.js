@@ -10,7 +10,8 @@ background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
 
 `;
 
-const DetaiHero = () => {
+const DetaiHero = ({detailsData}) => {
+  
   return (
     <Wrap className="pt-1 pb-[6%]">
       <div className=" xl:px-20 text-white dark:text-white">
@@ -19,7 +20,7 @@ const DetaiHero = () => {
       <div className="container mx-auto " >
      
         <h1 className="Git_text text-white mx-5  xl:text-8xl leading-normal mb-0  py-0  ">
-          Mern stack development{" "}
+          {detailsData[0].text}
         </h1>
         <h2 className="Git_text text-white mx-5 font-black xl:text-5xl mt-5  leading-normal ">
           COMPANY
