@@ -7,14 +7,14 @@ import GitHubSection from "../components/GitHubSection/GitHubSection";
 import Carousel from "../components/Carousel/Carousel";
 import BusinessModel from "../components/Business Model/BusinessModel";
 import TwoSection from "../components/TwoSection/TwoSection";
-import Clients from "../components/Client_animated/client"
+import Clients from "../components/Client_animated/client";
 import Blog from "../components/Blog/Blog";
 import Footer from "../components/Footer/Footer";
+
 const Home = () => {
   return (
-
     <div className="h-full w-full dark:bg-[#040C18] bg-white pt-1">
-      <Layout >
+      <Layout>
         <Hero />
         <AboutUs />
         <OurService />
@@ -26,8 +26,7 @@ const Home = () => {
         <Blog />
       </Layout>
       <Footer />
-      </div>
-   
+    </div>
   );
 };
 

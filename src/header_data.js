@@ -1,4 +1,4 @@
-export const data =  {
+export const data=  {
     mobile_app_development: [
         {   id:1,
             text: 'Iphone App Development',

@@ -13,42 +13,90 @@ import { Container } from "../layout/LayoutStyles";
 import { data } from "../header_data";
 
 export const getStaticPaths = () => {
-  const paths = data.mobile_app_development.map((curElem) => {
+  const mobileDetail = data.mobile_app_development.map((curElem) => {
     return {
       params: {
-        index: curElem.text.replace(/\s/g,"-"),
+        index: curElem.text.replace(/\s/g, "-"),
+      },
+    };
+  });
+  const webDetail = data.web_development.map((curElem) => {
+    return {
+      params: {
+        index: curElem.text.replace(/\s/g, "-"),
+      },
+    };
+  });
+  const enterpriseMobilityDetail = data.enterprise_mobility_solutions.map(
+    (curElem) => {
+      return {
+        params: {
+          index: curElem.text.replace(/\s/g, "-"),
+        },
+      };
+    }
+  );
+  const hireDevelopersDetail = data.dedicated_developers.map((curElem) => {
+    return {
+      params: {
+        index: curElem.text.replace(/\s/g, "-"),
       },
     };
   });
 
   return {
-    paths,
+    paths: [
+      ...mobileDetail,
+      ...webDetail,
+      ...enterpriseMobilityDetail,
+      ...hireDevelopersDetail,
+    ],
     fallback: false,
   };
 };
 export const getStaticProps = (context) => {
   const text = context.params.index;
-  
-  const detailsData = data.mobile_app_development.filter((e) => {
-    return e.text.replace(/\s/g,"-") == text;
+  const mobileDetail = data.mobile_app_development.filter((e) => {
+    return e.text.replace(/\s/g, "-") == text;
   });
+  const webDetail = data.web_development.filter((e) => {
+    return e.text.replace(/\s/g, "-") == text;
+  });
+  const enterpriseMobilityDetail = data.enterprise_mobility_solutions.filter(
+    (e) => {
+      return e.text.replace(/\s/g, "-") == text;
+    }
+  );
+  const hireDevelopersDetail = data.dedicated_developers.filter((e) => {
+    return e.text.replace(/\s/g, "-") == text;
+  });
+
+  const detailsData = [
+    mobileDetail,
+    webDetail,
+    enterpriseMobilityDetail,
+    hireDevelopersDetail,
+  ];
+  const details = detailsData.filter((e) => {
+    return e.length === 1;
+  });
+
+  const detail = details.flat();
 
   return {
     props: {
-      detailsData,
+      detail,
     },
   };
 };
- 
 
-const index = ({detailsData}) => {
+const index = ({ detail }) => {
   return (
     <>
       <div className="h-full w-full dark:bg-[#040C18] bg-white ">
+        <DetailHero detail={detail} />
 
-        <DetailHero detailsData={detailsData} />
-       
-       <Container>
+        <Container>
           <div className="flex justify-center xl:flex-row flex-col xl:mt-0 md:mx-0 mt-0  xl:p-0 px-0">
             <TextBulletopt />
             <EnquiryForm />
